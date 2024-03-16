@@ -1,0 +1,177 @@
+{
+  "_fv": 57,
+  "_type": "config",
+  "definition": {
+    "pools": [
+      {
+        "category": "karma",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 1000.0,
+            "textDefault": "",
+            "comment": "amount of xp required for the base karma lvl, the amount required increases by 50% of the base each karma lvl. Default value: 1000",
+            "vardisplay": "karma xp",
+            "varname": "karmaxp",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.1,
+            "textDefault": "",
+            "comment": "number the enemy health is multiplied by to determine a bonus number, the xp dropped by an enemy is then multiplied by this bonus number to determine karma xp per kill. Default value: 0.1",
+            "vardisplay": "hp multiplier",
+            "varname": "hpmulti",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.1,
+            "textDefault": "",
+            "comment": "amount of extra damage taken per lvl of karma, karma lvl is multiplied by this number then damage is multiplied by that number to determine extra damage taken, Default value: 0.1",
+            "vardisplay": "karma damage taken",
+            "varname": "karmadmg",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.2,
+            "textDefault": "",
+            "comment": "chance for enemies to apply stacking potion effects per karma lvl. Chances are rolled for each individual effect, min:0 max:1. Default value: 0.2",
+            "vardisplay": "karma effect chance",
+            "varname": "karmaeff",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 3.0,
+            "textDefault": "",
+            "comment": "minimum lvl of karma for weakness potion effect to apply when hit, this uses the karma effect chance. Default value: 3",
+            "vardisplay": "min karma for weakness",
+            "varname": "weakness",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 2.0,
+            "textDefault": "",
+            "comment": "minimum lvl of karma for slowness potion effect to apply when hit, this uses the karma effect chance. Default value: 2",
+            "vardisplay": "min karma for slowness",
+            "varname": "slowness",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 5.0,
+            "textDefault": "",
+            "comment": "minimum lvl of karma for poison potion effect to apply when hit, this uses the karma effect chance. Default value: 5",
+            "vardisplay": "min karma for poison",
+            "varname": "poison",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 1.0,
+            "textDefault": "",
+            "comment": "minimum lvl of karma for bleed potion effect to apply when hit, this uses the karma effect chance. Default value: 1",
+            "vardisplay": "min karma for bleed",
+            "varname": "bleed",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 60.0,
+            "textDefault": "",
+            "comment": "duration in ticks for potion effects for each karma lvl. Default value: 60",
+            "vardisplay": "duration ticks per karma",
+            "varname": "effduration",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          }
+        ]
+      }
+    ],
+    "file": "joyg_cfg",
+    "configType": 1
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "mod_elements": [
+    {
+      "name": "KarmaStacker",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "karma_stacker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/KarmaStackerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "droppedexperience",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "CmdKarmaSet",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cmd_karma_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/CmdKarmaSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "CmdKarma",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cmd_karma",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/CmdKarmaCommand.java"
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "CmdKarmaGet",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cmd_karma_get",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/CmdKarmaGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "KarmaScoreboard",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "karma_scoreboard",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/KarmaScoreboardProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "JoygCfg",
+      "type": "config",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "joyg_cfg",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/configuration/JoygCfgConfiguration.java"
+        ]
+      }
+    },
+    {
+      "name": "KarmaDmg",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "karma_dmg",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/KarmaDmgProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "BleedActiveTickCondition",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleed_active_tick_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/joyg/procedures/BleedActiveTickConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "amplifier",
+            "type": "number"
+          },
+          {
+            "name": "duration",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/effects"
+    },
+    {
+      "name": "Bleed",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/BleedMobEffect.java"
+        ]
+      },
+      "path": "~/effects"
+    },
+    {
+      "name": "Bleeding",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleeding",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/damage_type/bleeding.json"
+        ]
+      },
+      "path": "~/effects"
+    },
+    {
+      "name": "BleedOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleed_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BleedOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/effects"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "karma",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "karmaBar",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "config.joyg.joyg_cfg": "joyg_cfg",
+      "effect.joyg.bleed": "Bleed",
+      "death.attack.bleeding": "%1$s died from bleeding",
+      "death.attack.bleeding.item": "%1$s was bled to death by %2$s using %3$s",
+      "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "karma",
+        "children": []
+      },
+      {
+        "name": "effects",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "joyg",
+    "modName": "joyg",
+    "version": "1.0.0",
+    "author": "Ivan, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "curios_api",
+      "geckolib",
+      "jei"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.joyg",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300452316
+}

@@ -1,0 +1,12 @@
+{
+  "_fv": 57,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.3,
+    "scaling": "never",
+    "effects": "poking",
+    "normalDeathMessage": "%1$s died from bleeding",
+    "itemDeathMessage": "%1$s was bled to death by %2$s using %3$s",
+    "playerDeathMessage": "%1$s bled to death whilst trying to escape %2$s"
+  }
+}

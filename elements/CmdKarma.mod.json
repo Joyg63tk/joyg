@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "joyg",
+    "type": "STANDARD",
+    "permissionLevel": "4",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">karma_set</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">players</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">num</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">CmdKarmaSet</field></block></statement></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">karma_get</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">players</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">CmdKarmaGet</field></block></statement></block></statement></block></next></block></next></block></xml>"
+  }
+}

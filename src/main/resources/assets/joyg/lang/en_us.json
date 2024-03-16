@@ -1,0 +1,7 @@
+{
+  "config.joyg.joyg_cfg": "joyg_cfg",
+  "effect.joyg.bleed": "Bleed",
+  "death.attack.bleeding": "%1$s died from bleeding",
+  "death.attack.bleeding.item": "%1$s was bled to death by %2$s using %3$s",
+  "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s"
+}
