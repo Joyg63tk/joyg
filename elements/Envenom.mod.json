@@ -1,0 +1,19 @@
+{
+  "_fv": 57,
+  "_type": "attribute",
+  "definition": {
+    "description": "Envenom",
+    "minValue": 0.0,
+    "maxValue": 100.0,
+    "defaultValue": 0.0,
+    "isPersistent": true,
+    "entities": [
+      {
+        "value": "EntityPlayer"
+      },
+      {
+        "value": "EntityPlayerMP"
+      }
+    ]
+  }
+}

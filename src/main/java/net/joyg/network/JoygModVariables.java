@@ -68,6 +68,7 @@ public class JoygModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.karma = original.karma;
 			clone.karmaBar = original.karmaBar;
+			clone.indirectMoH = original.indirectMoH;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -106,6 +107,7 @@ public class JoygModVariables {
 	public static class PlayerVariables {
 		public double karma = 0;
 		public double karmaBar = 0;
+		public boolean indirectMoH = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -116,6 +118,7 @@ public class JoygModVariables {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("karma", karma);
 			nbt.putDouble("karmaBar", karmaBar);
+			nbt.putBoolean("indirectMoH", indirectMoH);
 			return nbt;
 		}
 
@@ -123,6 +126,7 @@ public class JoygModVariables {
 			CompoundTag nbt = (CompoundTag) Tag;
 			karma = nbt.getDouble("karma");
 			karmaBar = nbt.getDouble("karmaBar");
+			indirectMoH = nbt.getBoolean("indirectMoH");
 		}
 	}
 
@@ -149,6 +153,7 @@ public class JoygModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.karma = message.data.karma;
 					variables.karmaBar = message.data.karmaBar;
+					variables.indirectMoH = message.data.indirectMoH;
 				}
 			});
 			context.setPacketHandled(true);

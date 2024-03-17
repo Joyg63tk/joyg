@@ -231,6 +231,206 @@
         ]
       },
       "path": "~/effects"
+    },
+    {
+      "name": "KarmaDie",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "karma_die",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/KarmaDieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "KarmaSync",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "karma_sync",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/KarmaSyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "ManaOnHitChance",
+      "type": "attribute",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_on_hit_chance",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/attributes/mana on hit"
+    },
+    {
+      "name": "ManaOnHitChanceP",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_on_hit_chance_p",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManaOnHitChancePProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/attributes/mana on hit"
+    },
+    {
+      "name": "ManaGainedOnHit",
+      "type": "attribute",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_gained_on_hit",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/attributes/mana on hit"
+    },
+    {
+      "name": "Envenom",
+      "type": "attribute",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "envenom",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/attributes/envenom"
+    },
+    {
+      "name": "EnvenomP",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "envenom_p",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/EnvenomPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/attributes/envenom"
+    },
+    {
+      "name": "Maim",
+      "type": "attribute",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maim",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/attributes/maim"
+    },
+    {
+      "name": "MaimP",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maim_p",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/MaimPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/attributes/maim"
+    },
+    {
+      "name": "SkillCdr",
+      "type": "attribute",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_cdr",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/attributes/skill cdr"
+    },
+    {
+      "name": "CdrCalc",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cdr_calc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/CdrCalcProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/attributes/skill cdr"
     }
   ],
   "variable_elements": [
@@ -245,16 +445,30 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "indirectMoH",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
       "config.joyg.joyg_cfg": "joyg_cfg",
+      "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
+      "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
       "effect.joyg.bleed": "Bleed",
+      "attribute.joyg.maim": "Maim Chance",
       "death.attack.bleeding": "%1$s died from bleeding",
       "death.attack.bleeding.item": "%1$s was bled to death by %2$s using %3$s",
-      "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s"
+      "joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
+      "joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
+      "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
+      "attribute.joyg.skill_cdr": "Skill Cooldown Reduction",
+      "attribute.joyg.envenom": "Envenom"
     }
   },
   "foldersRoot": {
@@ -266,6 +480,35 @@
       },
       {
         "name": "effects",
+        "children": []
+      },
+      {
+        "name": "attributes",
+        "children": [
+          {
+            "name": "mana on hit",
+            "children": []
+          },
+          {
+            "name": "envenom",
+            "children": []
+          },
+          {
+            "name": "maim",
+            "children": []
+          },
+          {
+            "name": "skill cdr",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "skills",
+        "children": []
+      },
+      {
+        "name": "passives",
         "children": []
       }
     ]

@@ -167,6 +167,101 @@
             "enablecomment": true,
             "onlyComment": false,
             "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.5,
+            "textDefault": "",
+            "comment": "when player dies their karma is operated in this way. this is a logic variable, true will multiply the karma by the dpamount number, false will sum the karma with the dpamount number. Default value: true",
+            "vardisplay": "karma death penalty operation",
+            "varname": "dpoperation",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.5,
+            "textDefault": "",
+            "comment": "number the player karma will be operated by when they die. if death penalty operation is true karma will be MULTIPLIED by this amount then rounded down, use decimals to divide. if death penalty operation is false the karma will be added to this number then rounded, use negative numbers to substract. Default value: 0.5",
+            "vardisplay": "death penalty amount",
+            "varname": "dpamount",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          }
+        ]
+      },
+      {
+        "category": "Karma Bonuses",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 5.0,
+            "textDefault": "",
+            "comment": "number of karma levels required to grant an additional lvl of Looting, Default value: 5",
+            "vardisplay": "karma lvl for each Looting lvl",
+            "varname": "looting",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 3.0,
+            "textDefault": "",
+            "comment": "number of karma levels required to grant an additional lvl of Fortune, Default value: 3",
+            "vardisplay": "karma lvl for each Fortune lvl",
+            "varname": "fortune",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 1.0,
+            "textDefault": "",
+            "comment": "number of karma levels required to grant an additional lvl of Luck, Default value: 1",
+            "vardisplay": "karma lvl for each Luck lvl",
+            "varname": "luck",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
           }
         ]
       }
