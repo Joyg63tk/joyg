@@ -1,8 +1,11 @@
 {
   "joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
+  "item.joyg.dragon_leap": "Dragon Leap",
   "config.joyg.joyg_cfg": "joyg_cfg",
   "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
+  "attribute.joyg.skill_effect_area": "Skill Effect Area",
   "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
+  "item.joyg.karmadame": "Karmadame",
   "effect.joyg.bleed": "Bleed",
   "attribute.joyg.maim": "Maim Chance",
   "death.attack.bleeding": "%1$s died from bleeding",

@@ -1,0 +1,19 @@
+{
+  "_fv": 57,
+  "_type": "attribute",
+  "definition": {
+    "description": "Skill Effect Area",
+    "minValue": 1.0,
+    "maxValue": 100.0,
+    "defaultValue": 1.0,
+    "isPersistent": true,
+    "entities": [
+      {
+        "value": "EntityPlayer"
+      },
+      {
+        "value": "EntityPlayerMP"
+      }
+    ]
+  }
+}

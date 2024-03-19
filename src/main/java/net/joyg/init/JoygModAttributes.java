@@ -28,6 +28,7 @@ public class JoygModAttributes {
 	public static final RegistryObject<Attribute> ENVENOM = ATTRIBUTES.register("envenom", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".envenom", 0, 0, 100)).setSyncable(true));
 	public static final RegistryObject<Attribute> MAIM = ATTRIBUTES.register("maim", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".maim", 0, 0, 100)).setSyncable(true));
 	public static final RegistryObject<Attribute> SKILLCDR = ATTRIBUTES.register("skill_cdr", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".skill_cdr", 1, 1, 100)).setSyncable(true));
+	public static final RegistryObject<Attribute> SKILLEFFECTAREA = ATTRIBUTES.register("skill_effect_area", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".skill_effect_area", 1, 1, 100)).setSyncable(true));
 
 	@SubscribeEvent
 	public static void register(FMLConstructModEvent event) {
@@ -48,6 +49,8 @@ public class JoygModAttributes {
 		event.add(EntityType.PLAYER, MAIM.get());
 		event.add(EntityType.PLAYER, SKILLCDR.get());
 		event.add(EntityType.PLAYER, SKILLCDR.get());
+		event.add(EntityType.PLAYER, SKILLEFFECTAREA.get());
+		event.add(EntityType.PLAYER, SKILLEFFECTAREA.get());
 	}
 
 	@Mod.EventBusSubscriber
@@ -61,6 +64,7 @@ public class JoygModAttributes {
 			newP.getAttribute(ENVENOM.get()).setBaseValue(oldP.getAttribute(ENVENOM.get()).getBaseValue());
 			newP.getAttribute(MAIM.get()).setBaseValue(oldP.getAttribute(MAIM.get()).getBaseValue());
 			newP.getAttribute(SKILLCDR.get()).setBaseValue(oldP.getAttribute(SKILLCDR.get()).getBaseValue());
+			newP.getAttribute(SKILLEFFECTAREA.get()).setBaseValue(oldP.getAttribute(SKILLEFFECTAREA.get()).getBaseValue());
 		}
 	}
 }

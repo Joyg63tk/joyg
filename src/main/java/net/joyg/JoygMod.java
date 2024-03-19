@@ -29,7 +29,9 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.joyg.init.JoygModTabs;
 import net.joyg.init.JoygModMobEffects;
+import net.joyg.init.JoygModItems;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -48,6 +50,10 @@ public class JoygMod {
 	public JoygMod() {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		JoygModItems.REGISTRY.register(bus);
+
+		JoygModTabs.REGISTRY.register(bus);
 
 		JoygModMobEffects.REGISTRY.register(bus);
 

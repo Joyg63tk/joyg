@@ -5,6 +5,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
@@ -35,29 +36,31 @@ public class ManaOnHitChancePProcedure {
 	private static void execute(@Nullable Event event, DamageSource damagesource, Entity sourceentity) {
 		if (damagesource == null || sourceentity == null)
 			return;
-		if ((damagesource.getDirectEntity()) == sourceentity) {
-			if (Mth.nextInt(RandomSource.create(), 1, 100) <= ((LivingEntity) sourceentity).getAttribute(JoygModAttributes.MANAONHITCHANCE.get()).getValue()) {
-				{
-					Entity _ent = sourceentity;
-					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-						_ent.getServer().getCommands()
-								.performPrefixedCommand(
-										new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(),
-												_ent.getDisplayName(), _ent.level().getServer(), _ent),
-										("/effect give @s irons_spellbooks:instant_mana 10 " + ((LivingEntity) sourceentity).getAttribute(JoygModAttributes.MANAGAINEDONHIT.get()).getValue() + " false"));
+		if (sourceentity instanceof Player) {
+			if ((damagesource.getDirectEntity()) == sourceentity) {
+				if (Mth.nextInt(RandomSource.create(), 1, 100) <= ((LivingEntity) sourceentity).getAttribute(JoygModAttributes.MANAONHITCHANCE.get()).getValue()) {
+					{
+						Entity _ent = sourceentity;
+						if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+							_ent.getServer().getCommands()
+									.performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(),
+													_ent.getDisplayName(), _ent.level().getServer(), _ent),
+											("/effect give @s irons_spellbooks:instant_mana 10 " + ((LivingEntity) sourceentity).getAttribute(JoygModAttributes.MANAGAINEDONHIT.get()).getValue() + " false"));
+						}
 					}
 				}
-			}
-		} else if ((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).indirectMoH == true) {
-			if (Mth.nextInt(RandomSource.create(), 1, 100) <= ((LivingEntity) sourceentity).getAttribute(JoygModAttributes.MANAONHITCHANCE.get()).getValue() / 2) {
-				{
-					Entity _ent = sourceentity;
-					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-						_ent.getServer().getCommands()
-								.performPrefixedCommand(
-										new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(),
-												_ent.getDisplayName(), _ent.level().getServer(), _ent),
-										("/effect give @s irons_spellbooks:instant_mana 10 " + ((LivingEntity) sourceentity).getAttribute(JoygModAttributes.MANAGAINEDONHIT.get()).getValue() + " false"));
+			} else if ((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).indirectMoH == true) {
+				if (Mth.nextInt(RandomSource.create(), 1, 100) <= ((LivingEntity) sourceentity).getAttribute(JoygModAttributes.MANAONHITCHANCE.get()).getValue() / 2) {
+					{
+						Entity _ent = sourceentity;
+						if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+							_ent.getServer().getCommands()
+									.performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(),
+													_ent.getDisplayName(), _ent.level().getServer(), _ent),
+											("/effect give @s irons_spellbooks:instant_mana 10 " + ((LivingEntity) sourceentity).getAttribute(JoygModAttributes.MANAGAINEDONHIT.get()).getValue() + " false"));
+						}
 					}
 				}
 			}

@@ -51,6 +51,7 @@
     {
       "name": "CmdKarma",
       "type": "command",
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cmd_karma",
@@ -108,6 +109,7 @@
     {
       "name": "JoygCfg",
       "type": "config",
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "registry_name": "joyg_cfg",
@@ -131,6 +133,10 @@
         "dependencies": [
           {
             "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
             "type": "entity"
           },
           {
@@ -173,6 +179,7 @@
     {
       "name": "Bleed",
       "type": "potioneffect",
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bleed",
@@ -186,6 +193,7 @@
     {
       "name": "Bleeding",
       "type": "damagetype",
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bleeding",
@@ -431,6 +439,314 @@
         ]
       },
       "path": "~/attributes/skill cdr"
+    },
+    {
+      "name": "DragonLeapSpecialInformation",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_leap_special_information",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/DragonLeapSpecialInformationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ]
+      },
+      "path": "~/skills"
+    },
+    {
+      "name": "DragonLeap",
+      "type": "item",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_leap",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/dragon_leap.json",
+          "src/main/java/net/joyg/item/DragonLeapItem.java"
+        ]
+      },
+      "path": "~/skills"
+    },
+    {
+      "name": "DragonLeapRightclicked",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_leap_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/DragonLeapRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/skills"
+    },
+    {
+      "name": "DragonLeapFlight",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_leap_flight",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/DragonLeapFlightProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/skills"
+    },
+    {
+      "name": "SkillEffectArea",
+      "type": "attribute",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_effect_area",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/attributes/skill area"
+    },
+    {
+      "name": "KarmadameRightclicked",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "karmadame_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/KarmadameRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "Karmadame",
+      "type": "item",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "karmadame",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/KarmadameItem.java",
+          "src/main/resources/assets/joyg/models/item/karmadame.json"
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "KarmadameTt",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "karmadame_tt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/KarmadameTtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "KarmaOverlayNum",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "karma_overlay_num",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/joyg/procedures/KarmaOverlayNumProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "KarmaDisplay",
+      "type": "overlay",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "karma_display",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/client/screens/KarmaDisplayOverlay.java"
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "Numberoffset",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "numberoffset",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/joyg/procedures/NumberoffsetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "Numberoffset2",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "numberoffset_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/joyg/procedures/Numberoffset2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "Numberoffset3",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "numberoffset_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/joyg/procedures/Numberoffset3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/karma"
+    },
+    {
+      "name": "KarmaWorldSync",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "karma_world_sync",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/KarmaWorldSyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/karma"
     }
   ],
   "variable_elements": [
@@ -451,15 +767,66 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "dragonLeap",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "karmaDmg",
+      "type": "number",
+      "scope": "map",
+      "value": "0.1"
+    },
+    {
+      "name": "karmaEffChance",
+      "type": "number",
+      "scope": "map",
+      "value": "0.2"
+    },
+    {
+      "name": "karmaWeakness",
+      "type": "number",
+      "scope": "map",
+      "value": "3.0"
+    },
+    {
+      "name": "karmaSlowness",
+      "type": "number",
+      "scope": "map",
+      "value": "2.0"
+    },
+    {
+      "name": "karmaPoison",
+      "type": "number",
+      "scope": "map",
+      "value": "5.0"
+    },
+    {
+      "name": "karmaBleed",
+      "type": "number",
+      "scope": "map",
+      "value": "1.0"
+    },
+    {
+      "name": "karmaEffDuration",
+      "type": "number",
+      "scope": "map",
+      "value": "60.0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
       "joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
+      "item.joyg.dragon_leap": "Dragon Leap",
       "config.joyg.joyg_cfg": "joyg_cfg",
       "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
+      "attribute.joyg.skill_effect_area": "Skill Effect Area",
       "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
+      "item.joyg.karmadame": "Karmadame",
       "effect.joyg.bleed": "Bleed",
       "attribute.joyg.maim": "Maim Chance",
       "death.attack.bleeding": "%1$s died from bleeding",
@@ -499,6 +866,10 @@
           },
           {
             "name": "skill cdr",
+            "children": []
+          },
+          {
+            "name": "skill area",
             "children": []
           }
         ]
