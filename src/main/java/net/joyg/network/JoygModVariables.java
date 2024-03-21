@@ -75,6 +75,8 @@ public class JoygModVariables {
 			clone.karma = original.karma;
 			clone.karmaBar = original.karmaBar;
 			clone.indirectMoH = original.indirectMoH;
+			clone.hollow = original.hollow;
+			clone.barbedarrow = original.barbedarrow;
 			if (!event.isWasDeath()) {
 				clone.dragonLeap = original.dragonLeap;
 			}
@@ -267,6 +269,8 @@ public class JoygModVariables {
 		public double karmaBar = 0;
 		public boolean indirectMoH = false;
 		public boolean dragonLeap = false;
+		public boolean hollow = false;
+		public boolean barbedarrow = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -279,6 +283,8 @@ public class JoygModVariables {
 			nbt.putDouble("karmaBar", karmaBar);
 			nbt.putBoolean("indirectMoH", indirectMoH);
 			nbt.putBoolean("dragonLeap", dragonLeap);
+			nbt.putBoolean("hollow", hollow);
+			nbt.putBoolean("barbedarrow", barbedarrow);
 			return nbt;
 		}
 
@@ -288,6 +294,8 @@ public class JoygModVariables {
 			karmaBar = nbt.getDouble("karmaBar");
 			indirectMoH = nbt.getBoolean("indirectMoH");
 			dragonLeap = nbt.getBoolean("dragonLeap");
+			hollow = nbt.getBoolean("hollow");
+			barbedarrow = nbt.getBoolean("barbedarrow");
 		}
 	}
 
@@ -316,6 +324,8 @@ public class JoygModVariables {
 					variables.karmaBar = message.data.karmaBar;
 					variables.indirectMoH = message.data.indirectMoH;
 					variables.dragonLeap = message.data.dragonLeap;
+					variables.hollow = message.data.hollow;
+					variables.barbedarrow = message.data.barbedarrow;
 				}
 			});
 			context.setPacketHandled(true);

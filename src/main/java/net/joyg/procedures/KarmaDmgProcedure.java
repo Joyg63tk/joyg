@@ -40,8 +40,7 @@ public class KarmaDmgProcedure {
 		if (entity instanceof Player) {
 			if (sourceentity instanceof Mob) {
 				entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)),
-						Math.round(Math.max(amount * (entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma * JoygModVariables.MapVariables.get(world).karmaDmg,
-								entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)));
+						Math.round(amount * (entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma * JoygModVariables.MapVariables.get(world).karmaDmg));
 				if ((entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma >= JoygModVariables.MapVariables.get(world).karmaSlowness) {
 					if (Math.random() <= (entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma * JoygModVariables.MapVariables.get(world).karmaEffChance) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

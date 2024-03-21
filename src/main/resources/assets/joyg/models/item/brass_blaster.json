@@ -1,0 +1,7 @@
+{
+  "parent": "joyg:custom/pistol",
+  "textures": {
+    "0": "joyg:block/pistol",
+    "particle": "joyg:item/2024-03-20_11_35_36-pistol_-_blockbench"
+  }
+}

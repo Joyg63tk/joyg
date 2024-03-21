@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "hand",
+        "1": "orb",
+        "2": "aura"
+      },
+      "name": "default"
+    }
+  }
+}

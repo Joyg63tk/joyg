@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abb",
+    "acd",
+    " ef"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:copper_ingot"
+    },
+    "c": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "d": {
+      "item": "minecraft:ender_eye"
+    },
+    "e": {
+      "item": "minecraft:blaze_rod"
+    },
+    "f": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "joyg:brass_blaster",
+    "count": 1
+  }
+}

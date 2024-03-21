@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "fabledweaponry:tome_leather",
+    "fabledweaponry:tome_iron",
+    "fabledweaponry:tome_gold",
+    "fabledweaponry:tome_diamond",
+    "fabledweaponry:tome_netherite"
+  ]
+}

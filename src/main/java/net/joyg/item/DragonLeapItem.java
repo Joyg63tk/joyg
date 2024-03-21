@@ -34,7 +34,7 @@ public class DragonLeapItem extends Item {
 
 	@Override
 	public int getUseDuration(ItemStack itemstack) {
-		return 0;
+		return 20;
 	}
 
 	@Override

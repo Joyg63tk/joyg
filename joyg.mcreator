@@ -417,30 +417,6 @@
       "path": "~/attributes/skill cdr"
     },
     {
-      "name": "CdrCalc",
-      "type": "procedure",
-      "sortid": 18,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cdr_calc",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/CdrCalcProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/attributes/skill cdr"
-    },
-    {
       "name": "DragonLeapSpecialInformation",
       "type": "procedure",
       "sortid": 19,
@@ -747,6 +723,332 @@
         ]
       },
       "path": "~/karma"
+    },
+    {
+      "name": "HollowPalmWep",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_palm_wep",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/HollowPalmWepProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/hollow palm"
+    },
+    {
+      "name": "HollowPalmEffects",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_palm_effects",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/HollowPalmEffectsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/hollow palm"
+    },
+    {
+      "name": "HollowpalmC",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollowpalm_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/HollowpalmCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/hollow palm"
+    },
+    {
+      "name": "CmdHollowpalm",
+      "type": "command",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cmd_hollowpalm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/CmdHollowpalmCommand.java"
+        ]
+      },
+      "path": "~/passives/hollow palm"
+    },
+    {
+      "name": "BarbedarrowsCmd",
+      "type": "command",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barbedarrows_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/BarbedarrowsCmdCommand.java"
+        ]
+      },
+      "path": "~/passives/Barbed arrows"
+    },
+    {
+      "name": "BarbedarrowsC",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barbedarrows_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BarbedarrowsCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/Barbed arrows"
+    },
+    {
+      "name": "BarbedArrows",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barbed_arrows",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BarbedArrowsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/Barbed arrows"
+    },
+    {
+      "name": "BarbedArrow",
+      "type": "potioneffect",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barbed_arrow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/BarbedArrowMobEffect.java"
+        ]
+      },
+      "path": "~/passives/Barbed arrows"
+    },
+    {
+      "name": "DmgBarbedarrow",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dmg_barbedarrow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/DmgBarbedarrowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/Barbed arrows"
+    },
+    {
+      "name": "BrassBlaster",
+      "type": "tool",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brass_blaster",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/brass_blaster.json",
+          "src/main/java/net/joyg/item/BrassBlasterItem.java"
+        ]
+      },
+      "path": "~/items/blasters"
+    },
+    {
+      "name": "BbR",
+      "type": "recipe",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bb_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/bb_r.json"
+        ]
+      },
+      "path": "~/items/blasters"
+    },
+    {
+      "name": "Blasters",
+      "type": "tag",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blasters",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/tags/items/blasters.json"
+        ]
+      },
+      "path": "~/items/blasters"
+    },
+    {
+      "name": "BlasterTT",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blaster_tt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BlasterTTProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ]
+      },
+      "path": "~/items/blasters"
+    },
+    {
+      "name": "Tomes",
+      "type": "tag",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "tomes",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/tags/items/tomes.json"
+        ]
+      },
+      "path": "~/items/tome"
+    },
+    {
+      "name": "TomeTT",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tome_tt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/TomeTTProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "tooltip",
+            "type": "tooltip"
+          }
+        ]
+      },
+      "path": "~/items/tome"
+    },
+    {
+      "name": "TomeAttribute",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tome_attribute",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/TomeAttributeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/items/tome"
+    },
+    {
+      "name": "GauntletBlaster",
+      "type": "tool",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gauntlet_blaster",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/GauntletBlasterItem.java",
+          "src/main/resources/assets/joyg/models/item/gauntlet_blaster.json"
+        ]
+      },
+      "path": "~/items/blasters"
     }
   ],
   "variable_elements": [
@@ -815,25 +1117,43 @@
       "type": "number",
       "scope": "map",
       "value": "60.0"
+    },
+    {
+      "name": "hollow",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "barbedarrow",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
       "item.joyg.dragon_leap": "Dragon Leap",
+      "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
       "config.joyg.joyg_cfg": "joyg_cfg",
+      "effect.joyg.barbed_arrow": "Barbed Arrow",
       "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
-      "attribute.joyg.skill_effect_area": "Skill Effect Area",
+      "item.joyg.gauntlet_blaster": "Gauntlet Blaster",
+      "attribute.joyg.skill_cdr.desc": "Reduces the Cooldown of your Martial Skills with diminishing returns",
+      "attribute.joyg.skill_effect_area": "Skill effect Area Multiplier",
       "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
       "item.joyg.karmadame": "Karmadame",
-      "effect.joyg.bleed": "Bleed",
+      "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
+      "attribute.joyg.mana_gained_on_hit.desc": "Increases mana gained by 5% of max mana, when Instant Mana on hit procs",
       "attribute.joyg.maim": "Maim Chance",
+      "effect.joyg.bleed": "Bleed",
+      "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
       "death.attack.bleeding": "%1$s died from bleeding",
+      "item.joyg.brass_blaster": "Brass Blaster",
       "death.attack.bleeding.item": "%1$s was bled to death by %2$s using %3$s",
-      "joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
-      "joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
+      "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
       "attribute.joyg.skill_cdr": "Skill Cooldown Reduction",
       "attribute.joyg.envenom": "Envenom"
     }
@@ -880,7 +1200,29 @@
       },
       {
         "name": "passives",
-        "children": []
+        "children": [
+          {
+            "name": "hollow palm",
+            "children": []
+          },
+          {
+            "name": "Barbed arrows",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "items",
+        "children": [
+          {
+            "name": "blasters",
+            "children": []
+          },
+          {
+            "name": "tome",
+            "children": []
+          }
+        ]
       }
     ]
   },
