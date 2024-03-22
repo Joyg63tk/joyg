@@ -4,7 +4,6 @@
   "config.joyg.joyg_cfg": "joyg_cfg",
   "effect.joyg.barbed_arrow": "Barbed Arrow",
   "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
-  "item.joyg.gauntlet_blaster": "Gauntlet Blaster",
   "attribute.joyg.skill_cdr.desc": "Reduces the Cooldown of your Martial Skills with diminishing returns",
   "attribute.joyg.skill_effect_area": "Skill effect Area Multiplier",
   "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",

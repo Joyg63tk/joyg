@@ -43,9 +43,11 @@ public class KarmaScoreboardProcedure {
 				_so = _sc.addObjective("karma_lvl", ObjectiveCriteria.DUMMY, Component.literal("karma_lvl"), ObjectiveCriteria.RenderType.INTEGER);
 			_sc.getOrCreatePlayerScore(_ent.getScoreboardName(), _so).setScore((int) (entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma);
 		}
-		if ((entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karmaBar >= (double) JoygCfgConfiguration.KARMAXP.get()) {
+		if ((entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new JoygModVariables.PlayerVariables())).karmaBar >= (entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma
+						+ (entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma * ((double) JoygCfgConfiguration.KARMAXP.get() / 2)) {
 			{
-				double _setval = (entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karmaBar - (double) JoygCfgConfiguration.KARMAXP.get();
+				double _setval = 0;
 				entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.karmaBar = _setval;
 					capability.syncPlayerVariables(entity);

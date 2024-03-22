@@ -1,9 +1,0 @@
-{
-  "parent": "joyg:custom/gauntlet_blaster",
-  "textures": {
-    "0": "joyg:block/hand",
-    "1": "joyg:block/orb",
-    "2": "joyg:block/aura",
-    "particle": "joyg:item/icon6"
-  }
-}

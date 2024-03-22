@@ -91,9 +91,11 @@ public class KarmaStackerProcedure {
 								+ Math.floor((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma / (double) JoygCfgConfiguration.LUCK.get()) + " add"));
 			}
 		}
-		if ((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karmaBar >= (double) JoygCfgConfiguration.KARMAXP.get()) {
+		if ((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new JoygModVariables.PlayerVariables())).karmaBar >= (sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma
+						+ (sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma * ((double) JoygCfgConfiguration.KARMAXP.get() / 2)) {
 			{
-				double _setval = (sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karmaBar - (double) JoygCfgConfiguration.KARMAXP.get();
+				double _setval = 0;
 				sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.karmaBar = _setval;
 					capability.syncPlayerVariables(sourceentity);

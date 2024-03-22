@@ -24,7 +24,6 @@ public class JoygModTabs {
 
 		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(JoygModItems.BRASS_BLASTER.get());
-			tabData.accept(JoygModItems.GAUNTLET_BLASTER.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

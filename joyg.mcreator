@@ -1036,19 +1036,28 @@
       "path": "~/items/tome"
     },
     {
-      "name": "GauntletBlaster",
-      "type": "tool",
-      "sortid": 60,
+      "name": "AbyssNerf",
+      "type": "procedure",
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "gauntlet_blaster",
+      "registry_name": "abyss_nerf",
       "metadata": {
         "files": [
-          "src/main/java/net/joyg/item/GauntletBlasterItem.java",
-          "src/main/resources/assets/joyg/models/item/gauntlet_blaster.json"
+          "src/main/java/net/joyg/procedures/AbyssNerfProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
         ]
       },
-      "path": "~/items/blasters"
+      "path": "~/util"
     }
   ],
   "variable_elements": [
@@ -1139,7 +1148,6 @@
       "config.joyg.joyg_cfg": "joyg_cfg",
       "effect.joyg.barbed_arrow": "Barbed Arrow",
       "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
-      "item.joyg.gauntlet_blaster": "Gauntlet Blaster",
       "attribute.joyg.skill_cdr.desc": "Reduces the Cooldown of your Martial Skills with diminishing returns",
       "attribute.joyg.skill_effect_area": "Skill effect Area Multiplier",
       "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
@@ -1223,6 +1231,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "util",
+        "children": []
       }
     ]
   },

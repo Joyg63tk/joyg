@@ -11,7 +11,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.item.Item;
 
 import net.joyg.item.KarmadameItem;
-import net.joyg.item.GauntletBlasterItem;
 import net.joyg.item.DragonLeapItem;
 import net.joyg.item.BrassBlasterItem;
 import net.joyg.JoygMod;
@@ -21,5 +20,4 @@ public class JoygModItems {
 	public static final RegistryObject<Item> DRAGON_LEAP = REGISTRY.register("dragon_leap", () -> new DragonLeapItem());
 	public static final RegistryObject<Item> KARMADAME = REGISTRY.register("karmadame", () -> new KarmadameItem());
 	public static final RegistryObject<Item> BRASS_BLASTER = REGISTRY.register("brass_blaster", () -> new BrassBlasterItem());
-	public static final RegistryObject<Item> GAUNTLET_BLASTER = REGISTRY.register("gauntlet_blaster", () -> new GauntletBlasterItem());
 }
