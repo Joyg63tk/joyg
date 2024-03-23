@@ -1,8 +1,9 @@
 {
   "item.joyg.dragon_leap": "Dragon Leap",
-  "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
   "config.joyg.joyg_cfg": "joyg_cfg",
+  "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
   "effect.joyg.barbed_arrow": "Barbed Arrow",
+  "effect.joyg.thunder_call": "Thunder Call",
   "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
   "attribute.joyg.skill_cdr.desc": "Reduces the Cooldown of your Martial Skills with diminishing returns",
   "attribute.joyg.skill_effect_area": "Skill effect Area Multiplier",

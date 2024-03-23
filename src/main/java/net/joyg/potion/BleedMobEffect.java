@@ -25,6 +25,6 @@ public class BleedMobEffect extends MobEffect {
 
 	@Override
 	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return BleedActiveTickConditionProcedure.execute(amplifier, duration);
+		return BleedActiveTickConditionProcedure.execute(duration);
 	}
 }

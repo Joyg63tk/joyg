@@ -19,6 +19,6 @@ public class BleedOnEffectActiveTickProcedure {
 		entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("joyg:bleeding")))),
 				(float) (1 + (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(JoygModMobEffects.BLEED.get()) ? _livEnt.getEffect(JoygModMobEffects.BLEED.get()).getAmplifier() : 0)));
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.LAVA, x, y, z, 5, 1, 2, 1, (-0.1));
+			_level.sendParticles(ParticleTypes.LANDING_LAVA, x, y, z, 5, 1, 2, 1, (-0.1));
 	}
 }

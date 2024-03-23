@@ -165,16 +165,12 @@
         ],
         "dependencies": [
           {
-            "name": "amplifier",
-            "type": "number"
-          },
-          {
             "name": "duration",
             "type": "number"
           }
         ]
       },
-      "path": "~/effects"
+      "path": "~/effects/bleed"
     },
     {
       "name": "Bleed",
@@ -188,7 +184,7 @@
           "src/main/java/net/joyg/potion/BleedMobEffect.java"
         ]
       },
-      "path": "~/effects"
+      "path": "~/effects/bleed"
     },
     {
       "name": "Bleeding",
@@ -202,7 +198,7 @@
           "src/main/resources/data/joyg/damage_type/bleeding.json"
         ]
       },
-      "path": "~/effects"
+      "path": "~/effects/bleed"
     },
     {
       "name": "BleedOnEffectActiveTick",
@@ -238,7 +234,7 @@
           }
         ]
       },
-      "path": "~/effects"
+      "path": "~/effects/bleed"
     },
     {
       "name": "KarmaDie",
@@ -895,11 +891,31 @@
         ],
         "dependencies": [
           {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
             "name": "entity",
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
             "type": "number"
           },
           {
@@ -1058,6 +1074,154 @@
         ]
       },
       "path": "~/util"
+    },
+    {
+      "name": "ThunderCall",
+      "type": "potioneffect",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_call",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/ThunderCallMobEffect.java"
+        ]
+      },
+      "path": "~/effects/thunder charge"
+    },
+    {
+      "name": "ThunderCallEffectExpires",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunder_call_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ThunderCallEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/effects/thunder charge"
+    },
+    {
+      "name": "SplinterC",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "splinter_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/SplinterCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/Barbed arrows"
+    },
+    {
+      "name": "Ruleofthree",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ruleofthree",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/RuleofthreeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/Barbed arrows"
+    },
+    {
+      "name": "Battlemage",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battlemage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BattlemageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/battlemage"
+    },
+    {
+      "name": "BattlemageC",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battlemage_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BattlemageCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/battlemage"
+    },
+    {
+      "name": "CmdBattlemgae",
+      "type": "command",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cmd_battlemgae",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/CmdBattlemgaeCommand.java"
+        ]
+      },
+      "path": "~/passives/battlemage"
     }
   ],
   "variable_elements": [
@@ -1138,15 +1302,34 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "splinter",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "ruleofthree",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "battleMage",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
       "item.joyg.dragon_leap": "Dragon Leap",
-      "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
       "config.joyg.joyg_cfg": "joyg_cfg",
+      "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
       "effect.joyg.barbed_arrow": "Barbed Arrow",
+      "effect.joyg.thunder_call": "Thunder Call",
       "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
       "attribute.joyg.skill_cdr.desc": "Reduces the Cooldown of your Martial Skills with diminishing returns",
       "attribute.joyg.skill_effect_area": "Skill effect Area Multiplier",
@@ -1175,7 +1358,16 @@
       },
       {
         "name": "effects",
-        "children": []
+        "children": [
+          {
+            "name": "bleed",
+            "children": []
+          },
+          {
+            "name": "thunder charge",
+            "children": []
+          }
+        ]
       },
       {
         "name": "attributes",
@@ -1215,6 +1407,10 @@
           },
           {
             "name": "Barbed arrows",
+            "children": []
+          },
+          {
+            "name": "battlemage",
             "children": []
           }
         ]

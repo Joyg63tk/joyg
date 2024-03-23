@@ -77,6 +77,9 @@ public class JoygModVariables {
 			clone.indirectMoH = original.indirectMoH;
 			clone.hollow = original.hollow;
 			clone.barbedarrow = original.barbedarrow;
+			clone.splinter = original.splinter;
+			clone.ruleofthree = original.ruleofthree;
+			clone.battleMage = original.battleMage;
 			if (!event.isWasDeath()) {
 				clone.dragonLeap = original.dragonLeap;
 			}
@@ -271,6 +274,9 @@ public class JoygModVariables {
 		public boolean dragonLeap = false;
 		public boolean hollow = false;
 		public boolean barbedarrow = false;
+		public boolean splinter = false;
+		public boolean ruleofthree = false;
+		public boolean battleMage = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -285,6 +291,9 @@ public class JoygModVariables {
 			nbt.putBoolean("dragonLeap", dragonLeap);
 			nbt.putBoolean("hollow", hollow);
 			nbt.putBoolean("barbedarrow", barbedarrow);
+			nbt.putBoolean("splinter", splinter);
+			nbt.putBoolean("ruleofthree", ruleofthree);
+			nbt.putBoolean("battleMage", battleMage);
 			return nbt;
 		}
 
@@ -296,6 +305,9 @@ public class JoygModVariables {
 			dragonLeap = nbt.getBoolean("dragonLeap");
 			hollow = nbt.getBoolean("hollow");
 			barbedarrow = nbt.getBoolean("barbedarrow");
+			splinter = nbt.getBoolean("splinter");
+			ruleofthree = nbt.getBoolean("ruleofthree");
+			battleMage = nbt.getBoolean("battleMage");
 		}
 	}
 
@@ -326,6 +338,9 @@ public class JoygModVariables {
 					variables.dragonLeap = message.data.dragonLeap;
 					variables.hollow = message.data.hollow;
 					variables.barbedarrow = message.data.barbedarrow;
+					variables.splinter = message.data.splinter;
+					variables.ruleofthree = message.data.ruleofthree;
+					variables.battleMage = message.data.battleMage;
 				}
 			});
 			context.setPacketHandled(true);
