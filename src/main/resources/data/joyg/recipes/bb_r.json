@@ -11,7 +11,7 @@
       "item": "minecraft:iron_ingot"
     },
     "b": {
-      "item": "minecraft:copper_ingot"
+      "item": "create:brass_ingot"
     },
     "c": {
       "item": "minecraft:amethyst_shard"
