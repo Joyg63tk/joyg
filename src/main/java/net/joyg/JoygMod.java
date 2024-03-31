@@ -31,7 +31,10 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.joyg.init.JoygModTabs;
 import net.joyg.init.JoygModMobEffects;
+import net.joyg.init.JoygModMenus;
 import net.joyg.init.JoygModItems;
+import net.joyg.init.JoygModBlocks;
+import net.joyg.init.JoygModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -51,12 +54,15 @@ public class JoygMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+		JoygModBlocks.REGISTRY.register(bus);
+		JoygModBlockEntities.REGISTRY.register(bus);
 		JoygModItems.REGISTRY.register(bus);
 
 		JoygModTabs.REGISTRY.register(bus);
 
 		JoygModMobEffects.REGISTRY.register(bus);
 
+		JoygModMenus.REGISTRY.register(bus);
 	}
 
 	private static final String PROTOCOL_VERSION = "1";

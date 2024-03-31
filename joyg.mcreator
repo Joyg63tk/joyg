@@ -1224,50 +1224,99 @@
       "path": "~/passives/battlemage"
     },
     {
-      "name": "DropAttribution",
+      "name": "LootBagBlockAdded",
       "type": "procedure",
       "sortid": 69,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "drop_attribution",
+      "registry_name": "loot_bag_block_added",
       "metadata": {
         "files": [
-          "src/main/java/net/joyg/procedures/DropAttributionProcedure.java"
+          "src/main/java/net/joyg/procedures/LootBagBlockAddedProcedure.java"
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
           },
           {
-            "name": "itemstack",
-            "type": "itemstack"
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
       "path": "~/util/loot atribution"
     },
     {
-      "name": "MobAttribution",
-      "type": "procedure",
+      "name": "LootBag",
+      "type": "block",
       "sortid": 70,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "mob_attribution",
+      "registry_name": "loot_bag",
       "metadata": {
         "files": [
-          "src/main/java/net/joyg/procedures/MobAttributionProcedure.java"
+          "src/main/resources/assets/joyg/models/item/loot_bag.json",
+          "src/main/java/net/joyg/block/LootBagBlock.java",
+          "src/main/java/net/joyg/block/entity/LootBagBlockEntity.java",
+          "src/main/resources/assets/joyg/blockstates/loot_bag.json",
+          "src/main/resources/assets/joyg/models/block/loot_bag.json"
+        ]
+      },
+      "path": "~/util/loot atribution"
+    },
+    {
+      "name": "Lootbagslots",
+      "type": "gui",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lootbagslots",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/world/inventory/LootbagslotsMenu.java",
+          "src/main/java/net/joyg/client/gui/LootbagslotsScreen.java"
+        ]
+      },
+      "path": "~/util/loot atribution"
+    },
+    {
+      "name": "LootbagSpawn",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lootbag_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/LootbagSpawnProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "sourceentity",
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1276,15 +1325,15 @@
       "path": "~/util/loot atribution"
     },
     {
-      "name": "PickupAttribution",
+      "name": "LootBagOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 71,
+      "sortid": 73,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pickup_attribution",
+      "registry_name": "loot_bag_on_block_right_clicked",
       "metadata": {
         "files": [
-          "src/main/java/net/joyg/procedures/PickupAttributionProcedure.java"
+          "src/main/java/net/joyg/procedures/LootBagOnBlockRightClickedProcedure.java"
         ],
         "dependencies": [
           {
@@ -1292,8 +1341,16 @@
             "type": "entity"
           },
           {
-            "name": "itemstack",
-            "type": "itemstack"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -1302,6 +1359,102 @@
         ]
       },
       "path": "~/util/loot atribution"
+    },
+    {
+      "name": "LootBagUpdateTick",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "loot_bag_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/LootBagUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/loot atribution"
+    },
+    {
+      "name": "LootbagParticle",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lootbag_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/LootbagParticleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/loot atribution"
+    },
+    {
+      "name": "PlayerJoin",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_join",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/PlayerJoinProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util/party"
+    },
+    {
+      "name": "PlayerLeave",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_leave",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/PlayerLeaveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util/party"
     }
   ],
   "variable_elements": [
@@ -1400,6 +1553,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "team",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     }
   ],
   "sound_elements": [],
@@ -1412,10 +1571,11 @@
       "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
       "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
       "effect.joyg.bleed": "Bleed",
-      "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
       "item.joyg.brass_blaster": "Brass Blaster",
+      "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
       "config.joyg.joyg_cfg": "joyg_cfg",
+      "block.joyg.loot_bag": "Loot Bag",
       "effect.joyg.barbed_arrow": "Barbed Arrow",
       "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
       "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
@@ -1515,6 +1675,10 @@
         "children": [
           {
             "name": "loot atribution",
+            "children": []
+          },
+          {
+            "name": "party",
             "children": []
           }
         ]

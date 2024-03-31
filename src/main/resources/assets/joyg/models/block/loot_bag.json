@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "joyg:block/pistol",
+    "up": "joyg:block/pistol",
+    "north": "joyg:block/hand",
+    "east": "joyg:block/pistol",
+    "south": "joyg:block/pistol",
+    "west": "joyg:block/pistol",
+    "particle": "joyg:block/pistol"
+  },
+  "render_type": "solid"
+}

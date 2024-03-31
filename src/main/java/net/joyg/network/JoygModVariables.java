@@ -80,6 +80,7 @@ public class JoygModVariables {
 			clone.splinter = original.splinter;
 			clone.ruleofthree = original.ruleofthree;
 			clone.battleMage = original.battleMage;
+			clone.team = original.team;
 			if (!event.isWasDeath()) {
 				clone.dragonLeap = original.dragonLeap;
 			}
@@ -277,6 +278,7 @@ public class JoygModVariables {
 		public boolean splinter = false;
 		public boolean ruleofthree = false;
 		public boolean battleMage = false;
+		public String team = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -294,6 +296,7 @@ public class JoygModVariables {
 			nbt.putBoolean("splinter", splinter);
 			nbt.putBoolean("ruleofthree", ruleofthree);
 			nbt.putBoolean("battleMage", battleMage);
+			nbt.putString("team", team);
 			return nbt;
 		}
 
@@ -308,6 +311,7 @@ public class JoygModVariables {
 			splinter = nbt.getBoolean("splinter");
 			ruleofthree = nbt.getBoolean("ruleofthree");
 			battleMage = nbt.getBoolean("battleMage");
+			team = nbt.getString("team");
 		}
 	}
 
@@ -341,6 +345,7 @@ public class JoygModVariables {
 					variables.splinter = message.data.splinter;
 					variables.ruleofthree = message.data.ruleofthree;
 					variables.battleMage = message.data.battleMage;
+					variables.team = message.data.team;
 				}
 			});
 			context.setPacketHandled(true);
