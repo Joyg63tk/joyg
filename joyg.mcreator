@@ -1222,6 +1222,86 @@
         ]
       },
       "path": "~/passives/battlemage"
+    },
+    {
+      "name": "DropAttribution",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drop_attribution",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/DropAttributionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/util/loot atribution"
+    },
+    {
+      "name": "MobAttribution",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mob_attribution",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/MobAttributionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/loot atribution"
+    },
+    {
+      "name": "PickupAttribution",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pickup_attribution",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/PickupAttributionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/loot atribution"
     }
   ],
   "variable_elements": [
@@ -1432,7 +1512,12 @@
       },
       {
         "name": "util",
-        "children": []
+        "children": [
+          {
+            "name": "loot atribution",
+            "children": []
+          }
+        ]
       }
     ]
   },
