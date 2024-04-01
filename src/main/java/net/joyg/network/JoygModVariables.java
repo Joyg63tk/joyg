@@ -34,8 +34,12 @@ import net.joyg.JoygMod;
 
 import java.util.function.Supplier;
 
+import java.io.File;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class JoygModVariables {
+	public static File partylist = new File("");
+
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		JoygMod.addNetworkMessage(SavedDataSyncMessage.class, SavedDataSyncMessage::buffer, SavedDataSyncMessage::new, SavedDataSyncMessage::handler);
@@ -81,6 +85,9 @@ public class JoygModVariables {
 			clone.ruleofthree = original.ruleofthree;
 			clone.battleMage = original.battleMage;
 			clone.team = original.team;
+			clone.canLoot = original.canLoot;
+			clone.invited = original.invited;
+			clone.invFrom = original.invFrom;
 			if (!event.isWasDeath()) {
 				clone.dragonLeap = original.dragonLeap;
 			}
@@ -279,6 +286,9 @@ public class JoygModVariables {
 		public boolean ruleofthree = false;
 		public boolean battleMage = false;
 		public String team = "\"\"";
+		public boolean canLoot = false;
+		public boolean invited = false;
+		public String invFrom = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -297,6 +307,9 @@ public class JoygModVariables {
 			nbt.putBoolean("ruleofthree", ruleofthree);
 			nbt.putBoolean("battleMage", battleMage);
 			nbt.putString("team", team);
+			nbt.putBoolean("canLoot", canLoot);
+			nbt.putBoolean("invited", invited);
+			nbt.putString("invFrom", invFrom);
 			return nbt;
 		}
 
@@ -312,6 +325,9 @@ public class JoygModVariables {
 			ruleofthree = nbt.getBoolean("ruleofthree");
 			battleMage = nbt.getBoolean("battleMage");
 			team = nbt.getString("team");
+			canLoot = nbt.getBoolean("canLoot");
+			invited = nbt.getBoolean("invited");
+			invFrom = nbt.getString("invFrom");
 		}
 	}
 
@@ -346,6 +362,9 @@ public class JoygModVariables {
 					variables.ruleofthree = message.data.ruleofthree;
 					variables.battleMage = message.data.battleMage;
 					variables.team = message.data.team;
+					variables.canLoot = message.data.canLoot;
+					variables.invited = message.data.invited;
+					variables.invFrom = message.data.invFrom;
 				}
 			});
 			context.setPacketHandled(true);

@@ -32,5 +32,12 @@ public class PlayerLeaveProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		{
+			boolean _setval = false;
+			entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.invited = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }

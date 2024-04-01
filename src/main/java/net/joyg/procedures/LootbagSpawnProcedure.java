@@ -5,15 +5,15 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
-import net.joyg.init.JoygModBlocks;
+import net.joyg.init.JoygModEntities;
+import net.joyg.entity.LootbagEEntity;
 import net.joyg.JoygMod;
 
 import javax.annotation.Nullable;
@@ -34,26 +34,21 @@ public class LootbagSpawnProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity sourceentity) {
 		if (sourceentity == null)
 			return;
-		JoygMod.queueServerWork(10, () -> {
-			world.setBlock(BlockPos.containing(x, y, z), JoygModBlocks.LOOT_BAG.get().defaultBlockState(), 3);
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putString("owner", (sourceentity.getStringUUID()));
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (sourceentity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) {
-				if (!world.isClientSide()) {
-					BlockPos _bp = BlockPos.containing(x, y, z);
-					BlockEntity _blockEntity = world.getBlockEntity(_bp);
-					BlockState _bs = world.getBlockState(_bp);
-					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putString("owner", ((sourceentity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getStringUUID()));
-					if (world instanceof Level _level)
-						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+		boolean found = false;
+		double sx = 0;
+		double sy = 0;
+		double sz = 0;
+		JoygMod.queueServerWork(5, () -> {
+			if (world instanceof ServerLevel _serverLevel) {
+				Entity entitytospawn = JoygModEntities.LOOTBAG_E.get().spawn(_serverLevel, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+				if (entitytospawn != null) {
+					entitytospawn.setYRot(world.getRandom().nextFloat() * 360.0F);
+				}
+				if ((entitytospawn) instanceof LootbagEEntity _datEntSetS)
+					_datEntSetS.getEntityData().set(LootbagEEntity.DATA_owner, (sourceentity.getStringUUID()));
+				if (sourceentity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) {
+					if ((entitytospawn) instanceof LootbagEEntity _datEntSetS)
+						_datEntSetS.getEntityData().set(LootbagEEntity.DATA_owner, ((sourceentity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getStringUUID()));
 				}
 			}
 		});

@@ -31,11 +31,6 @@ public class LootbagslotsScreen extends AbstractContainerScreen<LootbagslotsMenu
 		this.imageHeight = 166;
 	}
 
-	@Override
-	public boolean isPauseScreen() {
-		return true;
-	}
-
 	private static final ResourceLocation texture = new ResourceLocation("joyg:textures/screens/lootbagslots.png");
 
 	@Override
