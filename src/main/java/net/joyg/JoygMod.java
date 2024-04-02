@@ -34,6 +34,8 @@ import net.joyg.init.JoygModMobEffects;
 import net.joyg.init.JoygModMenus;
 import net.joyg.init.JoygModItems;
 import net.joyg.init.JoygModEntities;
+import net.joyg.init.JoygModBlocks;
+import net.joyg.init.JoygModBlockEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -53,6 +55,8 @@ public class JoygMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+		JoygModBlocks.REGISTRY.register(bus);
+		JoygModBlockEntities.REGISTRY.register(bus);
 		JoygModItems.REGISTRY.register(bus);
 		JoygModEntities.REGISTRY.register(bus);
 

@@ -1,0 +1,9 @@
+{
+  "parent": "joyg:custom/portal_-_converted",
+  "textures": {
+    "all": "joyg:block/portal",
+    "particle": "joyg:block/portal",
+    "0": "joyg:block/portal"
+  },
+  "render_type": "translucent"
+}
