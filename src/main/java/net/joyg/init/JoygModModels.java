@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.joyg.client.model.Modelportal;
 import net.joyg.client.model.Modellootsack_Converted;
 import net.joyg.client.model.Modeldragonwings;
 
@@ -18,5 +19,6 @@ public class JoygModModels {
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(Modeldragonwings.LAYER_LOCATION, Modeldragonwings::createBodyLayer);
 		event.registerLayerDefinition(Modellootsack_Converted.LAYER_LOCATION, Modellootsack_Converted::createBodyLayer);
+		event.registerLayerDefinition(Modelportal.LAYER_LOCATION, Modelportal::createBodyLayer);
 	}
 }

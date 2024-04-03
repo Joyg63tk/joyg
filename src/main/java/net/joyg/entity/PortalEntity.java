@@ -1,78 +1,64 @@
 
 package net.joyg.entity;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.items.wrapper.EntityHandsInvWrapper;
-import net.minecraftforge.items.wrapper.EntityArmorInvWrapper;
-import net.minecraftforge.items.wrapper.CombinedInvWrapper;
-import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.capabilities.Capability;
 
-import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.navigation.PathNavigation;
+import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
+import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.DifficultyInstance;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
+import net.minecraft.core.BlockPos;
 
-import net.joyg.world.inventory.LootbagslotsMenu;
-import net.joyg.procedures.LootbagEOnInitialEntitySpawnProcedure;
-import net.joyg.procedures.LootbagEOnEntityTickUpdateProcedure;
-import net.joyg.procedures.LootbagEEntityIsHurtProcedure;
+import net.joyg.procedures.PortalRightClickedOnEntityProcedure;
+import net.joyg.procedures.PortalOnEntityTickUpdateProcedure;
+import net.joyg.procedures.PortalEntityIsHurtProcedure;
 import net.joyg.init.JoygModEntities;
 
-import javax.annotation.Nullable;
-import javax.annotation.Nonnull;
+public class PortalEntity extends PathfinderMob {
+	public static final EntityDataAccessor<Integer> DATA_x = SynchedEntityData.defineId(PortalEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_y = SynchedEntityData.defineId(PortalEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_z = SynchedEntityData.defineId(PortalEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<String> DATA_owner = SynchedEntityData.defineId(PortalEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Boolean> DATA_home = SynchedEntityData.defineId(PortalEntity.class, EntityDataSerializers.BOOLEAN);
 
-import io.netty.buffer.Unpooled;
-
-public class LootbagEEntity extends PathfinderMob {
-	public static final EntityDataAccessor<String> DATA_owner = SynchedEntityData.defineId(LootbagEEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<Integer> DATA_age = SynchedEntityData.defineId(LootbagEEntity.class, EntityDataSerializers.INT);
-
-	public LootbagEEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(JoygModEntities.LOOTBAG_E.get(), world);
+	public PortalEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(JoygModEntities.PORTAL.get(), world);
 	}
 
-	public LootbagEEntity(EntityType<LootbagEEntity> type, Level world) {
+	public PortalEntity(EntityType<PortalEntity> type, Level world) {
 		super(type, world);
 		setMaxUpStep(0f);
 		xpReward = 0;
 		setNoAi(false);
 		setPersistenceRequired();
+		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
 	@Override
@@ -83,14 +69,22 @@ public class LootbagEEntity extends PathfinderMob {
 	@Override
 	protected void defineSynchedData() {
 		super.defineSynchedData();
-		this.entityData.define(DATA_owner, "NONE");
-		this.entityData.define(DATA_age, 0);
+		this.entityData.define(DATA_x, 0);
+		this.entityData.define(DATA_y, 0);
+		this.entityData.define(DATA_z, 0);
+		this.entityData.define(DATA_owner, "");
+		this.entityData.define(DATA_home, false);
+	}
+
+	@Override
+	protected PathNavigation createNavigation(Level world) {
+		return new FlyingPathNavigation(this, world);
 	}
 
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new FloatGoal(this));
+
 	}
 
 	@Override
@@ -104,6 +98,16 @@ public class LootbagEEntity extends PathfinderMob {
 	}
 
 	@Override
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.portal.ambient"));
+	}
+
+	@Override
+	public boolean causeFallDamage(float l, float d, DamageSource source) {
+		return false;
+	}
+
+	@Override
 	public boolean hurt(DamageSource damagesource, float amount) {
 		double x = this.getX();
 		double y = this.getY();
@@ -112,7 +116,7 @@ public class LootbagEEntity extends PathfinderMob {
 		Entity entity = this;
 		Entity sourceentity = damagesource.getEntity();
 		Entity immediatesourceentity = damagesource.getDirectEntity();
-		if (!LootbagEEntityIsHurtProcedure.execute())
+		if (!PortalEntityIsHurtProcedure.execute())
 			return false;
 		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
@@ -146,90 +150,49 @@ public class LootbagEEntity extends PathfinderMob {
 	}
 
 	@Override
-	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
-		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		LootbagEOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
-		return retval;
-	}
-
-	private final ItemStackHandler inventory = new ItemStackHandler(9) {
-		@Override
-		public int getSlotLimit(int slot) {
-			return 64;
-		}
-	};
-	private final CombinedInvWrapper combined = new CombinedInvWrapper(inventory, new EntityHandsInvWrapper(this), new EntityArmorInvWrapper(this));
-
-	@Override
-	public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> capability, @Nullable Direction side) {
-		if (this.isAlive() && capability == ForgeCapabilities.ITEM_HANDLER && side == null)
-			return LazyOptional.of(() -> combined).cast();
-		return super.getCapability(capability, side);
-	}
-
-	@Override
-	protected void dropEquipment() {
-		super.dropEquipment();
-		for (int i = 0; i < inventory.getSlots(); ++i) {
-			ItemStack itemstack = inventory.getStackInSlot(i);
-			if (!itemstack.isEmpty() && !EnchantmentHelper.hasVanishingCurse(itemstack)) {
-				this.spawnAtLocation(itemstack);
-			}
-		}
-	}
-
-	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
+		compound.putInt("Datax", this.entityData.get(DATA_x));
+		compound.putInt("Datay", this.entityData.get(DATA_y));
+		compound.putInt("Dataz", this.entityData.get(DATA_z));
 		compound.putString("Dataowner", this.entityData.get(DATA_owner));
-		compound.putInt("Dataage", this.entityData.get(DATA_age));
-		compound.put("InventoryCustom", inventory.serializeNBT());
+		compound.putBoolean("Datahome", this.entityData.get(DATA_home));
 	}
 
 	@Override
 	public void readAdditionalSaveData(CompoundTag compound) {
 		super.readAdditionalSaveData(compound);
+		if (compound.contains("Datax"))
+			this.entityData.set(DATA_x, compound.getInt("Datax"));
+		if (compound.contains("Datay"))
+			this.entityData.set(DATA_y, compound.getInt("Datay"));
+		if (compound.contains("Dataz"))
+			this.entityData.set(DATA_z, compound.getInt("Dataz"));
 		if (compound.contains("Dataowner"))
 			this.entityData.set(DATA_owner, compound.getString("Dataowner"));
-		if (compound.contains("Dataage"))
-			this.entityData.set(DATA_age, compound.getInt("Dataage"));
-		if (compound.get("InventoryCustom") instanceof CompoundTag inventoryTag)
-			inventory.deserializeNBT(inventoryTag);
+		if (compound.contains("Datahome"))
+			this.entityData.set(DATA_home, compound.getBoolean("Datahome"));
 	}
 
 	@Override
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
-		if (sourceentity instanceof ServerPlayer serverPlayer) {
-			NetworkHooks.openScreen(serverPlayer, new MenuProvider() {
-				@Override
-				public Component getDisplayName() {
-					return Component.literal("Loot bag");
-				}
-
-				@Override
-				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					FriendlyByteBuf packetBuffer = new FriendlyByteBuf(Unpooled.buffer());
-					packetBuffer.writeBlockPos(sourceentity.blockPosition());
-					packetBuffer.writeByte(0);
-					packetBuffer.writeVarInt(LootbagEEntity.this.getId());
-					return new LootbagslotsMenu(id, inventory, packetBuffer);
-				}
-			}, buf -> {
-				buf.writeBlockPos(sourceentity.blockPosition());
-				buf.writeByte(0);
-				buf.writeVarInt(this.getId());
-			});
-		}
 		super.mobInteract(sourceentity, hand);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level();
+
+		PortalRightClickedOnEntityProcedure.execute(world, x, y, z, entity, sourceentity);
 		return retval;
 	}
 
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		LootbagEOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+		PortalOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override
@@ -245,6 +208,20 @@ public class LootbagEEntity extends PathfinderMob {
 	protected void pushEntities() {
 	}
 
+	@Override
+	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
+	}
+
+	@Override
+	public void setNoGravity(boolean ignored) {
+		super.setNoGravity(true);
+	}
+
+	public void aiStep() {
+		super.aiStep();
+		this.setNoGravity(true);
+	}
+
 	public static void init() {
 	}
 
@@ -256,6 +233,7 @@ public class LootbagEEntity extends PathfinderMob {
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
+		builder = builder.add(Attributes.FLYING_SPEED, 0);
 		return builder;
 	}
 }

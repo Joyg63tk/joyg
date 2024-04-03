@@ -16,6 +16,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.joyg.entity.PortalEntity;
 import net.joyg.entity.LootbagEEntity;
 import net.joyg.JoygMod;
 
@@ -24,6 +25,8 @@ public class JoygModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, JoygMod.MODID);
 	public static final RegistryObject<EntityType<LootbagEEntity>> LOOTBAG_E = register("lootbag_e",
 			EntityType.Builder.<LootbagEEntity>of(LootbagEEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LootbagEEntity::new).fireImmune().sized(0.5f, 1f));
+	public static final RegistryObject<EntityType<PortalEntity>> PORTAL = register("portal",
+			EntityType.Builder.<PortalEntity>of(PortalEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PortalEntity::new).fireImmune().sized(0.6f, 2f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -33,11 +36,13 @@ public class JoygModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			LootbagEEntity.init();
+			PortalEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(LOOTBAG_E.get(), LootbagEEntity.createAttributes().build());
+		event.put(PORTAL.get(), PortalEntity.createAttributes().build());
 	}
 }

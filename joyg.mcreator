@@ -1623,32 +1623,45 @@
     },
     {
       "name": "Portal",
-      "type": "block",
+      "type": "livingentity",
       "sortid": 91,
       "compiles": true,
       "locked_code": false,
       "registry_name": "portal",
       "metadata": {
         "files": [
-          "src/main/resources/assets/joyg/blockstates/portal.json",
-          "src/main/resources/assets/joyg/models/block/portal.json",
-          "src/main/java/net/joyg/block/entity/PortalBlockEntity.java",
-          "src/main/resources/assets/joyg/models/item/portal.json",
-          "src/main/java/net/joyg/block/PortalBlock.java"
+          "src/main/java/net/joyg/entity/PortalEntity.java",
+          "src/main/java/net/joyg/client/renderer/PortalRenderer.java"
         ]
       },
       "path": "~/items/portal scroll"
     },
     {
-      "name": "PortalScrollRightclickedOnBlock",
+      "name": "LootbagEEntityIsHurt",
       "type": "procedure",
       "sortid": 92,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "portal_scroll_rightclicked_on_block",
+      "registry_name": "lootbag_e_entity_is_hurt",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/joyg/procedures/LootbagEEntityIsHurtProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/util/loot bag"
+    },
+    {
+      "name": "PortalScrollRightclicked",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portal_scroll_rightclicked",
       "metadata": {
         "files": [
-          "src/main/java/net/joyg/procedures/PortalScrollRightclickedOnBlockProcedure.java"
+          "src/main/java/net/joyg/procedures/PortalScrollRightclickedProcedure.java"
         ],
         "dependencies": [
           {
@@ -1658,6 +1671,98 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/items/portal scroll"
+    },
+    {
+      "name": "PortalEntityIsHurt",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portal_entity_is_hurt",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/joyg/procedures/PortalEntityIsHurtProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/items/portal scroll"
+    },
+    {
+      "name": "PortalRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portal_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/PortalRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/items/portal scroll"
+    },
+    {
+      "name": "PortalOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portal_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/PortalOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
           },
           {
             "name": "x",
@@ -1806,13 +1911,25 @@
       "type": "file",
       "scope": "global",
       "value": "new File(\"\")"
+    },
+    {
+      "name": "portal",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "portalTaken",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.joyg.dragon_leap": "Dragon Leap",
       "gui.joyg.lootbagslots.label_owner": "owner",
+      "item.joyg.dragon_leap": "Dragon Leap",
       "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
       "effect.joyg.thunder_call": "Thunder Call",
       "attribute.joyg.skill_effect_area": "Skill effect Area Multiplier",
@@ -1820,9 +1937,10 @@
       "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
       "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
       "effect.joyg.bleed": "Bleed",
-      "item.joyg.brass_blaster": "Brass Blaster",
       "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
+      "item.joyg.brass_blaster": "Brass Blaster",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
+      "entity.joyg.portal": "Portal",
       "config.joyg.joyg_cfg": "joyg_cfg",
       "effect.joyg.barbed_arrow": "Barbed Arrow",
       "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
@@ -1835,7 +1953,6 @@
       "affix.apotheosis:armor/attribute/longwinded.prefix": "Long winded",
       "death.attack.bleeding": "%1$s died from bleeding",
       "death.attack.bleeding.item": "%1$s was bled to death by %2$s using %3$s",
-      "block.joyg.portal": "Portal",
       "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
       "attribute.joyg.skill_cdr": "Skill Cooldown Reduction",
       "attribute.joyg.envenom": "Envenom"

@@ -29,7 +29,8 @@
     "specialInformation": {
       "fixedValue": [
         "Use to open a portal to your spawn point",
-        "Returning to the portal away from your spawn point will consume the portals"
+        "Using the portal at your spawn will teleport you to the portal created by the scroll and consume both portals",
+        "portals last 5 min."
       ]
     },
     "glowCondition": {
@@ -38,8 +39,8 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedOnBlock": {
-      "name": "PortalScrollRightclickedOnBlock"
+    "onRightClickedInAir": {
+      "name": "PortalScrollRightclicked"
     },
     "enableRanged": false,
     "shootConstantly": false,

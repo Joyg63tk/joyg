@@ -88,6 +88,8 @@ public class JoygModVariables {
 			clone.canLoot = original.canLoot;
 			clone.invited = original.invited;
 			clone.invFrom = original.invFrom;
+			clone.portal = original.portal;
+			clone.portalTaken = original.portalTaken;
 			if (!event.isWasDeath()) {
 				clone.dragonLeap = original.dragonLeap;
 			}
@@ -289,6 +291,8 @@ public class JoygModVariables {
 		public boolean canLoot = false;
 		public boolean invited = false;
 		public String invFrom = "\"\"";
+		public boolean portal = false;
+		public String portalTaken = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -310,6 +314,8 @@ public class JoygModVariables {
 			nbt.putBoolean("canLoot", canLoot);
 			nbt.putBoolean("invited", invited);
 			nbt.putString("invFrom", invFrom);
+			nbt.putBoolean("portal", portal);
+			nbt.putString("portalTaken", portalTaken);
 			return nbt;
 		}
 
@@ -328,6 +334,8 @@ public class JoygModVariables {
 			canLoot = nbt.getBoolean("canLoot");
 			invited = nbt.getBoolean("invited");
 			invFrom = nbt.getString("invFrom");
+			portal = nbt.getBoolean("portal");
+			portalTaken = nbt.getString("portalTaken");
 		}
 	}
 
@@ -365,6 +373,8 @@ public class JoygModVariables {
 					variables.canLoot = message.data.canLoot;
 					variables.invited = message.data.invited;
 					variables.invFrom = message.data.invFrom;
+					variables.portal = message.data.portal;
+					variables.portalTaken = message.data.portalTaken;
 				}
 			});
 			context.setPacketHandled(true);

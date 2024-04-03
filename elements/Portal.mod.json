@@ -1,135 +1,187 @@
 {
   "_fv": 57,
-  "_type": "block",
+  "_type": "livingentity",
   "definition": {
-    "texture": "portal",
-    "textureTop": "",
-    "textureLeft": "",
-    "textureFront": "",
-    "textureRight": "",
-    "textureBack": "",
-    "renderType": 2,
-    "customModelName": "portal_-_converted:default",
-    "rotationMode": 1,
-    "enablePitch": false,
-    "emissiveRendering": true,
-    "displayFluidOverlay": false,
-    "itemTexture": "",
-    "particleTexture": "",
-    "tintType": "No tint",
-    "isItemTinted": false,
-    "hasTransparency": true,
-    "connectedSides": false,
-    "transparencyType": "TRANSLUCENT",
-    "disableOffset": false,
-    "boundingBoxes": [
+    "mobName": "Portal",
+    "mobLabel": "",
+    "mobModelName": "Modelportal",
+    "mobModelTexture": "portal.png",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "modelLayers": [
       {
-        "mx": 0.0,
-        "my": 0.0,
-        "mz": 9.0,
-        "Mx": 16.0,
-        "My": 32.0,
-        "Mz": 9.0,
-        "subtract": false
+        "model": "Modelportal",
+        "texture": "portal.png",
+        "glow": true
       }
     ],
-    "name": "Portal",
-    "specialInformation": {
-      "fixedValue": []
+    "modelWidth": 0.6,
+    "modelHeight": 2.0,
+    "modelShadowSize": 0.5,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": false,
+    "spawnEggBaseColor": {
+      "value": -1,
+      "falpha": 0.0
     },
-    "hardness": 1.0,
-    "resistance": 10.0,
-    "hasGravity": false,
-    "isWaterloggable": false,
+    "spawnEggDotColor": {
+      "value": -1,
+      "falpha": 0.0
+    },
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "MISC"
     },
-    "destroyTool": "Not specified",
-    "customDrop": {
-      "value": "Blocks.AIR"
-    },
-    "dropAmount": 1,
-    "useLootTableForDrops": false,
-    "requiresCorrectTool": false,
-    "enchantPowerBonus": 0.0,
-    "plantsGrowOn": false,
-    "canRedstoneConnect": false,
-    "lightOpacity": 0,
-    "material": {
-      "value": "PORTAL"
-    },
-    "tickRate": 0,
-    "tickRandomly": true,
-    "isReplaceable": false,
-    "canProvidePower": false,
-    "emittedRedstonePower": {
-      "fixedValue": 15.0
-    },
-    "colorOnMap": "DEFAULT",
-    "creativePickItem": {
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
       "value": ""
     },
-    "offsetType": "NONE",
-    "aiPathNodeType": "DEFAULT",
-    "flammability": 0,
-    "fireSpreadSpeed": 0,
-    "isLadder": false,
-    "slipperiness": 0.6,
-    "speedFactor": 1.0,
-    "jumpFactor": 1.0,
-    "reactionToPushing": "IGNORE",
-    "isNotColidable": true,
-    "isCustomSoundType": false,
-    "soundOnStep": {
-      "value": "AMETHYST_BLOCK"
-    },
-    "breakSound": {
+    "equipmentOffHand": {
       "value": ""
     },
-    "fallSound": {
+    "equipmentHelmet": {
       "value": ""
     },
-    "hitSound": {
+    "equipmentBody": {
       "value": ""
     },
-    "placeSound": {
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Creature",
+    "mobCreatureType": "UNDEFINED",
+    "attackStrength": 0,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 1.0,
+    "movementSpeed": 0.0,
+    "stepHeight": 0.0,
+    "armorBaseValue": 0.0,
+    "trackingRange": 64,
+    "followRange": 16,
+    "health": 10,
+    "xpAmount": 0,
+    "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
+    "flyingMob": true,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 0,
+    "inventoryStackSize": 64,
+    "disableCollisions": true,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": true,
+    "immuneToArrows": true,
+    "immuneToFallDamage": true,
+    "immuneToCactus": true,
+    "immuneToDrowning": true,
+    "immuneToLightning": true,
+    "immuneToPotions": true,
+    "immuneToPlayer": true,
+    "immuneToExplosion": true,
+    "immuneToTrident": true,
+    "immuneToAnvil": true,
+    "immuneToWither": true,
+    "immuneToDragonBreath": true,
+    "mobDrop": {
+      "value": ""
+    },
+    "livingSound": {
+      "value": "block.portal.ambient"
+    },
+    "hurtSound": {
+      "value": ""
+    },
+    "deathSound": {
       "value": ""
     },
     "stepSound": {
       "value": ""
     },
-    "luminance": 15,
-    "unbreakable": true,
-    "breakHarvestLevel": 1,
-    "isBonemealable": false,
-    "hasInventory": true,
-    "guiBoundTo": "<NONE>",
-    "openGUIOnRightClick": false,
-    "inventorySize": 0,
-    "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": false,
-    "inventoryComparatorPower": false,
-    "inventoryOutSlotIDs": [],
-    "inventoryInSlotIDs": [],
-    "hasEnergyStorage": false,
-    "energyInitial": 0,
-    "energyCapacity": 400000,
-    "energyMaxReceive": 200,
-    "energyMaxExtract": 200,
-    "isFluidTank": false,
-    "fluidCapacity": 8000,
-    "fluidRestrictions": [],
-    "generateFeature": false,
-    "restrictionBiomes": [],
-    "blocksToReplace": [
+    "entityDataEntries": [
       {
-        "value": "TAG:stone_ore_replaceables"
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "x",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "y",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "z",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "name": "owner",
+        "type": "string",
+        "value": ""
+      },
+      {
+        "name": "home",
+        "type": "logic",
+        "value": false
       }
     ],
-    "generationShape": "UNIFORM",
-    "frequencyPerChunks": 10,
-    "frequencyOnChunk": 16,
-    "minGenerateHeight": 0,
-    "maxGenerateHeight": 64
+    "whenMobIsHurt": {
+      "name": "PortalEntityIsHurt"
+    },
+    "onRightClickedOn": {
+      "name": "PortalRightClickedOnEntity"
+    },
+    "onMobTickUpdate": {
+      "name": "PortalOnEntityTickUpdate"
+    },
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 20,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
+    "restrictionBiomes": [],
+    "spawnInDungeons": false
   }
 }
