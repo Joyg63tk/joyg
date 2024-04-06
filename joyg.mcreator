@@ -1783,6 +1783,123 @@
         ]
       },
       "path": "~/items/portal scroll"
+    },
+    {
+      "name": "WoodTotemToolInHandTick",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wood_totem_tool_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/WoodTotemToolInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "WoodTotem",
+      "type": "tool",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wood_totem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/WoodTotemItem.java",
+          "src/main/resources/assets/joyg/models/item/wood_totem.json"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "StoneTotemToolInHandTick",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_totem_tool_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/StoneTotemToolInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "StoneTotem",
+      "type": "tool",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_totem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/StoneTotemItem.java",
+          "src/main/resources/assets/joyg/models/item/stone_totem.json"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "IronTotemToolInHandTick",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_totem_tool_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/IronTotemToolInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "IronTotem",
+      "type": "tool",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_totem",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/iron_totem.json",
+          "src/main/java/net/joyg/item/IronTotemItem.java"
+        ]
+      },
+      "path": "~/items/totems"
     }
   ],
   "variable_elements": [
@@ -1928,22 +2045,25 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "gui.joyg.lootbagslots.label_owner": "owner",
       "item.joyg.dragon_leap": "Dragon Leap",
+      "gui.joyg.lootbagslots.label_owner": "owner",
       "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
       "effect.joyg.thunder_call": "Thunder Call",
+      "item.joyg.wood_totem": "Wood Totem",
       "attribute.joyg.skill_effect_area": "Skill effect Area Multiplier",
       "item.joyg.portal_scroll": "Portal Scroll",
       "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
       "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
       "effect.joyg.bleed": "Bleed",
-      "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
       "item.joyg.brass_blaster": "Brass Blaster",
+      "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
       "entity.joyg.portal": "Portal",
+      "item.joyg.stone_totem": "Stone Totem",
       "config.joyg.joyg_cfg": "joyg_cfg",
       "effect.joyg.barbed_arrow": "Barbed Arrow",
       "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
+      "item.joyg.iron_totem": "Iron Totem",
       "entity.joyg.lootbag_e": "Loot bag",
       "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
       "attribute.joyg.skill_cdr.desc": "Reduces the Cooldown of your Martial Skills with diminishing returns",
@@ -2037,6 +2157,10 @@
           },
           {
             "name": "portal scroll",
+            "children": []
+          },
+          {
+            "name": "totems",
             "children": []
           }
         ]

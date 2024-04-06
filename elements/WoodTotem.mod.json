@@ -1,0 +1,43 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "wood",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Wood Totem",
+    "specialInformation": {
+      "fixedValue": [
+        "Grants Absorption 1 for 20s every 20s",
+        "Recover 10 mana when you take damage"
+      ]
+    },
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 0.8,
+    "enchantability": 2,
+    "damageVsEntity": 4.0,
+    "usageCount": 100,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "Blocks.LOG"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInUseTick": {
+      "name": "WoodTotemToolInHandTick"
+    }
+  }
+}
