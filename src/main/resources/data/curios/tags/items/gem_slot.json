@@ -1,0 +1,8 @@
+{
+  "replace": "false",
+  "values": [
+    "minecraft:air",
+    "joyg:gem_regen",
+    "joyg:gem_strenght"
+  ]
+}

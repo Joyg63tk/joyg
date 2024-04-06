@@ -15,6 +15,8 @@ import net.joyg.item.StoneTotemItem;
 import net.joyg.item.PortalScrollItem;
 import net.joyg.item.KarmadameItem;
 import net.joyg.item.IronTotemItem;
+import net.joyg.item.GemStrenghtItem;
+import net.joyg.item.GemRegenItem;
 import net.joyg.item.DragonLeapItem;
 import net.joyg.item.BrassBlasterItem;
 import net.joyg.JoygMod;
@@ -28,4 +30,6 @@ public class JoygModItems {
 	public static final RegistryObject<Item> WOOD_TOTEM = REGISTRY.register("wood_totem", () -> new WoodTotemItem());
 	public static final RegistryObject<Item> STONE_TOTEM = REGISTRY.register("stone_totem", () -> new StoneTotemItem());
 	public static final RegistryObject<Item> IRON_TOTEM = REGISTRY.register("iron_totem", () -> new IronTotemItem());
+	public static final RegistryObject<Item> GEM_REGEN = REGISTRY.register("gem_regen", () -> new GemRegenItem());
+	public static final RegistryObject<Item> GEM_STRENGHT = REGISTRY.register("gem_strenght", () -> new GemStrenghtItem());
 }

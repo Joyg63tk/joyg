@@ -32,6 +32,8 @@ public class JoygModTabs {
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(JoygModItems.KARMADAME.get());
 			tabData.accept(JoygModItems.PORTAL_SCROLL.get());
+			tabData.accept(JoygModItems.GEM_REGEN.get());
+			tabData.accept(JoygModItems.GEM_STRENGHT.get());
 		}
 	}
 }

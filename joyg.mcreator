@@ -1900,6 +1900,121 @@
         ]
       },
       "path": "~/items/totems"
+    },
+    {
+      "name": "GemSlot",
+      "type": "curiosslot",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gem_slot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/curios/tags/items/gem_slot.json"
+        ]
+      }
+    },
+    {
+      "name": "GemRegenWhileBaubleIsEquippedTick",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gem_regen_while_bauble_is_equipped_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/GemRegenWhileBaubleIsEquippedTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/items/Gems"
+    },
+    {
+      "name": "GemRegen",
+      "type": "curiosbauble",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gem_regen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/GemRegenItem.java",
+          "src/main/resources/assets/joyg/models/item/gem_regen.json"
+        ]
+      },
+      "path": "~/items/Gems"
+    },
+    {
+      "name": "GemStrenghtWhileBaubleIsEquippedTick",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gem_strenght_while_bauble_is_equipped_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/GemStrenghtWhileBaubleIsEquippedTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/items/Gems"
+    },
+    {
+      "name": "GemStrenght",
+      "type": "curiosbauble",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gem_strenght",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/gem_strenght.json",
+          "src/main/java/net/joyg/item/GemStrenghtItem.java"
+        ]
+      },
+      "path": "~/items/Gems"
     }
   ],
   "variable_elements": [
@@ -2045,14 +2160,15 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.joyg.dragon_leap": "Dragon Leap",
       "gui.joyg.lootbagslots.label_owner": "owner",
+      "item.joyg.dragon_leap": "Dragon Leap",
       "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
       "effect.joyg.thunder_call": "Thunder Call",
       "item.joyg.wood_totem": "Wood Totem",
       "attribute.joyg.skill_effect_area": "Skill effect Area Multiplier",
       "item.joyg.portal_scroll": "Portal Scroll",
       "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
+      "item.joyg.gem_strenght": "Aura Gem of Strengh",
       "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
       "effect.joyg.bleed": "Bleed",
       "item.joyg.brass_blaster": "Brass Blaster",
@@ -2073,8 +2189,10 @@
       "affix.apotheosis:armor/attribute/longwinded.prefix": "Long winded",
       "death.attack.bleeding": "%1$s died from bleeding",
       "death.attack.bleeding.item": "%1$s was bled to death by %2$s using %3$s",
+      "item.joyg.gem_regen": "Aura Gem of Regeneration",
       "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
       "attribute.joyg.skill_cdr": "Skill Cooldown Reduction",
+      "curios.identifier.gem_slot": "Gem Slot",
       "attribute.joyg.envenom": "Envenom"
     }
   },
@@ -2161,6 +2279,10 @@
           },
           {
             "name": "totems",
+            "children": []
+          },
+          {
+            "name": "Gems",
             "children": []
           }
         ]
