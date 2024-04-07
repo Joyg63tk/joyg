@@ -24,9 +24,14 @@ public class JoygModTabs {
 
 		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(JoygModItems.BRASS_BLASTER.get());
-			tabData.accept(JoygModItems.WOOD_TOTEM.get());
-			tabData.accept(JoygModItems.STONE_TOTEM.get());
-			tabData.accept(JoygModItems.IRON_TOTEM.get());
+			tabData.accept(JoygModItems.TOTEM_WOOD.get());
+			tabData.accept(JoygModItems.TOTEM_STONE.get());
+			tabData.accept(JoygModItems.TOTEM_IRON.get());
+			tabData.accept(JoygModItems.TOTEM_GOLD.get());
+			tabData.accept(JoygModItems.TOTEM_DIAMOND.get());
+			tabData.accept(JoygModItems.TOTEM_NETHERITE.get());
+			tabData.accept(JoygModItems.TOTEM_SUNKING.get());
+			tabData.accept(JoygModItems.TOTEM_FROSTSHAMAN.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

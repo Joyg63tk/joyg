@@ -1785,123 +1785,6 @@
       "path": "~/items/portal scroll"
     },
     {
-      "name": "WoodTotemToolInHandTick",
-      "type": "procedure",
-      "sortid": 97,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_totem_tool_in_hand_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/WoodTotemToolInHandTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/items/totems"
-    },
-    {
-      "name": "WoodTotem",
-      "type": "tool",
-      "sortid": 98,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wood_totem",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/item/WoodTotemItem.java",
-          "src/main/resources/assets/joyg/models/item/wood_totem.json"
-        ]
-      },
-      "path": "~/items/totems"
-    },
-    {
-      "name": "StoneTotemToolInHandTick",
-      "type": "procedure",
-      "sortid": 99,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stone_totem_tool_in_hand_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/StoneTotemToolInHandTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/items/totems"
-    },
-    {
-      "name": "StoneTotem",
-      "type": "tool",
-      "sortid": 100,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stone_totem",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/item/StoneTotemItem.java",
-          "src/main/resources/assets/joyg/models/item/stone_totem.json"
-        ]
-      },
-      "path": "~/items/totems"
-    },
-    {
-      "name": "IronTotemToolInHandTick",
-      "type": "procedure",
-      "sortid": 101,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "iron_totem_tool_in_hand_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/IronTotemToolInHandTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/items/totems"
-    },
-    {
-      "name": "IronTotem",
-      "type": "tool",
-      "sortid": 102,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "iron_totem",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/joyg/models/item/iron_totem.json",
-          "src/main/java/net/joyg/item/IronTotemItem.java"
-        ]
-      },
-      "path": "~/items/totems"
-    },
-    {
       "name": "GemSlot",
       "type": "curiosslot",
       "sortid": 103,
@@ -2015,6 +1898,146 @@
         ]
       },
       "path": "~/items/Gems"
+    },
+    {
+      "name": "TotemWood",
+      "type": "item",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_wood",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/totem_wood.json",
+          "src/main/java/net/joyg/item/TotemWoodItem.java"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "TotemStone",
+      "type": "item",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/TotemStoneItem.java",
+          "src/main/resources/assets/joyg/models/item/totem_stone.json"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "TotemIron",
+      "type": "item",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_iron",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/TotemIronItem.java",
+          "src/main/resources/assets/joyg/models/item/totem_iron.json"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "TotemGold",
+      "type": "item",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_gold",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/totem_gold.json",
+          "src/main/java/net/joyg/item/TotemGoldItem.java"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "TotemDiamond",
+      "type": "item",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_diamond",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/TotemDiamondItem.java",
+          "src/main/resources/assets/joyg/models/item/totem_diamond.json"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "TotemNetherite",
+      "type": "item",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_netherite",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/totem_netherite.json",
+          "src/main/java/net/joyg/item/TotemNetheriteItem.java"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "TotemSunking",
+      "type": "item",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_sunking",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/totem_sunking.json",
+          "src/main/java/net/joyg/item/TotemSunkingItem.java"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "TotemFrostshaman",
+      "type": "item",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_frostshaman",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/TotemFrostshamanItem.java",
+          "src/main/resources/assets/joyg/models/item/totem_frostshaman.json"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "TotemManaOnHit",
+      "type": "procedure",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_mana_on_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/TotemManaOnHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/items/totems"
     }
   ],
   "variable_elements": [
@@ -2160,11 +2183,12 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "gui.joyg.lootbagslots.label_owner": "owner",
       "item.joyg.dragon_leap": "Dragon Leap",
+      "gui.joyg.lootbagslots.label_owner": "owner",
       "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
+      "item.joyg.totem_netherite": "Totem Netherite",
       "effect.joyg.thunder_call": "Thunder Call",
-      "item.joyg.wood_totem": "Wood Totem",
+      "item.joyg.totem_iron": "Iron Totem",
       "attribute.joyg.skill_effect_area": "Skill effect Area Multiplier",
       "item.joyg.portal_scroll": "Portal Scroll",
       "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
@@ -2173,15 +2197,16 @@
       "effect.joyg.bleed": "Bleed",
       "item.joyg.brass_blaster": "Brass Blaster",
       "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
+      "item.joyg.totem_gold": "Gold Totem",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
       "entity.joyg.portal": "Portal",
-      "item.joyg.stone_totem": "Stone Totem",
+      "item.joyg.totem_frostshaman": "Frost Shaman\u0027s Idol",
       "config.joyg.joyg_cfg": "joyg_cfg",
       "effect.joyg.barbed_arrow": "Barbed Arrow",
       "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
-      "item.joyg.iron_totem": "Iron Totem",
       "entity.joyg.lootbag_e": "Loot bag",
       "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
+      "item.joyg.totem_stone": "Stone Totem",
       "attribute.joyg.skill_cdr.desc": "Reduces the Cooldown of your Martial Skills with diminishing returns",
       "item.joyg.karmadame": "Karmadame",
       "attribute.joyg.mana_gained_on_hit.desc": "Increases mana gained by 5% of max mana, when Instant Mana on hit procs",
@@ -2193,7 +2218,10 @@
       "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
       "attribute.joyg.skill_cdr": "Skill Cooldown Reduction",
       "curios.identifier.gem_slot": "Gem Slot",
-      "attribute.joyg.envenom": "Envenom"
+      "item.joyg.totem_sunking": "Totem Sunking",
+      "item.joyg.totem_diamond": "Diamond Totem",
+      "attribute.joyg.envenom": "Envenom",
+      "item.joyg.totem_wood": "Wood Totem"
     }
   },
   "foldersRoot": {
