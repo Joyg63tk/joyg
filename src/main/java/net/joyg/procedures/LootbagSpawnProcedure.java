@@ -14,6 +14,7 @@ import net.minecraft.core.BlockPos;
 
 import net.joyg.init.JoygModEntities;
 import net.joyg.entity.LootbagEEntity;
+import net.joyg.configuration.JoygCfgConfiguration;
 import net.joyg.JoygMod;
 
 import javax.annotation.Nullable;
@@ -38,19 +39,21 @@ public class LootbagSpawnProcedure {
 		double sx = 0;
 		double sy = 0;
 		double sz = 0;
-		JoygMod.queueServerWork(5, () -> {
-			if (world instanceof ServerLevel _serverLevel) {
-				Entity entitytospawn = JoygModEntities.LOOTBAG_E.get().spawn(_serverLevel, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-				if (entitytospawn != null) {
-					entitytospawn.setYRot(world.getRandom().nextFloat() * 360.0F);
-				}
-				if ((entitytospawn) instanceof LootbagEEntity _datEntSetS)
-					_datEntSetS.getEntityData().set(LootbagEEntity.DATA_owner, (sourceentity.getStringUUID()));
-				if (sourceentity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) {
+		if (JoygCfgConfiguration.ENABLE_LOOT.get() == true) {
+			JoygMod.queueServerWork(5, () -> {
+				if (world instanceof ServerLevel _serverLevel) {
+					Entity entitytospawn = JoygModEntities.LOOTBAG_E.get().spawn(_serverLevel, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entitytospawn != null) {
+						entitytospawn.setYRot(world.getRandom().nextFloat() * 360.0F);
+					}
 					if ((entitytospawn) instanceof LootbagEEntity _datEntSetS)
-						_datEntSetS.getEntityData().set(LootbagEEntity.DATA_owner, ((sourceentity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getStringUUID()));
+						_datEntSetS.getEntityData().set(LootbagEEntity.DATA_owner, (sourceentity.getStringUUID()));
+					if (sourceentity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) {
+						if ((entitytospawn) instanceof LootbagEEntity _datEntSetS)
+							_datEntSetS.getEntityData().set(LootbagEEntity.DATA_owner, ((sourceentity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getStringUUID()));
+					}
 				}
-			}
-		});
+			});
+		}
 	}
 }

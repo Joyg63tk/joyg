@@ -35,8 +35,7 @@ public class LootbagERightClickedOnEntityProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (entity instanceof LootbagEEntity) {
-			if (((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).team)
-					.contains(entity instanceof LootbagEEntity _datEntS ? _datEntS.getEntityData().get(LootbagEEntity.DATA_owner) : "")) {
+			if ((entity instanceof LootbagEEntity _datEntS ? _datEntS.getEntityData().get(LootbagEEntity.DATA_owner) : "").contains(sourceentity.getStringUUID())) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.bundle.insert")), SoundSource.NEUTRAL, 1, 1);

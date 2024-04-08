@@ -264,6 +264,47 @@
             "entityType": "EntityAgeable"
           }
         ]
+      },
+      {
+        "category": "Loot alocation",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "whether loot alocation is enabled, True will store loot from killed enemies so only the person who landed the killing blow can loot it until the loot bag despawns and releases the items",
+            "vardisplay": "enable loot",
+            "varname": "enable_loot",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:LootbagE"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 400.0,
+            "textDefault": "",
+            "comment": "amount of ticks loot is protected before the loot bag despawns and items drop to the ground",
+            "vardisplay": "alocation ticks",
+            "varname": "loot_time",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:LootbagE"
+          }
+        ]
       }
     ],
     "file": "joyg_cfg",

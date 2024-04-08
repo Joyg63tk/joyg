@@ -37,14 +37,14 @@ public class TomeAttributeProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s additional_attributes:spell_general modifier remove 4ecd1718-e741-11ee-b88e-325096b39f47");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s irons_spellbooks:spell_power modifier remove 4ecd1718-e741-11ee-b88e-325096b39f47");
 					}
 				}
 				{
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s additional_attributes:spell_general modifier add 4ecd1718-e741-11ee-b88e-325096b39f47 tome 1 add");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s irons_spellbooks:spell_power modifier add 4ecd1718-e741-11ee-b88e-325096b39f47 tome 0.1 multiply_base");
 					}
 				}
 			} else if ((ForgeRegistries.ITEMS.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem()).toString()).contains("iron")) {
@@ -52,14 +52,14 @@ public class TomeAttributeProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s additional_attributes:spell_general modifier remove 4ecd1718-e741-11ee-b88e-325096b39f47");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s irons_spellbooks:spell_power modifier remove 4ecd1718-e741-11ee-b88e-325096b39f47");
 					}
 				}
 				{
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s additional_attributes:spell_general modifier add 4ecd1718-e741-11ee-b88e-325096b39f47 tome 2 add");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s irons_spellbooks:spell_power modifier add 4ecd1718-e741-11ee-b88e-325096b39f47 tome 0.2 multiply_base");
 					}
 				}
 			} else if ((ForgeRegistries.ITEMS.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem()).toString()).contains("gold")) {
@@ -67,14 +67,14 @@ public class TomeAttributeProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s additional_attributes:spell_general modifier remove 4ecd1718-e741-11ee-b88e-325096b39f47");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s irons_spellbooks:spell_power modifier remove 4ecd1718-e741-11ee-b88e-325096b39f47");
 					}
 				}
 				{
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s additional_attributes:spell_general modifier add 4ecd1718-e741-11ee-b88e-325096b39f47 tome 3 add");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s irons_spellbooks:spell_power modifier add 4ecd1718-e741-11ee-b88e-325096b39f47 tome 0.3 multiply_base");
 					}
 				}
 			} else if ((ForgeRegistries.ITEMS.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem()).toString()).contains("diamond")) {
@@ -82,14 +82,14 @@ public class TomeAttributeProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s additional_attributes:spell_general modifier remove 4ecd1718-e741-11ee-b88e-325096b39f47");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s irons_spellbooks:spell_power modifier remove 4ecd1718-e741-11ee-b88e-325096b39f47");
 					}
 				}
 				{
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s additional_attributes:spell_general modifier add 4ecd1718-e741-11ee-b88e-325096b39f47 tome 4 add");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s irons_spellbooks:spell_power modifier add 4ecd1718-e741-11ee-b88e-325096b39f47 tome 0.4 multiply_base");
 					}
 				}
 			} else if ((ForgeRegistries.ITEMS.getKey((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem()).toString()).contains("netherite")) {
@@ -97,14 +97,14 @@ public class TomeAttributeProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s additional_attributes:spell_general modifier remove 4ecd1718-e741-11ee-b88e-325096b39f47");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s irons_spellbooks:spell_power modifier remove 4ecd1718-e741-11ee-b88e-325096b39f47");
 					}
 				}
 				{
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s additional_attributes:spell_general modifier add 4ecd1718-e741-11ee-b88e-325096b39f47 tome 5 add");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s irons_spellbooks:spell_power modifier add 4ecd1718-e741-11ee-b88e-325096b39f47 tome 0.5 multiply_base");
 					}
 				}
 			}
@@ -113,7 +113,7 @@ public class TomeAttributeProcedure {
 				Entity _ent = entity;
 				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s additional_attributes:spell_general modifier remove 4ecd1718-e741-11ee-b88e-325096b39f47");
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @s irons_spellbooks:spell_power modifier remove 4ecd1718-e741-11ee-b88e-325096b39f47");
 				}
 			}
 		}

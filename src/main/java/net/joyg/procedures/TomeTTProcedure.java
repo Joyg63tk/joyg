@@ -1,5 +1,6 @@
 package net.joyg.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -32,8 +33,21 @@ public class TomeTTProcedure {
 		if (tooltip == null)
 			return;
 		if (itemstack.is(ItemTags.create(new ResourceLocation("joyg:tomes")))) {
-			tooltip.add(Component.literal("Increases the lvl of all Spells while equiped in the Offhand"));
-			tooltip.add(Component.literal("Spell lvl increases with Item Tier"));
+			if ((ForgeRegistries.ITEMS.getKey(itemstack.getItem()).toString()).contains("leather")) {
+				tooltip.add(Component.literal("10% increased Spell Damage while equipped in the Offhand"));
+			}
+			if ((ForgeRegistries.ITEMS.getKey(itemstack.getItem()).toString()).contains("iron")) {
+				tooltip.add(Component.literal("20% increased Spell Damage while equipped in the Offhand"));
+			}
+			if ((ForgeRegistries.ITEMS.getKey(itemstack.getItem()).toString()).contains("gold")) {
+				tooltip.add(Component.literal("30% increased Spell Damage while equipped in the Offhand"));
+			}
+			if ((ForgeRegistries.ITEMS.getKey(itemstack.getItem()).toString()).contains("diamond")) {
+				tooltip.add(Component.literal("40% increased Spell Damage while equipped in the Offhand"));
+			}
+			if ((ForgeRegistries.ITEMS.getKey(itemstack.getItem()).toString()).contains("netherite")) {
+				tooltip.add(Component.literal("50% increased Spell Damage while equipped in the Offhand"));
+			}
 			tooltip.add(Component.literal("Melee Damage converted to Magic while weilding a Mace in your Mainhand"));
 		}
 	}

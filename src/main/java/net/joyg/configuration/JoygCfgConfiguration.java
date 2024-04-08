@@ -19,6 +19,8 @@ public class JoygCfgConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> LOOTING;
 	public static final ForgeConfigSpec.ConfigValue<Double> FORTUNE;
 	public static final ForgeConfigSpec.ConfigValue<Double> LUCK;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_LOOT;
+	public static final ForgeConfigSpec.ConfigValue<Double> LOOT_TIME;
 	static {
 		BUILDER.push("karma");
 		KARMAXP = BUILDER.comment("amount of xp required for the base karma lvl, the amount required increases by 50% of the base each karma lvl. Default value: 1000").define("karma xp", (double) 1000);
@@ -42,6 +44,11 @@ public class JoygCfgConfiguration {
 		LOOTING = BUILDER.comment("number of karma levels required to grant an additional lvl of Looting, Default value: 5").define("karma lvl for each Looting lvl", (double) 5);
 		FORTUNE = BUILDER.comment("number of karma levels required to grant an additional lvl of Fortune, Default value: 3").define("karma lvl for each Fortune lvl", (double) 3);
 		LUCK = BUILDER.comment("number of karma levels required to grant an additional lvl of Luck, Default value: 1").define("karma lvl for each Luck lvl", (double) 1);
+		BUILDER.pop();
+		BUILDER.push("Loot alocation");
+		ENABLE_LOOT = BUILDER.comment("whether loot alocation is enabled, True will store loot from killed enemies so only the person who landed the killing blow can loot it until the loot bag despawns and releases the items").define("enable loot",
+				true);
+		LOOT_TIME = BUILDER.comment("amount of ticks loot is protected before the loot bag despawns and items drop to the ground").define("alocation ticks", (double) 400);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

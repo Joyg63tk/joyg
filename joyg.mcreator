@@ -2038,6 +2038,86 @@
         ]
       },
       "path": "~/items/totems"
+    },
+    {
+      "name": "AmethystFocusIron",
+      "type": "item",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_focus_iron",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/AmethystFocusIronItem.java",
+          "src/main/resources/assets/joyg/models/item/amethyst_focus_iron.json"
+        ]
+      },
+      "path": "~/items/amethyst focus"
+    },
+    {
+      "name": "AmethystFocusGold",
+      "type": "item",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_focus_gold",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/amethyst_focus_gold.json",
+          "src/main/java/net/joyg/item/AmethystFocusGoldItem.java"
+        ]
+      },
+      "path": "~/items/amethyst focus"
+    },
+    {
+      "name": "AmethystFocusDiamond",
+      "type": "item",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_focus_diamond",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/AmethystFocusDiamondItem.java",
+          "src/main/resources/assets/joyg/models/item/amethyst_focus_diamond.json"
+        ]
+      },
+      "path": "~/items/amethyst focus"
+    },
+    {
+      "name": "AmethystFocusNetherite",
+      "type": "item",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_focus_netherite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/AmethystFocusNetheriteItem.java",
+          "src/main/resources/assets/joyg/models/item/amethyst_focus_netherite.json"
+        ]
+      },
+      "path": "~/items/amethyst focus"
+    },
+    {
+      "name": "FocusAttribute",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "focus_attribute",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/FocusAttributeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/items/amethyst focus"
     }
   ],
   "variable_elements": [
@@ -2183,9 +2263,10 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.joyg.dragon_leap": "Dragon Leap",
       "gui.joyg.lootbagslots.label_owner": "owner",
+      "item.joyg.dragon_leap": "Dragon Leap",
       "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
+      "item.joyg.amethyst_focus_netherite": "Netherite Amethyst Focus",
       "item.joyg.totem_netherite": "Totem Netherite",
       "effect.joyg.thunder_call": "Thunder Call",
       "item.joyg.totem_iron": "Iron Totem",
@@ -2201,15 +2282,18 @@
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
       "entity.joyg.portal": "Portal",
       "item.joyg.totem_frostshaman": "Frost Shaman\u0027s Idol",
+      "item.joyg.amethyst_focus_diamond": "Diamond Amethyst Focus",
       "config.joyg.joyg_cfg": "joyg_cfg",
       "effect.joyg.barbed_arrow": "Barbed Arrow",
       "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
       "entity.joyg.lootbag_e": "Loot bag",
       "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
+      "item.joyg.amethyst_focus_iron": "Iron Amethyst Focus",
       "item.joyg.totem_stone": "Stone Totem",
       "attribute.joyg.skill_cdr.desc": "Reduces the Cooldown of your Martial Skills with diminishing returns",
       "item.joyg.karmadame": "Karmadame",
       "attribute.joyg.mana_gained_on_hit.desc": "Increases mana gained by 5% of max mana, when Instant Mana on hit procs",
+      "item.joyg.amethyst_focus_gold": "Gold Amethyst Focus",
       "attribute.joyg.maim": "Maim Chance",
       "affix.apotheosis:armor/attribute/longwinded.prefix": "Long winded",
       "death.attack.bleeding": "%1$s died from bleeding",
@@ -2311,6 +2395,10 @@
           },
           {
             "name": "Gems",
+            "children": []
+          },
+          {
+            "name": "amethyst focus",
             "children": []
           }
         ]

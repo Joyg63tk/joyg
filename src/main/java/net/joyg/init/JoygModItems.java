@@ -24,6 +24,10 @@ import net.joyg.item.GemStrenghtItem;
 import net.joyg.item.GemRegenItem;
 import net.joyg.item.DragonLeapItem;
 import net.joyg.item.BrassBlasterItem;
+import net.joyg.item.AmethystFocusNetheriteItem;
+import net.joyg.item.AmethystFocusIronItem;
+import net.joyg.item.AmethystFocusGoldItem;
+import net.joyg.item.AmethystFocusDiamondItem;
 import net.joyg.JoygMod;
 
 public class JoygModItems {
@@ -42,4 +46,8 @@ public class JoygModItems {
 	public static final RegistryObject<Item> TOTEM_NETHERITE = REGISTRY.register("totem_netherite", () -> new TotemNetheriteItem());
 	public static final RegistryObject<Item> TOTEM_SUNKING = REGISTRY.register("totem_sunking", () -> new TotemSunkingItem());
 	public static final RegistryObject<Item> TOTEM_FROSTSHAMAN = REGISTRY.register("totem_frostshaman", () -> new TotemFrostshamanItem());
+	public static final RegistryObject<Item> AMETHYST_FOCUS_IRON = REGISTRY.register("amethyst_focus_iron", () -> new AmethystFocusIronItem());
+	public static final RegistryObject<Item> AMETHYST_FOCUS_GOLD = REGISTRY.register("amethyst_focus_gold", () -> new AmethystFocusGoldItem());
+	public static final RegistryObject<Item> AMETHYST_FOCUS_DIAMOND = REGISTRY.register("amethyst_focus_diamond", () -> new AmethystFocusDiamondItem());
+	public static final RegistryObject<Item> AMETHYST_FOCUS_NETHERITE = REGISTRY.register("amethyst_focus_netherite", () -> new AmethystFocusNetheriteItem());
 }

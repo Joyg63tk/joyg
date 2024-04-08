@@ -10,6 +10,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.core.BlockPos;
 
 import net.joyg.entity.LootbagEEntity;
+import net.joyg.configuration.JoygCfgConfiguration;
 
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -104,7 +105,7 @@ public class LootbagEOnEntityTickUpdateProcedure {
 		}
 		if (entity instanceof LootbagEEntity _datEntSetI)
 			_datEntSetI.getEntityData().set(LootbagEEntity.DATA_age, (int) ((entity instanceof LootbagEEntity _datEntI ? _datEntI.getEntityData().get(LootbagEEntity.DATA_age) : 0) + 1));
-		if ((entity instanceof LootbagEEntity _datEntI ? _datEntI.getEntityData().get(LootbagEEntity.DATA_age) : 0) >= 6000) {
+		if ((entity instanceof LootbagEEntity _datEntI ? _datEntI.getEntityData().get(LootbagEEntity.DATA_age) : 0) >= (double) JoygCfgConfiguration.LOOT_TIME.get()) {
 			if (!entity.level().isClientSide())
 				entity.discard();
 		}

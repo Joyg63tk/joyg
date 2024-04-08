@@ -40,7 +40,7 @@ public class TotemManaOnHitProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana @p add 20");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana add @p 20");
 					}
 				}
 			}
@@ -49,7 +49,7 @@ public class TotemManaOnHitProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana @p add 25");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana add @p 25");
 					}
 				}
 			}
@@ -58,7 +58,7 @@ public class TotemManaOnHitProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana @p add 30");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana add @p 30");
 					}
 				}
 			}
@@ -67,7 +67,7 @@ public class TotemManaOnHitProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana @p add 35");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana add @p 35");
 					}
 				}
 			}
@@ -76,7 +76,7 @@ public class TotemManaOnHitProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana @p add 40");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana add @p 40");
 					}
 				}
 			}
@@ -85,7 +85,7 @@ public class TotemManaOnHitProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana @p add 45");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana add @p 45");
 					}
 				}
 			}
@@ -94,7 +94,7 @@ public class TotemManaOnHitProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana @p add 50");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana add @p 50");
 					}
 				}
 			}
@@ -103,7 +103,7 @@ public class TotemManaOnHitProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana @p add 50");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana add @p 50");
 					}
 				}
 			}

@@ -32,6 +32,10 @@ public class JoygModTabs {
 			tabData.accept(JoygModItems.TOTEM_NETHERITE.get());
 			tabData.accept(JoygModItems.TOTEM_SUNKING.get());
 			tabData.accept(JoygModItems.TOTEM_FROSTSHAMAN.get());
+			tabData.accept(JoygModItems.AMETHYST_FOCUS_IRON.get());
+			tabData.accept(JoygModItems.AMETHYST_FOCUS_GOLD.get());
+			tabData.accept(JoygModItems.AMETHYST_FOCUS_DIAMOND.get());
+			tabData.accept(JoygModItems.AMETHYST_FOCUS_NETHERITE.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
