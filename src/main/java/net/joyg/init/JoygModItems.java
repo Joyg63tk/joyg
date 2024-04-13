@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.item.Item;
 
+import net.joyg.item.WandWoodItem;
 import net.joyg.item.TotemWoodItem;
 import net.joyg.item.TotemSunkingItem;
 import net.joyg.item.TotemStoneItem;
@@ -50,4 +51,5 @@ public class JoygModItems {
 	public static final RegistryObject<Item> AMETHYST_FOCUS_GOLD = REGISTRY.register("amethyst_focus_gold", () -> new AmethystFocusGoldItem());
 	public static final RegistryObject<Item> AMETHYST_FOCUS_DIAMOND = REGISTRY.register("amethyst_focus_diamond", () -> new AmethystFocusDiamondItem());
 	public static final RegistryObject<Item> AMETHYST_FOCUS_NETHERITE = REGISTRY.register("amethyst_focus_netherite", () -> new AmethystFocusNetheriteItem());
+	public static final RegistryObject<Item> WAND_WOOD = REGISTRY.register("wand_wood", () -> new WandWoodItem());
 }

@@ -1,0 +1,20 @@
+{
+  "_fv": 57,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Clarity",
+    "icon": "icon38.png",
+    "color": {
+      "value": -16750900,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "activeTickCondition": {
+      "name": "ClarityActiveTickCondition"
+    }
+  }
+}

@@ -2118,6 +2118,80 @@
         ]
       },
       "path": "~/items/amethyst focus"
+    },
+    {
+      "name": "ClarityActiveTickCondition",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clarity_active_tick_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/joyg/procedures/ClarityActiveTickConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "duration",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/effects/clarity"
+    },
+    {
+      "name": "Clarity",
+      "type": "potioneffect",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clarity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/ClarityMobEffect.java"
+        ]
+      },
+      "path": "~/effects/clarity"
+    },
+    {
+      "name": "WandWoodRightclicked",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand_wood_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/WandWoodRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "WandWood",
+      "type": "item",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand_wood",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/wand_wood.json",
+          "src/main/java/net/joyg/item/WandWoodItem.java"
+        ]
+      },
+      "path": "~/items/wands"
     }
   ],
   "variable_elements": [
@@ -2263,10 +2337,10 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "gui.joyg.lootbagslots.label_owner": "owner",
       "item.joyg.dragon_leap": "Dragon Leap",
-      "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
+      "gui.joyg.lootbagslots.label_owner": "owner",
       "item.joyg.amethyst_focus_netherite": "Netherite Amethyst Focus",
+      "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
       "item.joyg.totem_netherite": "Totem Netherite",
       "effect.joyg.thunder_call": "Thunder Call",
       "item.joyg.totem_iron": "Iron Totem",
@@ -2291,7 +2365,9 @@
       "item.joyg.amethyst_focus_iron": "Iron Amethyst Focus",
       "item.joyg.totem_stone": "Stone Totem",
       "attribute.joyg.skill_cdr.desc": "Reduces the Cooldown of your Martial Skills with diminishing returns",
+      "item.joyg.wand_wood": "Wooden Wand",
       "item.joyg.karmadame": "Karmadame",
+      "effect.joyg.clarity": "Clarity",
       "attribute.joyg.mana_gained_on_hit.desc": "Increases mana gained by 5% of max mana, when Instant Mana on hit procs",
       "item.joyg.amethyst_focus_gold": "Gold Amethyst Focus",
       "attribute.joyg.maim": "Maim Chance",
@@ -2324,6 +2400,10 @@
           },
           {
             "name": "thunder charge",
+            "children": []
+          },
+          {
+            "name": "clarity",
             "children": []
           }
         ]
@@ -2399,6 +2479,10 @@
           },
           {
             "name": "amethyst focus",
+            "children": []
+          },
+          {
+            "name": "wands",
             "children": []
           }
         ]
