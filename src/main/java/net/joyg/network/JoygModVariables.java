@@ -90,6 +90,11 @@ public class JoygModVariables {
 			clone.invFrom = original.invFrom;
 			clone.portal = original.portal;
 			clone.portalTaken = original.portalTaken;
+			clone.arcaneFamiliar = original.arcaneFamiliar;
+			clone.arcanKnowledge = original.arcanKnowledge;
+			clone.idolatry = original.idolatry;
+			clone.fanaticism = original.fanaticism;
+			clone.totemcount = original.totemcount;
 			if (!event.isWasDeath()) {
 				clone.dragonLeap = original.dragonLeap;
 			}
@@ -293,6 +298,11 @@ public class JoygModVariables {
 		public String invFrom = "\"\"";
 		public boolean portal = false;
 		public String portalTaken = "\"\"";
+		public boolean arcaneFamiliar = false;
+		public boolean arcanKnowledge = false;
+		public boolean idolatry = false;
+		public boolean fanaticism = false;
+		public double totemcount = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -316,6 +326,11 @@ public class JoygModVariables {
 			nbt.putString("invFrom", invFrom);
 			nbt.putBoolean("portal", portal);
 			nbt.putString("portalTaken", portalTaken);
+			nbt.putBoolean("arcaneFamiliar", arcaneFamiliar);
+			nbt.putBoolean("arcanKnowledge", arcanKnowledge);
+			nbt.putBoolean("idolatry", idolatry);
+			nbt.putBoolean("fanaticism", fanaticism);
+			nbt.putDouble("totemcount", totemcount);
 			return nbt;
 		}
 
@@ -336,6 +351,11 @@ public class JoygModVariables {
 			invFrom = nbt.getString("invFrom");
 			portal = nbt.getBoolean("portal");
 			portalTaken = nbt.getString("portalTaken");
+			arcaneFamiliar = nbt.getBoolean("arcaneFamiliar");
+			arcanKnowledge = nbt.getBoolean("arcanKnowledge");
+			idolatry = nbt.getBoolean("idolatry");
+			fanaticism = nbt.getBoolean("fanaticism");
+			totemcount = nbt.getDouble("totemcount");
 		}
 	}
 
@@ -375,6 +395,11 @@ public class JoygModVariables {
 					variables.invFrom = message.data.invFrom;
 					variables.portal = message.data.portal;
 					variables.portalTaken = message.data.portalTaken;
+					variables.arcaneFamiliar = message.data.arcaneFamiliar;
+					variables.arcanKnowledge = message.data.arcanKnowledge;
+					variables.idolatry = message.data.idolatry;
+					variables.fanaticism = message.data.fanaticism;
+					variables.totemcount = message.data.totemcount;
 				}
 			});
 			context.setPacketHandled(true);

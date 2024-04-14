@@ -11,6 +11,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.item.Item;
 
 import net.joyg.item.WandWoodItem;
+import net.joyg.item.WandNetheriteItem;
+import net.joyg.item.WandIronItem;
+import net.joyg.item.WandGoldItem;
+import net.joyg.item.WandDiamondItem;
 import net.joyg.item.TotemWoodItem;
 import net.joyg.item.TotemSunkingItem;
 import net.joyg.item.TotemStoneItem;
@@ -28,6 +32,7 @@ import net.joyg.item.BrassBlasterItem;
 import net.joyg.item.AmethystFocusNetheriteItem;
 import net.joyg.item.AmethystFocusIronItem;
 import net.joyg.item.AmethystFocusGoldItem;
+import net.joyg.item.AmethystFocusEternalItem;
 import net.joyg.item.AmethystFocusDiamondItem;
 import net.joyg.JoygMod;
 
@@ -52,4 +57,9 @@ public class JoygModItems {
 	public static final RegistryObject<Item> AMETHYST_FOCUS_DIAMOND = REGISTRY.register("amethyst_focus_diamond", () -> new AmethystFocusDiamondItem());
 	public static final RegistryObject<Item> AMETHYST_FOCUS_NETHERITE = REGISTRY.register("amethyst_focus_netherite", () -> new AmethystFocusNetheriteItem());
 	public static final RegistryObject<Item> WAND_WOOD = REGISTRY.register("wand_wood", () -> new WandWoodItem());
+	public static final RegistryObject<Item> WAND_IRON = REGISTRY.register("wand_iron", () -> new WandIronItem());
+	public static final RegistryObject<Item> WAND_GOLD = REGISTRY.register("wand_gold", () -> new WandGoldItem());
+	public static final RegistryObject<Item> WAND_DIAMOND = REGISTRY.register("wand_diamond", () -> new WandDiamondItem());
+	public static final RegistryObject<Item> WAND_NETHERITE = REGISTRY.register("wand_netherite", () -> new WandNetheriteItem());
+	public static final RegistryObject<Item> AMETHYST_FOCUS_ETERNAL = REGISTRY.register("amethyst_focus_eternal", () -> new AmethystFocusEternalItem());
 }

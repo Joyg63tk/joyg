@@ -13,10 +13,10 @@
       "value": "COMBAT"
     },
     "stackSize": 1,
-    "enchantability": 0,
+    "enchantability": 22,
     "useDuration": 60,
     "toolType": 1.0,
-    "damageCount": 0,
+    "damageCount": 59,
     "recipeRemainder": {
       "value": ""
     },
@@ -28,7 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "Shoots Magic Missle lvl 1 without a mana cost",
+        "Shoots Magic Missile lvl 1 without a mana cost",
         "5s Cooldown"
       ]
     },

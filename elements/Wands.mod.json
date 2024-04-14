@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:WandWood"
+      },
+      {
+        "value": "CUSTOM:WandIron"
+      },
+      {
+        "value": "CUSTOM:WandGold"
+      },
+      {
+        "value": "CUSTOM:WandDiamond"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "wands",
+    "namespace": "mod"
+  }
+}

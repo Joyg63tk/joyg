@@ -37,6 +37,11 @@ public class JoygModTabs {
 			tabData.accept(JoygModItems.AMETHYST_FOCUS_DIAMOND.get());
 			tabData.accept(JoygModItems.AMETHYST_FOCUS_NETHERITE.get());
 			tabData.accept(JoygModItems.WAND_WOOD.get());
+			tabData.accept(JoygModItems.WAND_IRON.get());
+			tabData.accept(JoygModItems.WAND_GOLD.get());
+			tabData.accept(JoygModItems.WAND_DIAMOND.get());
+			tabData.accept(JoygModItems.WAND_NETHERITE.get());
+			tabData.accept(JoygModItems.AMETHYST_FOCUS_ETERNAL.get());
 		}
 
 		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

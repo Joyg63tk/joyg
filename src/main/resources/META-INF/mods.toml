@@ -20,6 +20,12 @@ authors="Ivan, MCreator"
 
 
 [[dependencies.joyg]]
+    modId="use_compiled_mods"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.joyg]]
     modId="curios_api"
     mandatory=false
     versionRange="[0,)"
@@ -27,6 +33,12 @@ authors="Ivan, MCreator"
     side="BOTH"
 [[dependencies.joyg]]
     modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.joyg]]
+    modId="playeranimator"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

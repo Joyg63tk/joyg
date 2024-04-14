@@ -34,6 +34,7 @@ import net.joyg.init.JoygModMobEffects;
 import net.joyg.init.JoygModMenus;
 import net.joyg.init.JoygModItems;
 import net.joyg.init.JoygModEntities;
+import net.joyg.init.JoygModEnchantments;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -55,7 +56,7 @@ public class JoygMod {
 
 		JoygModItems.REGISTRY.register(bus);
 		JoygModEntities.REGISTRY.register(bus);
-
+		JoygModEnchantments.REGISTRY.register(bus);
 		JoygModTabs.REGISTRY.register(bus);
 
 		JoygModMobEffects.REGISTRY.register(bus);

@@ -19,12 +19,17 @@ import java.util.List;
 
 public class WandWoodItem extends Item {
 	public WandWoodItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+		super(new Item.Properties().durability(59).rarity(Rarity.COMMON));
 	}
 
 	@Override
 	public UseAnim getUseAnimation(ItemStack itemstack) {
 		return UseAnim.BOW;
+	}
+
+	@Override
+	public int getEnchantmentValue() {
+		return 22;
 	}
 
 	@Override
@@ -35,7 +40,7 @@ public class WandWoodItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("Shoots Magic Missle lvl 1 without a mana cost"));
+		list.add(Component.literal("Shoots Magic Missile lvl 1 without a mana cost"));
 		list.add(Component.literal("5s Cooldown"));
 	}
 

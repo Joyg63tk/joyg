@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "joyg:amethyst_focus_iron",
+    "joyg:amethyst_focus_gold",
+    "joyg:amethyst_focus_diamond",
+    "joyg:amethyst_focus_netherite",
+    "joyg:amethyst_focus_eternal"
+  ]
+}

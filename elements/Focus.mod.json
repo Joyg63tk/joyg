@@ -1,0 +1,31 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:AmethystFocusIron"
+      },
+      {
+        "value": "CUSTOM:AmethystFocusGold"
+      },
+      {
+        "value": "CUSTOM:AmethystFocusDiamond"
+      },
+      {
+        "value": "CUSTOM:AmethystFocusNetherite"
+      },
+      {
+        "value": "CUSTOM:AmethystFocusEternal"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "focus",
+    "namespace": "mod"
+  }
+}

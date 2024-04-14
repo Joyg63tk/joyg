@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "joyg:wand_wood",
+    "joyg:wand_iron",
+    "joyg:wand_gold",
+    "joyg:wand_diamond"
+  ]
+}

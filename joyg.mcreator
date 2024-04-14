@@ -445,8 +445,8 @@
       "registry_name": "dragon_leap",
       "metadata": {
         "files": [
-          "src/main/resources/assets/joyg/models/item/dragon_leap.json",
-          "src/main/java/net/joyg/item/DragonLeapItem.java"
+          "src/main/java/net/joyg/item/DragonLeapItem.java",
+          "src/main/resources/assets/joyg/models/item/dragon_leap.json"
         ]
       },
       "path": "~/skills"
@@ -935,8 +935,8 @@
       "registry_name": "brass_blaster",
       "metadata": {
         "files": [
-          "src/main/resources/assets/joyg/models/item/brass_blaster.json",
-          "src/main/java/net/joyg/item/BrassBlasterItem.java"
+          "src/main/java/net/joyg/item/BrassBlasterItem.java",
+          "src/main/resources/assets/joyg/models/item/brass_blaster.json"
         ]
       },
       "path": "~/items/blasters"
@@ -2192,6 +2192,535 @@
         ]
       },
       "path": "~/items/wands"
+    },
+    {
+      "name": "WandRep",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand_rep",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/WandRepProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "leftItem",
+            "type": "itemstack"
+          },
+          {
+            "name": "rightItem",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "Wands",
+      "type": "tag",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wands",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/tags/items/wands.json"
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "AuraGems",
+      "type": "tag",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aura_gems",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/tags/items/aura_gems.json"
+        ]
+      },
+      "path": "~/items/Gems"
+    },
+    {
+      "name": "Empower",
+      "type": "enchantment",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empower",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/enchantment/EmpowerEnchantment.java"
+        ]
+      },
+      "path": "~/items/enchants"
+    },
+    {
+      "name": "WandIronOnPlayerStoppedUsing",
+      "type": "procedure",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand_iron_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/WandIronOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "WandIron",
+      "type": "item",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand_iron",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/WandIronItem.java",
+          "src/main/resources/assets/joyg/models/item/wand_iron.json"
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "WandGoldOnPlayerStoppedUsing",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand_gold_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/WandGoldOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "WandGold",
+      "type": "item",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand_gold",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/wand_gold.json",
+          "src/main/java/net/joyg/item/WandGoldItem.java"
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "WandDiamondOnPlayerStoppedUsing",
+      "type": "procedure",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand_diamond_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/WandDiamondOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "WandDiamond",
+      "type": "item",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand_diamond",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/wand_diamond.json",
+          "src/main/java/net/joyg/item/WandDiamondItem.java"
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "WandNetheriteOnPlayerStoppedUsing",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand_netherite_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/WandNetheriteOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "WandNetherite",
+      "type": "item",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wand_netherite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/WandNetheriteItem.java",
+          "src/main/resources/assets/joyg/models/item/wand_netherite.json"
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "AmethystFocusEternal",
+      "type": "item",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_focus_eternal",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/amethyst_focus_eternal.json",
+          "src/main/java/net/joyg/item/AmethystFocusEternalItem.java"
+        ]
+      },
+      "path": "~/items/amethyst focus"
+    },
+    {
+      "name": "ArcaneFamiliarOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arcane_familiar_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ArcaneFamiliarOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/passives/arcane familiar/familiar"
+    },
+    {
+      "name": "ArcaneFamiliar",
+      "type": "livingentity",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arcane_familiar",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/entity/ArcaneFamiliarEntity.java",
+          "src/main/java/net/joyg/client/renderer/ArcaneFamiliarRenderer.java"
+        ]
+      },
+      "path": "~/passives/arcane familiar/familiar"
+    },
+    {
+      "name": "ArcaneFamC",
+      "type": "procedure",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arcane_fam_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ArcaneFamCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/arcane familiar"
+    },
+    {
+      "name": "ArcaneKnowledgeC",
+      "type": "procedure",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arcane_knowledge_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ArcaneKnowledgeCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/arcane familiar"
+    },
+    {
+      "name": "ArcaneFamCmd",
+      "type": "command",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arcane_fam_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/ArcaneFamCmdCommand.java"
+        ]
+      },
+      "path": "~/passives/arcane familiar"
+    },
+    {
+      "name": "ItemEquippedArcanefam",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "item_equipped_arcanefam",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ItemEquippedArcanefamProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/arcane familiar"
+    },
+    {
+      "name": "Focus",
+      "type": "tag",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "focus",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/tags/items/focus.json"
+        ]
+      },
+      "path": "~/items/amethyst focus"
+    },
+    {
+      "name": "Totem",
+      "type": "livingentity",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/client/renderer/TotemRenderer.java",
+          "src/main/java/net/joyg/entity/TotemEntity.java"
+        ]
+      },
+      "path": "~/passives/idolatry"
+    },
+    {
+      "name": "IdolatryC",
+      "type": "procedure",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "idolatry_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/IdolatryCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/idolatry"
+    },
+    {
+      "name": "FanaticismC",
+      "type": "procedure",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fanaticism_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/FanaticismCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/idolatry"
+    },
+    {
+      "name": "IdolCMD",
+      "type": "command",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "idol_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/IdolCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/idolatry"
+    },
+    {
+      "name": "TotemSummon",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_summon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/TotemSummonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/idolatry"
+    },
+    {
+      "name": "TotemStacke",
+      "type": "procedure",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_stacke",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/TotemStackeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/idolatry"
+    },
+    {
+      "name": "TotemOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/TotemOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/idolatry"
     }
   ],
   "variable_elements": [
@@ -2332,56 +2861,94 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
+    },
+    {
+      "name": "arcaneFamiliar",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "arcanKnowledge",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "idolatry",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "fanaticism",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "totemcount",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.joyg.dragon_leap": "Dragon Leap",
-      "gui.joyg.lootbagslots.label_owner": "owner",
-      "item.joyg.amethyst_focus_netherite": "Netherite Amethyst Focus",
       "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
       "item.joyg.totem_netherite": "Totem Netherite",
       "effect.joyg.thunder_call": "Thunder Call",
       "item.joyg.totem_iron": "Iron Totem",
-      "attribute.joyg.skill_effect_area": "Skill effect Area Multiplier",
+      "attribute.joyg.skill_effect_area": "Skill Effect Area",
       "item.joyg.portal_scroll": "Portal Scroll",
-      "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
-      "item.joyg.gem_strenght": "Aura Gem of Strengh",
       "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
       "effect.joyg.bleed": "Bleed",
       "item.joyg.brass_blaster": "Brass Blaster",
       "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
       "item.joyg.totem_gold": "Gold Totem",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
+      "item.joyg.wand_gold": "Aurous Wand",
+      "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
+      "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
+      "item.joyg.wand_wood": "Wooden Wand",
+      "entity.joyg.totem": "Totem",
+      "item.joyg.karmadame": "Karmadame",
+      "effect.joyg.clarity": "Clarity",
+      "affix.apotheosis:armor/attribute/longwinded.prefix": "Long winded",
+      "item.joyg.gem_regen": "Aura Gem of Regeneration",
+      "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
+      "item.joyg.wand_iron": "Ferrous Wand",
+      "attribute.joyg.skill_cdr": "Skill Cooldown Reduction",
+      "item.joyg.totem_diamond": "Diamond Totem",
+      "attribute.joyg.envenom": "Envenom",
+      "item.joyg.totem_wood": "Wood Totem",
+      "gui.joyg.lootbagslots.label_owner": "owner",
+      "item.joyg.dragon_leap": "Dragon Leap",
+      "item.joyg.amethyst_focus_netherite": "Netherite Amethyst Focus",
+      "entity.joyg.arcane_familiar": "Arcane Familiar",
+      "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
+      "item.joyg.gem_strenght": "Aura Gem of Strengh",
       "entity.joyg.portal": "Portal",
       "item.joyg.totem_frostshaman": "Frost Shaman\u0027s Idol",
       "item.joyg.amethyst_focus_diamond": "Diamond Amethyst Focus",
       "config.joyg.joyg_cfg": "joyg_cfg",
+      "item.joyg.wand_netherite": "Netherflame Wand",
       "effect.joyg.barbed_arrow": "Barbed Arrow",
-      "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
+      "item.joyg.wand_diamond": "Diamantiferous Wand",
       "entity.joyg.lootbag_e": "Loot bag",
+      "enchantment.joyg.empower": "Empower",
       "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
       "item.joyg.amethyst_focus_iron": "Iron Amethyst Focus",
       "item.joyg.totem_stone": "Stone Totem",
       "attribute.joyg.skill_cdr.desc": "Reduces the Cooldown of your Martial Skills with diminishing returns",
-      "item.joyg.wand_wood": "Wooden Wand",
-      "item.joyg.karmadame": "Karmadame",
-      "effect.joyg.clarity": "Clarity",
       "attribute.joyg.mana_gained_on_hit.desc": "Increases mana gained by 5% of max mana, when Instant Mana on hit procs",
       "item.joyg.amethyst_focus_gold": "Gold Amethyst Focus",
       "attribute.joyg.maim": "Maim Chance",
-      "affix.apotheosis:armor/attribute/longwinded.prefix": "Long winded",
       "death.attack.bleeding": "%1$s died from bleeding",
       "death.attack.bleeding.item": "%1$s was bled to death by %2$s using %3$s",
-      "item.joyg.gem_regen": "Aura Gem of Regeneration",
-      "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
-      "attribute.joyg.skill_cdr": "Skill Cooldown Reduction",
       "curios.identifier.gem_slot": "Gem Slot",
-      "item.joyg.totem_sunking": "Totem Sunking",
-      "item.joyg.totem_diamond": "Diamond Totem",
-      "attribute.joyg.envenom": "Envenom",
-      "item.joyg.totem_wood": "Wood Totem"
+      "item.joyg.totem_sunking": "Totem Sunking"
     }
   },
   "foldersRoot": {
@@ -2451,6 +3018,19 @@
           {
             "name": "battlemage",
             "children": []
+          },
+          {
+            "name": "arcane familiar",
+            "children": [
+              {
+                "name": "familiar",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "idolatry",
+            "children": []
           }
         ]
       },
@@ -2484,6 +3064,10 @@
           {
             "name": "wands",
             "children": []
+          },
+          {
+            "name": "enchants",
+            "children": []
           }
         ]
       },
@@ -2515,8 +3099,10 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
+      "use_compiled_mods",
       "curios_api",
       "geckolib",
+      "playeranimator",
       "jei"
     ],
     "currentGenerator": "forge-1.20.1",
