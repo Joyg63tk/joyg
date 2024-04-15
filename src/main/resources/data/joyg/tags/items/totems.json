@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "joyg:totem_diamond",
+    "joyg:totem_netherite",
+    "joyg:totem_sunking",
+    "joyg:totem_frostshaman",
+    "joyg:totem_gold",
+    "joyg:totem_iron",
+    "joyg:totem_stone",
+    "joyg:totem_wood"
+  ]
+}

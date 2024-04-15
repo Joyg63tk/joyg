@@ -27,18 +27,17 @@ import net.joyg.item.PortalScrollItem;
 import net.joyg.item.KarmadameItem;
 import net.joyg.item.GemStrenghtItem;
 import net.joyg.item.GemRegenItem;
-import net.joyg.item.DragonLeapItem;
 import net.joyg.item.BrassBlasterItem;
 import net.joyg.item.AmethystFocusNetheriteItem;
 import net.joyg.item.AmethystFocusIronItem;
 import net.joyg.item.AmethystFocusGoldItem;
+import net.joyg.item.AmethystFocusFallItem;
 import net.joyg.item.AmethystFocusEternalItem;
 import net.joyg.item.AmethystFocusDiamondItem;
 import net.joyg.JoygMod;
 
 public class JoygModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, JoygMod.MODID);
-	public static final RegistryObject<Item> DRAGON_LEAP = REGISTRY.register("dragon_leap", () -> new DragonLeapItem());
 	public static final RegistryObject<Item> KARMADAME = REGISTRY.register("karmadame", () -> new KarmadameItem());
 	public static final RegistryObject<Item> BRASS_BLASTER = REGISTRY.register("brass_blaster", () -> new BrassBlasterItem());
 	public static final RegistryObject<Item> PORTAL_SCROLL = REGISTRY.register("portal_scroll", () -> new PortalScrollItem());
@@ -62,4 +61,5 @@ public class JoygModItems {
 	public static final RegistryObject<Item> WAND_DIAMOND = REGISTRY.register("wand_diamond", () -> new WandDiamondItem());
 	public static final RegistryObject<Item> WAND_NETHERITE = REGISTRY.register("wand_netherite", () -> new WandNetheriteItem());
 	public static final RegistryObject<Item> AMETHYST_FOCUS_ETERNAL = REGISTRY.register("amethyst_focus_eternal", () -> new AmethystFocusEternalItem());
+	public static final RegistryObject<Item> AMETHYST_FOCUS_FALL = REGISTRY.register("amethyst_focus_fall", () -> new AmethystFocusFallItem());
 }

@@ -12,6 +12,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.joyg.network.JoygModVariables;
+import net.joyg.init.JoygModItems;
 import net.joyg.init.JoygModEnchantments;
 
 public class ArcaneFamiliarOnEntityTickUpdateProcedure {
@@ -51,14 +52,34 @@ public class ArcaneFamiliarOnEntityTickUpdateProcedure {
 												+ ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + entity.getEyeHeight()) + " " + ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
 							}
 						}
-						{
-							Entity _ent = entity;
-							if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-								_ent.getServer().getCommands().performPrefixedCommand(
-										new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(),
-												_ent.getDisplayName(), _ent.level().getServer(), _ent),
-										("cast @p magic_missile " + (1 + ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
-												.getEnchantmentLevel(JoygModEnchantments.EMPOWER.get()))));
+						if (((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == JoygModItems.AMETHYST_FOCUS_FALL.get()) {
+							{
+								Entity _ent = (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null);
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana add @p -5");
+								}
+							}
+							{
+								Entity _ent = entity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(),
+													_ent.getDisplayName(), _ent.level().getServer(), _ent),
+											("cast @s eldritch_blast " + (1 + ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
+													.getEnchantmentLevel(JoygModEnchantments.EMPOWER.get()))));
+								}
+							}
+						} else {
+							{
+								Entity _ent = entity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(),
+													_ent.getDisplayName(), _ent.level().getServer(), _ent),
+											("cast @s magic_missile " + (1 + ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
+													.getEnchantmentLevel(JoygModEnchantments.EMPOWER.get()))));
+								}
 							}
 						}
 					}
@@ -84,14 +105,34 @@ public class ArcaneFamiliarOnEntityTickUpdateProcedure {
 												+ ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getY() + entity.getEyeHeight()) + " " + ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null).getZ())));
 							}
 						}
-						{
-							Entity _ent = entity;
-							if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-								_ent.getServer().getCommands().performPrefixedCommand(
-										new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(),
-												_ent.getDisplayName(), _ent.level().getServer(), _ent),
-										("cast @p magic_missile " + (1 + ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
-												.getEnchantmentLevel(JoygModEnchantments.EMPOWER.get()))));
+						if (((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == JoygModItems.AMETHYST_FOCUS_FALL.get()) {
+							{
+								Entity _ent = (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null);
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null,
+											4, _ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "mana add @p -5");
+								}
+							}
+							{
+								Entity _ent = entity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(),
+													_ent.getDisplayName(), _ent.level().getServer(), _ent),
+											("cast @s eldritch_blast " + (1 + ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
+													.getEnchantmentLevel(JoygModEnchantments.EMPOWER.get()))));
+								}
+							}
+						} else {
+							{
+								Entity _ent = entity;
+								if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+									_ent.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(),
+													_ent.getDisplayName(), _ent.level().getServer(), _ent),
+											("cast @s magic_missile " + (1 + ((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY)
+													.getEnchantmentLevel(JoygModEnchantments.EMPOWER.get()))));
+								}
 							}
 						}
 					}

@@ -95,8 +95,11 @@ public class JoygModVariables {
 			clone.idolatry = original.idolatry;
 			clone.fanaticism = original.fanaticism;
 			clone.totemcount = original.totemcount;
+			clone.maxCharges = original.maxCharges;
+			clone.manaBlast = original.manaBlast;
+			clone.manaShield = original.manaShield;
+			clone.artillerist = original.artillerist;
 			if (!event.isWasDeath()) {
-				clone.dragonLeap = original.dragonLeap;
 			}
 		}
 
@@ -286,7 +289,6 @@ public class JoygModVariables {
 		public double karma = 0;
 		public double karmaBar = 0;
 		public boolean indirectMoH = false;
-		public boolean dragonLeap = false;
 		public boolean hollow = false;
 		public boolean barbedarrow = false;
 		public boolean splinter = false;
@@ -303,6 +305,10 @@ public class JoygModVariables {
 		public boolean idolatry = false;
 		public boolean fanaticism = false;
 		public double totemcount = 0;
+		public double maxCharges = 0;
+		public boolean manaBlast = false;
+		public boolean manaShield = false;
+		public boolean artillerist = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -314,7 +320,6 @@ public class JoygModVariables {
 			nbt.putDouble("karma", karma);
 			nbt.putDouble("karmaBar", karmaBar);
 			nbt.putBoolean("indirectMoH", indirectMoH);
-			nbt.putBoolean("dragonLeap", dragonLeap);
 			nbt.putBoolean("hollow", hollow);
 			nbt.putBoolean("barbedarrow", barbedarrow);
 			nbt.putBoolean("splinter", splinter);
@@ -331,6 +336,10 @@ public class JoygModVariables {
 			nbt.putBoolean("idolatry", idolatry);
 			nbt.putBoolean("fanaticism", fanaticism);
 			nbt.putDouble("totemcount", totemcount);
+			nbt.putDouble("maxCharges", maxCharges);
+			nbt.putBoolean("manaBlast", manaBlast);
+			nbt.putBoolean("manaShield", manaShield);
+			nbt.putBoolean("artillerist", artillerist);
 			return nbt;
 		}
 
@@ -339,7 +348,6 @@ public class JoygModVariables {
 			karma = nbt.getDouble("karma");
 			karmaBar = nbt.getDouble("karmaBar");
 			indirectMoH = nbt.getBoolean("indirectMoH");
-			dragonLeap = nbt.getBoolean("dragonLeap");
 			hollow = nbt.getBoolean("hollow");
 			barbedarrow = nbt.getBoolean("barbedarrow");
 			splinter = nbt.getBoolean("splinter");
@@ -356,6 +364,10 @@ public class JoygModVariables {
 			idolatry = nbt.getBoolean("idolatry");
 			fanaticism = nbt.getBoolean("fanaticism");
 			totemcount = nbt.getDouble("totemcount");
+			maxCharges = nbt.getDouble("maxCharges");
+			manaBlast = nbt.getBoolean("manaBlast");
+			manaShield = nbt.getBoolean("manaShield");
+			artillerist = nbt.getBoolean("artillerist");
 		}
 	}
 
@@ -383,7 +395,6 @@ public class JoygModVariables {
 					variables.karma = message.data.karma;
 					variables.karmaBar = message.data.karmaBar;
 					variables.indirectMoH = message.data.indirectMoH;
-					variables.dragonLeap = message.data.dragonLeap;
 					variables.hollow = message.data.hollow;
 					variables.barbedarrow = message.data.barbedarrow;
 					variables.splinter = message.data.splinter;
@@ -400,6 +411,10 @@ public class JoygModVariables {
 					variables.idolatry = message.data.idolatry;
 					variables.fanaticism = message.data.fanaticism;
 					variables.totemcount = message.data.totemcount;
+					variables.maxCharges = message.data.maxCharges;
+					variables.manaBlast = message.data.manaBlast;
+					variables.manaShield = message.data.manaShield;
+					variables.artillerist = message.data.artillerist;
 				}
 			});
 			context.setPacketHandled(true);

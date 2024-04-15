@@ -19,6 +19,7 @@ import net.minecraft.world.entity.Entity;
 import net.joyg.entity.TotemEntity;
 import net.joyg.entity.PortalEntity;
 import net.joyg.entity.LootbagEEntity;
+import net.joyg.entity.AutoBallistaEntity;
 import net.joyg.entity.ArcaneFamiliarEntity;
 import net.joyg.JoygMod;
 
@@ -37,6 +38,10 @@ public class JoygModEntities {
 			EntityType.Builder.<TotemEntity>of(TotemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TotemEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<AutoBallistaEntity>> AUTO_BALLISTA = register("auto_ballista",
+			EntityType.Builder.<AutoBallistaEntity>of(AutoBallistaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AutoBallistaEntity::new)
+
+					.sized(0.8f, 0.4f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -49,6 +54,7 @@ public class JoygModEntities {
 			PortalEntity.init();
 			ArcaneFamiliarEntity.init();
 			TotemEntity.init();
+			AutoBallistaEntity.init();
 		});
 	}
 
@@ -58,5 +64,6 @@ public class JoygModEntities {
 		event.put(PORTAL.get(), PortalEntity.createAttributes().build());
 		event.put(ARCANE_FAMILIAR.get(), ArcaneFamiliarEntity.createAttributes().build());
 		event.put(TOTEM.get(), TotemEntity.createAttributes().build());
+		event.put(AUTO_BALLISTA.get(), AutoBallistaEntity.createAttributes().build());
 	}
 }

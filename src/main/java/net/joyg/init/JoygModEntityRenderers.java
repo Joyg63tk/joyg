@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.joyg.client.renderer.TotemRenderer;
 import net.joyg.client.renderer.PortalRenderer;
 import net.joyg.client.renderer.LootbagERenderer;
+import net.joyg.client.renderer.AutoBallistaRenderer;
 import net.joyg.client.renderer.ArcaneFamiliarRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -22,5 +23,6 @@ public class JoygModEntityRenderers {
 		event.registerEntityRenderer(JoygModEntities.PORTAL.get(), PortalRenderer::new);
 		event.registerEntityRenderer(JoygModEntities.ARCANE_FAMILIAR.get(), ArcaneFamiliarRenderer::new);
 		event.registerEntityRenderer(JoygModEntities.TOTEM.get(), TotemRenderer::new);
+		event.registerEntityRenderer(JoygModEntities.AUTO_BALLISTA.get(), AutoBallistaRenderer::new);
 	}
 }

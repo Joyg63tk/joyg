@@ -413,121 +413,6 @@
       "path": "~/attributes/skill cdr"
     },
     {
-      "name": "DragonLeapSpecialInformation",
-      "type": "procedure",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dragon_leap_special_information",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/DragonLeapSpecialInformationProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "tooltip",
-            "type": "tooltip"
-          }
-        ]
-      },
-      "path": "~/skills"
-    },
-    {
-      "name": "DragonLeap",
-      "type": "item",
-      "sortid": 24,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dragon_leap",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/item/DragonLeapItem.java",
-          "src/main/resources/assets/joyg/models/item/dragon_leap.json"
-        ]
-      },
-      "path": "~/skills"
-    },
-    {
-      "name": "DragonLeapRightclicked",
-      "type": "procedure",
-      "sortid": 25,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dragon_leap_rightclicked",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/DragonLeapRightclickedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/skills"
-    },
-    {
-      "name": "DragonLeapFlight",
-      "type": "procedure",
-      "sortid": 26,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dragon_leap_flight",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/DragonLeapFlightProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/skills"
-    },
-    {
       "name": "SkillEffectArea",
       "type": "attribute",
       "sortid": 27,
@@ -2721,6 +2606,256 @@
         ]
       },
       "path": "~/passives/idolatry"
+    },
+    {
+      "name": "Totems",
+      "type": "tag",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totems",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/tags/items/totems.json"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "AmethystFocusFall",
+      "type": "item",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_focus_fall",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/item/AmethystFocusFallItem.java",
+          "src/main/resources/assets/joyg/models/item/amethyst_focus_fall.json"
+        ]
+      },
+      "path": "~/items/amethyst focus"
+    },
+    {
+      "name": "ManaChargeEffectExpires",
+      "type": "procedure",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_charge_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManaChargeEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/effects/mana charge"
+    },
+    {
+      "name": "ManaCharge",
+      "type": "potioneffect",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_charge",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/ManaChargeMobEffect.java"
+        ]
+      },
+      "path": "~/effects/mana charge"
+    },
+    {
+      "name": "ManablastC",
+      "type": "procedure",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manablast_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManablastCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/mana charge"
+    },
+    {
+      "name": "ManaShieldC",
+      "type": "procedure",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_shield_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManaShieldCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/mana charge"
+    },
+    {
+      "name": "ManaChargeCMD",
+      "type": "command",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_charge_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/ManaChargeCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/mana charge"
+    },
+    {
+      "name": "AutoBallista",
+      "type": "livingentity",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_ballista",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/client/renderer/AutoBallistaRenderer.java",
+          "src/main/java/net/joyg/entity/AutoBallistaEntity.java"
+        ]
+      },
+      "path": "~/passives/artillerist"
+    },
+    {
+      "name": "AutoBallistaOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_ballista_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/AutoBallistaOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/artillerist"
+    },
+    {
+      "name": "BallistaArrowCounter",
+      "type": "procedure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ballista_arrow_counter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BallistaArrowCounterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/artillerist"
+    },
+    {
+      "name": "BallistaSummon",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ballista_summon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BallistaSummonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/artillerist"
+    },
+    {
+      "name": "ArtilleristC",
+      "type": "procedure",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "artillerist_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ArtilleristCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/artillerist"
+    },
+    {
+      "name": "ArtilleristCmd",
+      "type": "command",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "artillerist_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/ArtilleristCmdCommand.java"
+        ]
+      },
+      "path": "~/passives/artillerist"
     }
   ],
   "variable_elements": [
@@ -2740,12 +2875,6 @@
       "name": "indirectMoH",
       "type": "logic",
       "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "dragonLeap",
-      "type": "logic",
-      "scope": "player_lifetime",
       "value": "false"
     },
     {
@@ -2891,6 +3020,30 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "maxCharges",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "manaBlast",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "manaShield",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "artillerist",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -2907,9 +3060,10 @@
       "item.joyg.brass_blaster": "Brass Blaster",
       "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
       "item.joyg.totem_gold": "Gold Totem",
+      "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
-      "item.joyg.wand_gold": "Aurous Wand",
       "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
+      "item.joyg.wand_gold": "Aurous Wand",
       "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
       "item.joyg.wand_wood": "Wooden Wand",
       "entity.joyg.totem": "Totem",
@@ -2924,12 +3078,13 @@
       "attribute.joyg.envenom": "Envenom",
       "item.joyg.totem_wood": "Wood Totem",
       "gui.joyg.lootbagslots.label_owner": "owner",
-      "item.joyg.dragon_leap": "Dragon Leap",
       "item.joyg.amethyst_focus_netherite": "Netherite Amethyst Focus",
       "entity.joyg.arcane_familiar": "Arcane Familiar",
       "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
       "item.joyg.gem_strenght": "Aura Gem of Strengh",
+      "effect.joyg.mana_charge": "Mana Charge",
       "entity.joyg.portal": "Portal",
+      "entity.joyg.auto_ballista": "Auto Ballista",
       "item.joyg.totem_frostshaman": "Frost Shaman\u0027s Idol",
       "item.joyg.amethyst_focus_diamond": "Diamond Amethyst Focus",
       "config.joyg.joyg_cfg": "joyg_cfg",
@@ -2972,6 +3127,10 @@
           {
             "name": "clarity",
             "children": []
+          },
+          {
+            "name": "mana charge",
+            "children": []
           }
         ]
       },
@@ -3001,10 +3160,6 @@
         ]
       },
       {
-        "name": "skills",
-        "children": []
-      },
-      {
         "name": "passives",
         "children": [
           {
@@ -3030,6 +3185,14 @@
           },
           {
             "name": "idolatry",
+            "children": []
+          },
+          {
+            "name": "mana charge",
+            "children": []
+          },
+          {
+            "name": "artillerist",
             "children": []
           }
         ]

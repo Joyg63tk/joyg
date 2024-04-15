@@ -3,20 +3,20 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "icon37",
+    "texture": "shaper",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Dragon Leap",
-    "rarity": "COMMON",
+    "name": "Shaper's Eye",
+    "rarity": "EPIC",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "COMBAT"
     },
     "stackSize": 1,
-    "enchantability": 0,
-    "useDuration": 20,
+    "enchantability": 22,
+    "useDuration": 0,
     "toolType": 1.0,
-    "damageCount": 0,
+    "damageCount": 2031,
     "recipeRemainder": {
       "value": ""
     },
@@ -27,7 +27,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "While in Offhand: Grants 70 increased Max Mana",
+        "Your Arcane Familiar fires Eldritch Blast"
+      ]
     },
     "glowCondition": {
       "fixedValue": true
@@ -35,22 +38,19 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "DragonLeapRightclicked"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "projectile": {
       "value": "Arrow"
     },
-    "isFood": true,
-    "nutritionalValue": -4,
-    "saturation": 0.0,
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
     "eatResultItem": {
-      "value": "CUSTOM:DragonLeap"
+      "value": ""
     },
     "isMeat": false,
-    "isAlwaysEdible": true,
+    "isAlwaysEdible": false,
     "animation": "none"
   }
 }
