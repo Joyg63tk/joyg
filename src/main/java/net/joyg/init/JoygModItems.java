@@ -27,6 +27,7 @@ import net.joyg.item.PortalScrollItem;
 import net.joyg.item.KarmadameItem;
 import net.joyg.item.GemStrenghtItem;
 import net.joyg.item.GemRegenItem;
+import net.joyg.item.FlashBombItem;
 import net.joyg.item.BrassBlasterItem;
 import net.joyg.item.AmethystFocusNetheriteItem;
 import net.joyg.item.AmethystFocusIronItem;
@@ -62,4 +63,5 @@ public class JoygModItems {
 	public static final RegistryObject<Item> WAND_NETHERITE = REGISTRY.register("wand_netherite", () -> new WandNetheriteItem());
 	public static final RegistryObject<Item> AMETHYST_FOCUS_ETERNAL = REGISTRY.register("amethyst_focus_eternal", () -> new AmethystFocusEternalItem());
 	public static final RegistryObject<Item> AMETHYST_FOCUS_FALL = REGISTRY.register("amethyst_focus_fall", () -> new AmethystFocusFallItem());
+	public static final RegistryObject<Item> FLASH_BOMB = REGISTRY.register("flash_bomb", () -> new FlashBombItem());
 }

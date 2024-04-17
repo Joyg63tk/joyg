@@ -2856,6 +2856,231 @@
         ]
       },
       "path": "~/passives/artillerist"
+    },
+    {
+      "name": "FlashBomb",
+      "type": "item",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flash_bomb",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/flash_bomb.json",
+          "src/main/java/net/joyg/item/FlashBombItem.java"
+        ]
+      },
+      "path": "~/items/consums/flash bomb"
+    },
+    {
+      "name": "FlashBombRightclicked",
+      "type": "procedure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flash_bomb_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/FlashBombRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/items/consums/flash bomb"
+    },
+    {
+      "name": "DisorientOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disorient_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/DisorientOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/effects/disorient"
+    },
+    {
+      "name": "Disorient",
+      "type": "potioneffect",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disorient",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/DisorientMobEffect.java"
+        ]
+      },
+      "path": "~/effects/disorient"
+    },
+    {
+      "name": "ManathornShield",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manathorn_shield",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManathornShieldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "blockedamount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/manathorn"
+    },
+    {
+      "name": "ManathornC",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manathorn_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManathornCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/manathorn"
+    },
+    {
+      "name": "ManathornCmd",
+      "type": "command",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manathorn_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/ManathornCmdCommand.java"
+        ]
+      },
+      "path": "~/passives/manathorn"
+    },
+    {
+      "name": "EscapeArtist",
+      "type": "procedure",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "escape_artist",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/EscapeArtistProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/escape artist"
+    },
+    {
+      "name": "EscapeArtistCD",
+      "type": "procedure",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "escape_artist_cd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/EscapeArtistCDProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/escape artist"
+    },
+    {
+      "name": "EscapeArtistCDIndicator",
+      "type": "potioneffect",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "escape_artist_cd_indicator",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/EscapeArtistCDIndicatorMobEffect.java"
+        ]
+      },
+      "path": "~/passives/escape artist"
     }
   ],
   "variable_elements": [
@@ -3044,13 +3269,33 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "manathorn",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "escapeArtist",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "escapeArtistCD",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
       "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
+      "item.joyg.flash_bomb": "Flash Bomb",
       "item.joyg.totem_netherite": "Totem Netherite",
+      "effect.joyg.disorient": "Disoriented",
       "effect.joyg.thunder_call": "Thunder Call",
       "item.joyg.totem_iron": "Iron Totem",
       "attribute.joyg.skill_effect_area": "Skill Effect Area",
@@ -3087,6 +3332,7 @@
       "entity.joyg.auto_ballista": "Auto Ballista",
       "item.joyg.totem_frostshaman": "Frost Shaman\u0027s Idol",
       "item.joyg.amethyst_focus_diamond": "Diamond Amethyst Focus",
+      "effect.joyg.escape_artist_cd_indicator": "Escape Artist Cooldown",
       "config.joyg.joyg_cfg": "joyg_cfg",
       "item.joyg.wand_netherite": "Netherflame Wand",
       "effect.joyg.barbed_arrow": "Barbed Arrow",
@@ -3130,6 +3376,10 @@
           },
           {
             "name": "mana charge",
+            "children": []
+          },
+          {
+            "name": "disorient",
             "children": []
           }
         ]
@@ -3194,6 +3444,14 @@
           {
             "name": "artillerist",
             "children": []
+          },
+          {
+            "name": "manathorn",
+            "children": []
+          },
+          {
+            "name": "escape artist",
+            "children": []
           }
         ]
       },
@@ -3231,6 +3489,15 @@
           {
             "name": "enchants",
             "children": []
+          },
+          {
+            "name": "consums",
+            "children": [
+              {
+                "name": "flash bomb",
+                "children": []
+              }
+            ]
           }
         ]
       },

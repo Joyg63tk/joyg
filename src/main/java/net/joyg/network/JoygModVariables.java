@@ -99,6 +99,9 @@ public class JoygModVariables {
 			clone.manaBlast = original.manaBlast;
 			clone.manaShield = original.manaShield;
 			clone.artillerist = original.artillerist;
+			clone.manathorn = original.manathorn;
+			clone.escapeArtist = original.escapeArtist;
+			clone.escapeArtistCD = original.escapeArtistCD;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -309,6 +312,9 @@ public class JoygModVariables {
 		public boolean manaBlast = false;
 		public boolean manaShield = false;
 		public boolean artillerist = false;
+		public boolean manathorn = false;
+		public boolean escapeArtist = false;
+		public double escapeArtistCD = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -340,6 +346,9 @@ public class JoygModVariables {
 			nbt.putBoolean("manaBlast", manaBlast);
 			nbt.putBoolean("manaShield", manaShield);
 			nbt.putBoolean("artillerist", artillerist);
+			nbt.putBoolean("manathorn", manathorn);
+			nbt.putBoolean("escapeArtist", escapeArtist);
+			nbt.putDouble("escapeArtistCD", escapeArtistCD);
 			return nbt;
 		}
 
@@ -368,6 +377,9 @@ public class JoygModVariables {
 			manaBlast = nbt.getBoolean("manaBlast");
 			manaShield = nbt.getBoolean("manaShield");
 			artillerist = nbt.getBoolean("artillerist");
+			manathorn = nbt.getBoolean("manathorn");
+			escapeArtist = nbt.getBoolean("escapeArtist");
+			escapeArtistCD = nbt.getDouble("escapeArtistCD");
 		}
 	}
 
@@ -415,6 +427,9 @@ public class JoygModVariables {
 					variables.manaBlast = message.data.manaBlast;
 					variables.manaShield = message.data.manaShield;
 					variables.artillerist = message.data.artillerist;
+					variables.manathorn = message.data.manathorn;
+					variables.escapeArtist = message.data.escapeArtist;
+					variables.escapeArtistCD = message.data.escapeArtistCD;
 				}
 			});
 			context.setPacketHandled(true);

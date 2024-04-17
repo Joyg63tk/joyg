@@ -1,6 +1,8 @@
 {
   "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
+  "item.joyg.flash_bomb": "Flash Bomb",
   "item.joyg.totem_netherite": "Totem Netherite",
+  "effect.joyg.disorient": "Disoriented",
   "effect.joyg.thunder_call": "Thunder Call",
   "item.joyg.totem_iron": "Iron Totem",
   "attribute.joyg.skill_effect_area": "Skill Effect Area",
@@ -37,6 +39,7 @@
   "entity.joyg.auto_ballista": "Auto Ballista",
   "item.joyg.totem_frostshaman": "Frost Shaman\u0027s Idol",
   "item.joyg.amethyst_focus_diamond": "Diamond Amethyst Focus",
+  "effect.joyg.escape_artist_cd_indicator": "Escape Artist Cooldown",
   "config.joyg.joyg_cfg": "joyg_cfg",
   "item.joyg.wand_netherite": "Netherflame Wand",
   "effect.joyg.barbed_arrow": "Barbed Arrow",

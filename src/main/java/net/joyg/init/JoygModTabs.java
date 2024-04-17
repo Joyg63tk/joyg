@@ -50,6 +50,7 @@ public class JoygModTabs {
 			tabData.accept(JoygModItems.PORTAL_SCROLL.get());
 			tabData.accept(JoygModItems.GEM_REGEN.get());
 			tabData.accept(JoygModItems.GEM_STRENGHT.get());
+			tabData.accept(JoygModItems.FLASH_BOMB.get());
 		}
 	}
 }
