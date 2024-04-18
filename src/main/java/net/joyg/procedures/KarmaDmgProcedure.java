@@ -3,7 +3,7 @@ package net.joyg.procedures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
@@ -12,9 +12,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.core.registries.Registries;
 
 import net.joyg.network.JoygModVariables;
 import net.joyg.init.JoygModMobEffects;
@@ -24,7 +21,7 @@ import javax.annotation.Nullable;
 @Mod.EventBusSubscriber
 public class KarmaDmgProcedure {
 	@SubscribeEvent
-	public static void onEntityAttacked(LivingAttackEvent event) {
+	public static void onEntityAttacked(LivingHurtEvent event) {
 		if (event != null && event.getEntity() != null) {
 			execute(event, event.getEntity().level(), event.getEntity(), event.getSource().getEntity(), event.getAmount());
 		}
@@ -39,8 +36,9 @@ public class KarmaDmgProcedure {
 			return;
 		if (entity instanceof Player) {
 			if (sourceentity instanceof Mob) {
-				entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)),
-						Math.round(amount * (entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma * JoygModVariables.MapVariables.get(world).karmaDmg));
+				if (event instanceof LivingHurtEvent _hurt) {
+					_hurt.setAmount(Math.round(amount * (entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma * JoygModVariables.MapVariables.get(world).karmaDmg));
+				}
 				if ((entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma >= JoygModVariables.MapVariables.get(world).karmaSlowness) {
 					if (Math.random() <= (entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).karma * JoygModVariables.MapVariables.get(world).karmaEffChance) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

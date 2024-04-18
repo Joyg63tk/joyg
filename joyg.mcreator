@@ -401,30 +401,6 @@
       "path": "~/attributes/maim"
     },
     {
-      "name": "SkillCdr",
-      "type": "attribute",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "skill_cdr",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/attributes/skill cdr"
-    },
-    {
-      "name": "SkillEffectArea",
-      "type": "attribute",
-      "sortid": 27,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "skill_effect_area",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/attributes/skill area"
-    },
-    {
       "name": "KarmadameRightclicked",
       "type": "procedure",
       "sortid": 28,
@@ -3081,6 +3057,42 @@
         ]
       },
       "path": "~/passives/escape artist"
+    },
+    {
+      "name": "CriticalBlockChance",
+      "type": "attribute",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "critical_block_chance",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/attributes/critical block chance"
+    },
+    {
+      "name": "Critblock",
+      "type": "procedure",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "critblock",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/CritblockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "blockedamount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/attributes/critical block chance"
     }
   ],
   "variable_elements": [
@@ -3287,6 +3299,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "unbreakableGuardian",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -3298,7 +3316,6 @@
       "effect.joyg.disorient": "Disoriented",
       "effect.joyg.thunder_call": "Thunder Call",
       "item.joyg.totem_iron": "Iron Totem",
-      "attribute.joyg.skill_effect_area": "Skill Effect Area",
       "item.joyg.portal_scroll": "Portal Scroll",
       "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
       "effect.joyg.bleed": "Bleed",
@@ -3307,8 +3324,9 @@
       "item.joyg.totem_gold": "Gold Totem",
       "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
-      "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
+      "attribute.joyg.critical_block_chance": "Critical Block Chance",
       "item.joyg.wand_gold": "Aurous Wand",
+      "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
       "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
       "item.joyg.wand_wood": "Wooden Wand",
       "entity.joyg.totem": "Totem",
@@ -3318,7 +3336,6 @@
       "item.joyg.gem_regen": "Aura Gem of Regeneration",
       "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
       "item.joyg.wand_iron": "Ferrous Wand",
-      "attribute.joyg.skill_cdr": "Skill Cooldown Reduction",
       "item.joyg.totem_diamond": "Diamond Totem",
       "attribute.joyg.envenom": "Envenom",
       "item.joyg.totem_wood": "Wood Totem",
@@ -3400,11 +3417,7 @@
             "children": []
           },
           {
-            "name": "skill cdr",
-            "children": []
-          },
-          {
-            "name": "skill area",
+            "name": "critical block chance",
             "children": []
           }
         ]

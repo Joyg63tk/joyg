@@ -2,10 +2,10 @@
   "_fv": 57,
   "_type": "attribute",
   "definition": {
-    "description": "Skill Effect Area",
-    "minValue": 1.0,
+    "description": "Critical Block Chance",
+    "minValue": 0.0,
     "maxValue": 100.0,
-    "defaultValue": 1.0,
+    "defaultValue": 0.0,
     "isPersistent": true,
     "entities": [
       {

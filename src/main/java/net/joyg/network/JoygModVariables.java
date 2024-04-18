@@ -102,6 +102,7 @@ public class JoygModVariables {
 			clone.manathorn = original.manathorn;
 			clone.escapeArtist = original.escapeArtist;
 			clone.escapeArtistCD = original.escapeArtistCD;
+			clone.unbreakableGuardian = original.unbreakableGuardian;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -315,6 +316,7 @@ public class JoygModVariables {
 		public boolean manathorn = false;
 		public boolean escapeArtist = false;
 		public double escapeArtistCD = 0;
+		public boolean unbreakableGuardian = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -349,6 +351,7 @@ public class JoygModVariables {
 			nbt.putBoolean("manathorn", manathorn);
 			nbt.putBoolean("escapeArtist", escapeArtist);
 			nbt.putDouble("escapeArtistCD", escapeArtistCD);
+			nbt.putBoolean("unbreakableGuardian", unbreakableGuardian);
 			return nbt;
 		}
 
@@ -380,6 +383,7 @@ public class JoygModVariables {
 			manathorn = nbt.getBoolean("manathorn");
 			escapeArtist = nbt.getBoolean("escapeArtist");
 			escapeArtistCD = nbt.getDouble("escapeArtistCD");
+			unbreakableGuardian = nbt.getBoolean("unbreakableGuardian");
 		}
 	}
 
@@ -430,6 +434,7 @@ public class JoygModVariables {
 					variables.manathorn = message.data.manathorn;
 					variables.escapeArtist = message.data.escapeArtist;
 					variables.escapeArtistCD = message.data.escapeArtistCD;
+					variables.unbreakableGuardian = message.data.unbreakableGuardian;
 				}
 			});
 			context.setPacketHandled(true);
