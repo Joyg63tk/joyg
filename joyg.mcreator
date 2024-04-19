@@ -3089,10 +3089,214 @@
           {
             "name": "blockedamount",
             "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
       "path": "~/attributes/critical block chance"
+    },
+    {
+      "name": "UnbreakableGuardianC",
+      "type": "procedure",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unbreakable_guardian_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/UnbreakableGuardianCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/unbreakable guardian"
+    },
+    {
+      "name": "UnbreakableguardianCMD",
+      "type": "command",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unbreakableguardian_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/UnbreakableguardianCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/unbreakable guardian"
+    },
+    {
+      "name": "ClarityOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clarity_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ClarityOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/effects/clarity"
+    },
+    {
+      "name": "ManaguardianC",
+      "type": "procedure",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "managuardian_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManaguardianCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/unbreakable guardian"
+    },
+    {
+      "name": "ManaLeech",
+      "type": "attribute",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_leech",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/attributes/mana leech"
+    },
+    {
+      "name": "ManaLeechP",
+      "type": "procedure",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_leech_p",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManaLeechPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/attributes/mana leech"
+    },
+    {
+      "name": "Lowlife",
+      "type": "procedure",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lowlife",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/LowlifeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util"
+    },
+    {
+      "name": "AffinityForSuffering",
+      "type": "procedure",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "affinity_for_suffering",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/AffinityForSufferingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/affinity for suffering"
+    },
+    {
+      "name": "AffinityforsufferingC",
+      "type": "procedure",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "affinityforsuffering_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/AffinityforsufferingCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/affinity for suffering"
+    },
+    {
+      "name": "AffinityforsufferingCMD",
+      "type": "command",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "affinityforsuffering_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/AffinityforsufferingCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/affinity for suffering"
     }
   ],
   "variable_elements": [
@@ -3305,6 +3509,24 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "manaGuardian",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "lowLife",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "affinityForSuffering",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -3325,8 +3547,8 @@
       "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
       "attribute.joyg.critical_block_chance": "Critical Block Chance",
-      "item.joyg.wand_gold": "Aurous Wand",
       "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
+      "item.joyg.wand_gold": "Aurous Wand",
       "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
       "item.joyg.wand_wood": "Wooden Wand",
       "entity.joyg.totem": "Totem",
@@ -3337,6 +3559,7 @@
       "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
       "item.joyg.wand_iron": "Ferrous Wand",
       "item.joyg.totem_diamond": "Diamond Totem",
+      "attribute.joyg.mana_leech": "Mana Leech",
       "attribute.joyg.envenom": "Envenom",
       "item.joyg.totem_wood": "Wood Totem",
       "gui.joyg.lootbagslots.label_owner": "owner",
@@ -3419,6 +3642,10 @@
           {
             "name": "critical block chance",
             "children": []
+          },
+          {
+            "name": "mana leech",
+            "children": []
           }
         ]
       },
@@ -3464,6 +3691,14 @@
           },
           {
             "name": "escape artist",
+            "children": []
+          },
+          {
+            "name": "unbreakable guardian",
+            "children": []
+          },
+          {
+            "name": "affinity for suffering",
             "children": []
           }
         ]

@@ -13,6 +13,9 @@
     "isBenefitical": true,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "ClarityOnEffectActiveTick"
+    },
     "activeTickCondition": {
       "name": "ClarityActiveTickCondition"
     }

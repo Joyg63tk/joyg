@@ -103,7 +103,10 @@ public class JoygModVariables {
 			clone.escapeArtist = original.escapeArtist;
 			clone.escapeArtistCD = original.escapeArtistCD;
 			clone.unbreakableGuardian = original.unbreakableGuardian;
+			clone.manaGuardian = original.manaGuardian;
+			clone.affinityForSuffering = original.affinityForSuffering;
 			if (!event.isWasDeath()) {
+				clone.lowLife = original.lowLife;
 			}
 		}
 
@@ -317,6 +320,9 @@ public class JoygModVariables {
 		public boolean escapeArtist = false;
 		public double escapeArtistCD = 0;
 		public boolean unbreakableGuardian = false;
+		public boolean manaGuardian = false;
+		public boolean lowLife = false;
+		public boolean affinityForSuffering = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -352,6 +358,9 @@ public class JoygModVariables {
 			nbt.putBoolean("escapeArtist", escapeArtist);
 			nbt.putDouble("escapeArtistCD", escapeArtistCD);
 			nbt.putBoolean("unbreakableGuardian", unbreakableGuardian);
+			nbt.putBoolean("manaGuardian", manaGuardian);
+			nbt.putBoolean("lowLife", lowLife);
+			nbt.putBoolean("affinityForSuffering", affinityForSuffering);
 			return nbt;
 		}
 
@@ -384,6 +393,9 @@ public class JoygModVariables {
 			escapeArtist = nbt.getBoolean("escapeArtist");
 			escapeArtistCD = nbt.getDouble("escapeArtistCD");
 			unbreakableGuardian = nbt.getBoolean("unbreakableGuardian");
+			manaGuardian = nbt.getBoolean("manaGuardian");
+			lowLife = nbt.getBoolean("lowLife");
+			affinityForSuffering = nbt.getBoolean("affinityForSuffering");
 		}
 	}
 
@@ -435,6 +447,9 @@ public class JoygModVariables {
 					variables.escapeArtist = message.data.escapeArtist;
 					variables.escapeArtistCD = message.data.escapeArtistCD;
 					variables.unbreakableGuardian = message.data.unbreakableGuardian;
+					variables.manaGuardian = message.data.manaGuardian;
+					variables.lowLife = message.data.lowLife;
+					variables.affinityForSuffering = message.data.affinityForSuffering;
 				}
 			});
 			context.setPacketHandled(true);

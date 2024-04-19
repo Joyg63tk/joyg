@@ -28,6 +28,7 @@ public class JoygModAttributes {
 	public static final RegistryObject<Attribute> ENVENOM = ATTRIBUTES.register("envenom", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".envenom", 0, 0, 100)).setSyncable(true));
 	public static final RegistryObject<Attribute> MAIM = ATTRIBUTES.register("maim", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".maim", 0, 0, 100)).setSyncable(true));
 	public static final RegistryObject<Attribute> CRITICALBLOCKCHANCE = ATTRIBUTES.register("critical_block_chance", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".critical_block_chance", 0, 0, 100)).setSyncable(true));
+	public static final RegistryObject<Attribute> MANALEECH = ATTRIBUTES.register("mana_leech", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".mana_leech", 0, 0, 0)).setSyncable(true));
 
 	@SubscribeEvent
 	public static void register(FMLConstructModEvent event) {
@@ -48,6 +49,8 @@ public class JoygModAttributes {
 		event.add(EntityType.PLAYER, MAIM.get());
 		event.add(EntityType.PLAYER, CRITICALBLOCKCHANCE.get());
 		event.add(EntityType.PLAYER, CRITICALBLOCKCHANCE.get());
+		event.add(EntityType.PLAYER, MANALEECH.get());
+		event.add(EntityType.PLAYER, MANALEECH.get());
 	}
 
 	@Mod.EventBusSubscriber
@@ -61,6 +64,7 @@ public class JoygModAttributes {
 			newP.getAttribute(ENVENOM.get()).setBaseValue(oldP.getAttribute(ENVENOM.get()).getBaseValue());
 			newP.getAttribute(MAIM.get()).setBaseValue(oldP.getAttribute(MAIM.get()).getBaseValue());
 			newP.getAttribute(CRITICALBLOCKCHANCE.get()).setBaseValue(oldP.getAttribute(CRITICALBLOCKCHANCE.get()).getBaseValue());
+			newP.getAttribute(MANALEECH.get()).setBaseValue(oldP.getAttribute(MANALEECH.get()).getBaseValue());
 		}
 	}
 }
