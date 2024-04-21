@@ -1136,46 +1136,6 @@
       "path": "~/util/loot bag"
     },
     {
-      "name": "PlayerJoin",
-      "type": "procedure",
-      "sortid": 76,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "player_join",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/PlayerJoinProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/util/party"
-    },
-    {
-      "name": "PlayerLeave",
-      "type": "procedure",
-      "sortid": 77,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "player_leave",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/PlayerLeaveProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/util/party"
-    },
-    {
       "name": "LootbagE",
       "type": "livingentity",
       "sortid": 79,
@@ -1361,111 +1321,6 @@
         ]
       },
       "path": "~/util/loot bag"
-    },
-    {
-      "name": "PartyInv",
-      "type": "procedure",
-      "sortid": 85,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "party_inv",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/PartyInvProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/util/party"
-    },
-    {
-      "name": "PartyInvY",
-      "type": "procedure",
-      "sortid": 86,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "party_inv_y",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/PartyInvYProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/util/party"
-    },
-    {
-      "name": "PartyInvN",
-      "type": "procedure",
-      "sortid": 87,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "party_inv_n",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/PartyInvNProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/util/party"
-    },
-    {
-      "name": "Party",
-      "type": "command",
-      "sortid": 88,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "party",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/command/PartyCommand.java"
-        ]
-      },
-      "path": "~/util/party"
-    },
-    {
-      "name": "CreateParty",
-      "type": "procedure",
-      "sortid": 89,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "create_party",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/CreatePartyProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/util/party"
     },
     {
       "name": "PortalScroll",
@@ -3297,6 +3152,632 @@
         ]
       },
       "path": "~/passives/affinity for suffering"
+    },
+    {
+      "name": "SpawnBuffer",
+      "type": "procedure",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_buffer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/SpawnBufferProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix"
+    },
+    {
+      "name": "HealthyAffix",
+      "type": "procedure",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healthy_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/HealthyAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "ArmoredAffix",
+      "type": "procedure",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armored_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ArmoredAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "StrongAffix",
+      "type": "procedure",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strong_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/StrongAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "Unyielding",
+      "type": "procedure",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unyielding_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/UnyieldingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "Respite",
+      "type": "procedure",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "respite_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/RespiteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "RespiteDamaged",
+      "type": "procedure",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "respite_damaged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/RespiteDamagedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "Igniter",
+      "type": "procedure",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "igniter_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/IgniterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "Duelist",
+      "type": "procedure",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "duelist_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/DuelistProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "SoultakerAffix",
+      "type": "procedure",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soultaker_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/SoultakerAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "FlamecasterAffix",
+      "type": "procedure",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flamecaster_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/FlamecasterAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "AffixerC",
+      "type": "procedure",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "affixer_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/AffixerCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "Affixer",
+      "type": "command",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "affixer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/AffixerCommand.java"
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "FrostcasterAffix",
+      "type": "procedure",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frostcaster_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/FrostcasterAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "QuakingAffix",
+      "type": "procedure",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quaking_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/QuakingAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "ProximityshieldAffix",
+      "type": "procedure",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "proximityshield_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ProximityshieldAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "ProximityshieldDamage",
+      "type": "procedure",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "proximityshield_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ProximityshieldDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "Teleporter",
+      "type": "procedure",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleporter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/TeleporterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "InspiringAffix",
+      "type": "procedure",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inspiring_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/InspiringAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "EndergripAffix",
+      "type": "procedure",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endergrip_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/EndergripAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "SuppressionfieldAffix",
+      "type": "procedure",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "suppressionfield_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/SuppressionfieldAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "InescapableAffix",
+      "type": "procedure",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inescapable_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/InescapableAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "EntombAffix",
+      "type": "procedure",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entomb_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/EntombAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
     }
   ],
   "variable_elements": [
@@ -3391,34 +3872,10 @@
       "value": "false"
     },
     {
-      "name": "team",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
       "name": "canLoot",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
-    },
-    {
-      "name": "invited",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "invFrom",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "partylist",
-      "type": "file",
-      "scope": "global",
-      "value": "new File(\"\")"
     },
     {
       "name": "portal",
@@ -3547,8 +4004,8 @@
       "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
       "attribute.joyg.critical_block_chance": "Critical Block Chance",
-      "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
       "item.joyg.wand_gold": "Aurous Wand",
+      "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
       "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
       "item.joyg.wand_wood": "Wooden Wand",
       "entity.joyg.totem": "Totem",
@@ -3757,8 +4214,13 @@
             "children": []
           },
           {
-            "name": "party",
-            "children": []
+            "name": "spawn affix",
+            "children": [
+              {
+                "name": "affixes",
+                "children": []
+              }
+            ]
           }
         ]
       }

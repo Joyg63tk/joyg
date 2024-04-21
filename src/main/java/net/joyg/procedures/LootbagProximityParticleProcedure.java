@@ -11,7 +11,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.particles.ParticleTypes;
 
-import net.joyg.network.JoygModVariables;
 import net.joyg.entity.LootbagEEntity;
 
 import javax.annotation.Nullable;
@@ -41,8 +40,7 @@ public class LootbagProximityParticleProcedure {
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(32 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
 					if (entityiterator instanceof LootbagEEntity) {
-						if (((entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).team)
-								.contains(entityiterator instanceof LootbagEEntity _datEntS ? _datEntS.getEntityData().get(LootbagEEntity.DATA_owner) : "")) {
+						if ((entityiterator instanceof LootbagEEntity _datEntS ? _datEntS.getEntityData().get(LootbagEEntity.DATA_owner) : "").contains(entity.getStringUUID())) {
 							world.addParticle(ParticleTypes.GLOW, (entityiterator.getX()), (entityiterator.getY() + 0.5), (entityiterator.getZ()), 0, 1.5, 0);
 						}
 					}
