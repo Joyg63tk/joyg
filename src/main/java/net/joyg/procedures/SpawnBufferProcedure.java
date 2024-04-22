@@ -59,7 +59,7 @@ public class SpawnBufferProcedure {
 				entity.getPersistentData().putDouble("rank", karma);
 				entity.setCustomName(Component.literal(("Elite " + entity.getDisplayName().getString() + " lvl " + karma)));
 			} else {
-				entity.setCustomName(Component.literal((entity.getDisplayName().getString() + " lvl " + karma)));
+				entity.setCustomName(Component.literal((entity.getDisplayName().getString() + " lvl " + (1 + karma))));
 			}
 		}
 	}

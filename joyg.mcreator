@@ -3451,7 +3451,7 @@
           }
         ]
       },
-      "path": "~/util/spawn affix/affixes"
+      "path": "~/util/spawn affix"
     },
     {
       "name": "Affixer",
@@ -3465,7 +3465,7 @@
           "src/main/java/net/joyg/command/AffixerCommand.java"
         ]
       },
-      "path": "~/util/spawn affix/affixes"
+      "path": "~/util/spawn affix"
     },
     {
       "name": "FrostcasterAffix",
@@ -3770,6 +3770,166 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "ThundercallerAffix",
+      "type": "procedure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thundercaller_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ThundercallerAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "BlindingAffix",
+      "type": "procedure",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blinding_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BlindingAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "ManaburnAffix",
+      "type": "procedure",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manaburn_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManaburnAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "ToxicAffix",
+      "type": "procedure",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toxic_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ToxicAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "DemolitionistAffix",
+      "type": "procedure",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "demolitionist_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/DemolitionistAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "ClimberAffix",
+      "type": "procedure",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "climber_affix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ClimberAffixProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
           },
           {
             "name": "world",

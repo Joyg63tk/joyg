@@ -27,8 +27,8 @@ public class UnyieldingProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getPersistentData().getBoolean("healthy_affix") == true) {
-			entity.getPersistentData().putBoolean("healthy_affix", false);
+		if (entity.getPersistentData().getBoolean("unyielding_affix") == true) {
+			entity.getPersistentData().putBoolean("unyielding_affix", false);
 			((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.KNOCKBACK_RESISTANCE).setBaseValue(1);
 			if (!(((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MOVEMENT_SPEED)
 					.hasModifier((new AttributeModifier(UUID.fromString("c07e1a82-ff39-11ee-97b0-325096b39f47"), "unyielding_affix", (-0.3), AttributeModifier.Operation.MULTIPLY_TOTAL)))))

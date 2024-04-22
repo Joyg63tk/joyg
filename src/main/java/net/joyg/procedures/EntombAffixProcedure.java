@@ -30,7 +30,7 @@ public class EntombAffixProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getPersistentData().getBoolean("healthy_affix") == true) {
+		if (entity.getPersistentData().getBoolean("entomb_affix") == true) {
 			entity.getPersistentData().putDouble("entomb", (entity.getPersistentData().getDouble("entomb") + 1));
 			if (entity.getPersistentData().getDouble("entomb") > 100 && (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof Player) {
 				entity.getPersistentData().putDouble("entomb", 0);

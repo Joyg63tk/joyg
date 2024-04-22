@@ -37,9 +37,8 @@ public class QuakingAffixProcedure {
 			return;
 		if (entity.getPersistentData().getBoolean("quaking_affix") == true) {
 			if (world instanceof ServerLevel _level) {
-				System.out.println(entity.getStringUUID());
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(0, 0, 0), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"execute as " + entity.getStringUUID() + " run quakerel");
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"execute positioned ~ ~ ~ run quakecord ~ ~ ~");
 			}
 			{
 				final Vec3 _center = new Vec3(x, y, z);
