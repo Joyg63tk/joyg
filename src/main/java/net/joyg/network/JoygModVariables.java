@@ -98,6 +98,10 @@ public class JoygModVariables {
 			clone.unbreakableGuardian = original.unbreakableGuardian;
 			clone.manaGuardian = original.manaGuardian;
 			clone.affinityForSuffering = original.affinityForSuffering;
+			clone.intimidatingPresence = original.intimidatingPresence;
+			clone.guardingPresence = original.guardingPresence;
+			clone.juggernaut = original.juggernaut;
+			clone.aegisGuardian = original.aegisGuardian;
 			if (!event.isWasDeath()) {
 				clone.lowLife = original.lowLife;
 			}
@@ -313,6 +317,10 @@ public class JoygModVariables {
 		public boolean manaGuardian = false;
 		public boolean lowLife = false;
 		public boolean affinityForSuffering = false;
+		public boolean intimidatingPresence = false;
+		public boolean guardingPresence = false;
+		public boolean juggernaut = false;
+		public boolean aegisGuardian = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -348,6 +356,10 @@ public class JoygModVariables {
 			nbt.putBoolean("manaGuardian", manaGuardian);
 			nbt.putBoolean("lowLife", lowLife);
 			nbt.putBoolean("affinityForSuffering", affinityForSuffering);
+			nbt.putBoolean("intimidatingPresence", intimidatingPresence);
+			nbt.putBoolean("guardingPresence", guardingPresence);
+			nbt.putBoolean("juggernaut", juggernaut);
+			nbt.putBoolean("aegisGuardian", aegisGuardian);
 			return nbt;
 		}
 
@@ -380,6 +392,10 @@ public class JoygModVariables {
 			manaGuardian = nbt.getBoolean("manaGuardian");
 			lowLife = nbt.getBoolean("lowLife");
 			affinityForSuffering = nbt.getBoolean("affinityForSuffering");
+			intimidatingPresence = nbt.getBoolean("intimidatingPresence");
+			guardingPresence = nbt.getBoolean("guardingPresence");
+			juggernaut = nbt.getBoolean("juggernaut");
+			aegisGuardian = nbt.getBoolean("aegisGuardian");
 		}
 	}
 
@@ -431,6 +447,10 @@ public class JoygModVariables {
 					variables.manaGuardian = message.data.manaGuardian;
 					variables.lowLife = message.data.lowLife;
 					variables.affinityForSuffering = message.data.affinityForSuffering;
+					variables.intimidatingPresence = message.data.intimidatingPresence;
+					variables.guardingPresence = message.data.guardingPresence;
+					variables.juggernaut = message.data.juggernaut;
+					variables.aegisGuardian = message.data.aegisGuardian;
 				}
 			});
 			context.setPacketHandled(true);

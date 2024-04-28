@@ -132,6 +132,20 @@ repositories {
 
 
 repositories {
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+dependencies {
+   compileOnly fg.deobf("curse.maven:mpp-forge-986014:5262463")
+   runtimeOnly fg.deobf("curse.maven:mpp-forge-986014:5262463")
+}
+
+
+repositories {
   maven {
     name = "Progwml6's maven"
     url = "https://dvs1.progwml6.com/files/maven/"

@@ -3938,6 +3938,248 @@
         ]
       },
       "path": "~/util/spawn affix/affixes"
+    },
+    {
+      "name": "IntimidatingPresence",
+      "type": "procedure",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "intimidating_presence",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/IntimidatingPresenceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/presence"
+    },
+    {
+      "name": "GuardingPresence",
+      "type": "procedure",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guarding_presence",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/GuardingPresenceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/presence"
+    },
+    {
+      "name": "GuardingpresenceC",
+      "type": "procedure",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guardingpresence_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/GuardingpresenceCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/presence"
+    },
+    {
+      "name": "IntimidatingPresenceC",
+      "type": "procedure",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "intimidating_presence_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/IntimidatingPresenceCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/presence"
+    },
+    {
+      "name": "PresenceCMD",
+      "type": "command",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "presence_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/PresenceCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/presence"
+    },
+    {
+      "name": "Juggernaut",
+      "type": "procedure",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "juggernaut",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/JuggernautProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/juggernaut"
+    },
+    {
+      "name": "JuggernautC",
+      "type": "procedure",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "juggernaut_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/JuggernautCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/juggernaut"
+    },
+    {
+      "name": "JuggernautCMD",
+      "type": "command",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "juggernaut_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/JuggernautCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/juggernaut"
+    },
+    {
+      "name": "AegisGuardian",
+      "type": "procedure",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aegis_guardian",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/AegisGuardianProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/aegis of the guardian"
+    },
+    {
+      "name": "AegisGuardianC",
+      "type": "procedure",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aegis_guardian_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/AegisGuardianCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/aegis of the guardian"
+    },
+    {
+      "name": "AegisGuardianCmd",
+      "type": "command",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aegis_guardian_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/AegisGuardianCmdCommand.java"
+        ]
+      },
+      "path": "~/passives/aegis of the guardian"
     }
   ],
   "variable_elements": [
@@ -4144,6 +4386,30 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "intimidatingPresence",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "guardingPresence",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "juggernaut",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "aegisGuardian",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -4164,8 +4430,8 @@
       "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
       "attribute.joyg.critical_block_chance": "Critical Block Chance",
-      "item.joyg.wand_gold": "Aurous Wand",
       "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
+      "item.joyg.wand_gold": "Aurous Wand",
       "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
       "item.joyg.wand_wood": "Wooden Wand",
       "entity.joyg.totem": "Totem",
@@ -4317,6 +4583,18 @@
           {
             "name": "affinity for suffering",
             "children": []
+          },
+          {
+            "name": "presence",
+            "children": []
+          },
+          {
+            "name": "juggernaut",
+            "children": []
+          },
+          {
+            "name": "aegis of the guardian",
+            "children": []
           }
         ]
       },
@@ -4403,6 +4681,7 @@
       "curios_api",
       "geckolib",
       "playeranimator",
+      "particlepresets",
       "jei"
     ],
     "currentGenerator": "forge-1.20.1",

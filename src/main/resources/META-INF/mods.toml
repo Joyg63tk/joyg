@@ -44,6 +44,12 @@ authors="Ivan, MCreator"
     ordering="NONE"
     side="BOTH"
 [[dependencies.joyg]]
+    modId="particlepresets"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.joyg]]
     modId="jei"
     mandatory=false
     versionRange="[0,)"
