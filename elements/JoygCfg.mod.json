@@ -305,6 +305,29 @@
             "entityType": "CUSTOM:LootbagE"
           }
         ]
+      },
+      {
+        "category": "Elite Affixes",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "Enable Elite mobs gaining random affixes based on the Karma lvl of nearby players when the mob spawns. to disable affixes check config folder/joyg_affix.json",
+            "vardisplay": "Enable elite affixes",
+            "varname": "elite_affix",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:ArcaneFamiliar"
+          }
+        ]
       }
     ],
     "file": "joyg_cfg",

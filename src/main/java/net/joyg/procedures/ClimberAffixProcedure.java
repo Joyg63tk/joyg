@@ -33,7 +33,8 @@ public class ClimberAffixProcedure {
 							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(), y + 1,
 							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(1)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()))
 					.canOcclude()) {
-				entity.setDeltaMovement(new Vec3((2 * entity.getLookAngle().x), 0.5, (2 * entity.getLookAngle().z)));
+				entity.setDeltaMovement(new Vec3((2 * entity.getLookAngle().x), 1, (2 * entity.getLookAngle().z)));
+				entity.fallDistance = 0;
 			}
 		}
 	}

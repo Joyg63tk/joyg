@@ -172,6 +172,7 @@ public class JoygModVariables {
 		public double karmaPoison = 5.0;
 		public double karmaBleed = 1.0;
 		public double karmaEffDuration = 60.0;
+		public String affixPool = "\"\"";
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -187,6 +188,7 @@ public class JoygModVariables {
 			karmaPoison = nbt.getDouble("karmaPoison");
 			karmaBleed = nbt.getDouble("karmaBleed");
 			karmaEffDuration = nbt.getDouble("karmaEffDuration");
+			affixPool = nbt.getString("affixPool");
 		}
 
 		@Override
@@ -198,6 +200,7 @@ public class JoygModVariables {
 			nbt.putDouble("karmaPoison", karmaPoison);
 			nbt.putDouble("karmaBleed", karmaBleed);
 			nbt.putDouble("karmaEffDuration", karmaEffDuration);
+			nbt.putString("affixPool", affixPool);
 			return nbt;
 		}
 

@@ -21,6 +21,7 @@ public class JoygCfgConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Double> LUCK;
 	public static final ForgeConfigSpec.ConfigValue<Boolean> ENABLE_LOOT;
 	public static final ForgeConfigSpec.ConfigValue<Double> LOOT_TIME;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> ELITE_AFFIX;
 	static {
 		BUILDER.push("karma");
 		KARMAXP = BUILDER.comment("amount of xp required for the base karma lvl, the amount required increases by 50% of the base each karma lvl. Default value: 1000").define("karma xp", (double) 1000);
@@ -49,6 +50,9 @@ public class JoygCfgConfiguration {
 		ENABLE_LOOT = BUILDER.comment("whether loot alocation is enabled, True will store loot from killed enemies so only the person who landed the killing blow can loot it until the loot bag despawns and releases the items").define("enable loot",
 				true);
 		LOOT_TIME = BUILDER.comment("amount of ticks loot is protected before the loot bag despawns and items drop to the ground").define("alocation ticks", (double) 400);
+		BUILDER.pop();
+		BUILDER.push("Elite Affixes");
+		ELITE_AFFIX = BUILDER.comment("Enable Elite mobs gaining random affixes based on the Karma lvl of nearby players when the mob spawns. to disable affixes check config folder/joyg_affix.json").define("Enable elite affixes", true);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();
