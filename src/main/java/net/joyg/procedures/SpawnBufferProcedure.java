@@ -46,12 +46,14 @@ public class SpawnBufferProcedure {
 		if (entity == null)
 			return;
 		File file = new File("");
-		String affix_2 = "";
-		String affix_1 = "";
-		String affix_3 = "";
 		double karma = 0;
 		double timeout = 0;
 		com.google.gson.JsonObject obj = new com.google.gson.JsonObject();
+		String affix_2 = "";
+		String affix_1 = "";
+		String affix_3 = "";
+		String affix_4 = "";
+		String affix_5 = "";
 		if (!world.isClientSide()) {
 			if (entity instanceof Monster) {
 				{
@@ -84,43 +86,147 @@ public class SpawnBufferProcedure {
 								}
 								bufferedReader.close();
 								obj = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-								affix_1 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
-								affix_2 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
-								affix_3 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
-								while (obj.get(affix_1).getAsBoolean() || !affix_1.contains("affix")) {
+								if (karma < 5) {
 									affix_1 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
-									timeout = timeout + 1;
-									if (timeout > 10000) {
-										timeout = 0;
-										break;
-									}
-								}
-								while (affix_2.contains(affix_1) || obj.get(affix_2).getAsBoolean() == false || !affix_2.contains("affix")) {
 									affix_2 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
-									if (timeout > 10000) {
-										timeout = 0;
-										break;
+									affix_3 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+									while (obj.get(affix_1).getAsBoolean() || !affix_1.contains("affix")) {
+										affix_1 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+										timeout = timeout + 1;
+										if (timeout > 10000) {
+											timeout = 0;
+											break;
+										}
 									}
-								}
-								while (affix_3.contains(affix_1) || affix_3.contains(affix_2) || obj.get(affix_3).getAsBoolean() == false || !affix_3.contains("affix")) {
-									affix_2 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
-									if (timeout > 10000) {
-										timeout = 0;
-										break;
+									while (affix_2.contains(affix_1) || obj.get(affix_2).getAsBoolean() == false || !affix_2.contains("affix")) {
+										affix_2 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+										if (timeout > 10000) {
+											timeout = 0;
+											break;
+										}
 									}
-								}
-								{
-									String[] _array = (affix_1 + "," + affix_2 + "," + affix_3).split(",");
-									if (_array.length != 0) {
-										for (String stringiterator : _array) {
+									while (affix_3.contains(affix_1) || affix_3.contains(affix_2) || obj.get(affix_3).getAsBoolean() == false || !affix_3.contains("affix")) {
+										affix_3 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+										if (timeout > 10000) {
+											timeout = 0;
+											break;
+										}
+									}
+									{
+										String[] _array = (affix_1 + "," + affix_2 + "," + affix_3).split(",");
+										if (_array.length != 0) {
+											for (String stringiterator : _array) {
+												entity.getPersistentData().putBoolean(stringiterator, true);
+											}
+										} else {
+											String stringiterator = (affix_1 + "," + affix_2 + "," + affix_3);
 											entity.getPersistentData().putBoolean(stringiterator, true);
 										}
-									} else {
-										String stringiterator = (affix_1 + "," + affix_2 + "," + affix_3);
-										entity.getPersistentData().putBoolean(stringiterator, true);
 									}
+									entity.setCustomName(Component.literal((("Elite " + entity.getDisplayName().getString() + " - " + affix_1 + affix_2 + affix_3 + "-").replace("_affix", " "))));
 								}
-								entity.setCustomName(Component.literal((("Elite " + entity.getDisplayName().getString() + " - " + affix_1 + affix_2 + affix_3 + "-").replace("_affix", " "))));
+								if (karma >= 5 && karma < 10) {
+									affix_1 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+									affix_2 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+									affix_3 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+									affix_4 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+									while (obj.get(affix_1).getAsBoolean() || !affix_1.contains("affix")) {
+										affix_1 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+										timeout = timeout + 1;
+										if (timeout > 10000) {
+											timeout = 0;
+											break;
+										}
+									}
+									while (affix_2.contains(affix_1) || obj.get(affix_2).getAsBoolean() == false || !affix_2.contains("affix")) {
+										affix_2 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+										if (timeout > 10000) {
+											timeout = 0;
+											break;
+										}
+									}
+									while (affix_3.contains(affix_1) || affix_3.contains(affix_2) || obj.get(affix_3).getAsBoolean() == false || !affix_3.contains("affix")) {
+										affix_3 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+										if (timeout > 10000) {
+											timeout = 0;
+											break;
+										}
+									}
+									while (affix_4.contains(affix_3) || affix_4.contains(affix_1) || affix_4.contains(affix_2) || obj.get(affix_4).getAsBoolean() == false || !affix_4.contains("affix")) {
+										affix_4 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+										if (timeout > 10000) {
+											timeout = 0;
+											break;
+										}
+									}
+									{
+										String[] _array = (affix_1 + "," + affix_2 + "," + affix_3 + "," + affix_4).split(",");
+										if (_array.length != 0) {
+											for (String stringiterator : _array) {
+												entity.getPersistentData().putBoolean(stringiterator, true);
+											}
+										} else {
+											String stringiterator = (affix_1 + "," + affix_2 + "," + affix_3 + "," + affix_4);
+											entity.getPersistentData().putBoolean(stringiterator, true);
+										}
+									}
+									entity.setCustomName(Component.literal((("Elite " + entity.getDisplayName().getString() + " - " + affix_1 + affix_2 + affix_3 + affix_4 + "-").replace("_affix", " "))));
+								}
+								if (karma >= 10) {
+									affix_1 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+									affix_2 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+									affix_3 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+									affix_4 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+									affix_5 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+									while (obj.get(affix_1).getAsBoolean() || !affix_1.contains("affix")) {
+										affix_1 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+										timeout = timeout + 1;
+										if (timeout > 10000) {
+											timeout = 0;
+											break;
+										}
+									}
+									while (affix_2.contains(affix_1) || obj.get(affix_2).getAsBoolean() == false || !affix_2.contains("affix")) {
+										affix_2 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+										if (timeout > 10000) {
+											timeout = 0;
+											break;
+										}
+									}
+									while (affix_3.contains(affix_1) || affix_3.contains(affix_2) || obj.get(affix_3).getAsBoolean() == false || !affix_3.contains("affix")) {
+										affix_3 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+										if (timeout > 10000) {
+											timeout = 0;
+											break;
+										}
+									}
+									while (affix_4.contains(affix_3) || affix_4.contains(affix_1) || affix_4.contains(affix_2) || obj.get(affix_4).getAsBoolean() == false || !affix_4.contains("affix")) {
+										affix_4 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+										if (timeout > 10000) {
+											timeout = 0;
+											break;
+										}
+									}
+									while (affix_5.contains(affix_1) || affix_5.contains(affix_2) || affix_5.contains(affix_3) || affix_5.contains(affix_4) || obj.get(affix_5).getAsBoolean() == false || !affix_5.contains("affix")) {
+										affix_5 = obj.keySet().stream().toList().get((Mth.nextInt(RandomSource.create(), 0, 23)));
+										if (timeout > 10000) {
+											timeout = 0;
+											break;
+										}
+									}
+									{
+										String[] _array = (affix_1 + "," + affix_2 + "," + affix_3 + "," + affix_4 + "," + affix_5).split(",");
+										if (_array.length != 0) {
+											for (String stringiterator : _array) {
+												entity.getPersistentData().putBoolean(stringiterator, true);
+											}
+										} else {
+											String stringiterator = (affix_1 + "," + affix_2 + "," + affix_3 + "," + affix_4 + "," + affix_5);
+											entity.getPersistentData().putBoolean(stringiterator, true);
+										}
+									}
+									entity.setCustomName(Component.literal((("Elite " + entity.getDisplayName().getString() + " - " + affix_1 + affix_2 + affix_3 + affix_4 + affix_5 + "-").replace("_affix", " "))));
+								}
 							} catch (IOException e) {
 								e.printStackTrace();
 							}
