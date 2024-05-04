@@ -15,6 +15,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
+import net.minecraft.network.chat.Component;
 
 import net.joyg.network.JoygModVariables;
 
@@ -119,6 +120,7 @@ public class SpawnBufferProcedure {
 										entity.getPersistentData().putBoolean(stringiterator, true);
 									}
 								}
+								entity.setCustomName(Component.literal((("Elite " + entity.getDisplayName().getString() + " - " + affix_1 + affix_2 + affix_3 + "-").replace("_affix", " "))));
 							} catch (IOException e) {
 								e.printStackTrace();
 							}
