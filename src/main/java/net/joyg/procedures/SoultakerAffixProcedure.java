@@ -8,13 +8,11 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
-import java.util.UUID;
 import java.util.List;
 import java.util.Comparator;
 
@@ -39,12 +37,10 @@ public class SoultakerAffixProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(16 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator.getPersistentData().getBoolean("soultaker_affix") == true) {
-					if (!(((LivingEntity) entityiterator).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MAX_HEALTH).hasModifier((new AttributeModifier(UUID.fromString("8af95b0e-ff45-11ee-959a-325096b39f47"), "soultaker",
-							Math.round((entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * 0.5), AttributeModifier.Operation.ADDITION)))))
-						((LivingEntity) entityiterator).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MAX_HEALTH).addPermanentModifier((new AttributeModifier(UUID.fromString("8af95b0e-ff45-11ee-959a-325096b39f47"), "soultaker",
-								Math.round((entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * 0.5), AttributeModifier.Operation.ADDITION)));
-					if (entityiterator instanceof LivingEntity _entity)
-						_entity.setHealth((float) ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * 0.5));
+					if (!(entityiterator == entity)) {
+						if (entityiterator instanceof LivingEntity _entity)
+							_entity.setHealth((float) ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) * 0.5));
+					}
 				}
 			}
 		}

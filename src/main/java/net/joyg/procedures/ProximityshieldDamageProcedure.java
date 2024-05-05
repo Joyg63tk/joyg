@@ -28,7 +28,7 @@ public class ProximityshieldDamageProcedure {
 		if (entity.getPersistentData().getBoolean("proximityshield_affix") == true) {
 			if ((sourceentity != null ? entity.distanceTo(sourceentity) : -1) >= 8) {
 				if (event instanceof LivingHurtEvent _hurt) {
-					_hurt.setAmount(Math.round(amount * 0.1 * entity.getPersistentData().getDouble("rank")));
+					_hurt.setAmount(Math.round(amount * 0.1));
 				}
 			}
 		}
