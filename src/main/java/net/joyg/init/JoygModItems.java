@@ -24,9 +24,6 @@ import net.joyg.item.TotemGoldItem;
 import net.joyg.item.TotemFrostshamanItem;
 import net.joyg.item.TotemDiamondItem;
 import net.joyg.item.PortalScrollItem;
-import net.joyg.item.KarmadameItem;
-import net.joyg.item.GemStrenghtItem;
-import net.joyg.item.GemRegenItem;
 import net.joyg.item.FlashBombItem;
 import net.joyg.item.BrassBlasterItem;
 import net.joyg.item.AmethystFocusNetheriteItem;
@@ -39,11 +36,8 @@ import net.joyg.JoygMod;
 
 public class JoygModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, JoygMod.MODID);
-	public static final RegistryObject<Item> KARMADAME = REGISTRY.register("karmadame", () -> new KarmadameItem());
 	public static final RegistryObject<Item> BRASS_BLASTER = REGISTRY.register("brass_blaster", () -> new BrassBlasterItem());
 	public static final RegistryObject<Item> PORTAL_SCROLL = REGISTRY.register("portal_scroll", () -> new PortalScrollItem());
-	public static final RegistryObject<Item> GEM_REGEN = REGISTRY.register("gem_regen", () -> new GemRegenItem());
-	public static final RegistryObject<Item> GEM_STRENGHT = REGISTRY.register("gem_strenght", () -> new GemStrenghtItem());
 	public static final RegistryObject<Item> TOTEM_WOOD = REGISTRY.register("totem_wood", () -> new TotemWoodItem());
 	public static final RegistryObject<Item> TOTEM_STONE = REGISTRY.register("totem_stone", () -> new TotemStoneItem());
 	public static final RegistryObject<Item> TOTEM_IRON = REGISTRY.register("totem_iron", () -> new TotemIronItem());

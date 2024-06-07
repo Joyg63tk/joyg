@@ -6,9 +6,11 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
@@ -39,21 +41,23 @@ public class LootbagSpawnProcedure {
 		double sx = 0;
 		double sy = 0;
 		double sz = 0;
-		if (JoygCfgConfiguration.ENABLE_LOOT.get() == true) {
-			JoygMod.queueServerWork(5, () -> {
-				if (world instanceof ServerLevel _serverLevel) {
-					Entity entitytospawn = JoygModEntities.LOOTBAG_E.get().spawn(_serverLevel, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-					if (entitytospawn != null) {
-						entitytospawn.setYRot(world.getRandom().nextFloat() * 360.0F);
-					}
-					if ((entitytospawn) instanceof LootbagEEntity _datEntSetS)
-						_datEntSetS.getEntityData().set(LootbagEEntity.DATA_owner, (sourceentity.getStringUUID()));
-					if (sourceentity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) {
+		if (sourceentity instanceof Player || sourceentity instanceof ServerPlayer || (sourceentity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
+			if (JoygCfgConfiguration.ENABLE_LOOT.get() == true) {
+				JoygMod.queueServerWork(5, () -> {
+					if (world instanceof ServerLevel _serverLevel) {
+						Entity entitytospawn = JoygModEntities.LOOTBAG_E.get().spawn(_serverLevel, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+						if (entitytospawn != null) {
+							entitytospawn.setYRot(world.getRandom().nextFloat() * 360.0F);
+						}
 						if ((entitytospawn) instanceof LootbagEEntity _datEntSetS)
-							_datEntSetS.getEntityData().set(LootbagEEntity.DATA_owner, ((sourceentity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getStringUUID()));
+							_datEntSetS.getEntityData().set(LootbagEEntity.DATA_owner, (sourceentity.getStringUUID()));
+						if (sourceentity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) {
+							if ((entitytospawn) instanceof LootbagEEntity _datEntSetS)
+								_datEntSetS.getEntityData().set(LootbagEEntity.DATA_owner, ((sourceentity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getStringUUID()));
+						}
 					}
-				}
-			});
+				});
+			}
 		}
 	}
 }
