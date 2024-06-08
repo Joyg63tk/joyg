@@ -3002,68 +3002,50 @@
         ]
       },
       "path": "~/passives/aegis of the guardian"
+    },
+    {
+      "name": "MaxAbsoption",
+      "type": "attribute",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "max_absoption",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/attributes/absorption"
+    },
+    {
+      "name": "AbsoptionRechargeRate",
+      "type": "attribute",
+      "sortid": 232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "absoption_recharge_rate",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/attributes/absorption"
+    },
+    {
+      "name": "AbsoptionDelay",
+      "type": "attribute",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "absoption_delay",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/attributes/absorption"
     }
   ],
   "variable_elements": [
-    {
-      "name": "karma",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "karmaBar",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
     {
       "name": "indirectMoH",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
-    },
-    {
-      "name": "karmaDmg",
-      "type": "number",
-      "scope": "map",
-      "value": "0.1"
-    },
-    {
-      "name": "karmaEffChance",
-      "type": "number",
-      "scope": "map",
-      "value": "0.2"
-    },
-    {
-      "name": "karmaWeakness",
-      "type": "number",
-      "scope": "map",
-      "value": "3.0"
-    },
-    {
-      "name": "karmaSlowness",
-      "type": "number",
-      "scope": "map",
-      "value": "2.0"
-    },
-    {
-      "name": "karmaPoison",
-      "type": "number",
-      "scope": "map",
-      "value": "5.0"
-    },
-    {
-      "name": "karmaBleed",
-      "type": "number",
-      "scope": "map",
-      "value": "1.0"
-    },
-    {
-      "name": "karmaEffDuration",
-      "type": "number",
-      "scope": "map",
-      "value": "60.0"
     },
     {
       "name": "hollow",
@@ -3234,10 +3216,10 @@
       "value": "false"
     },
     {
-      "name": "affixPool",
-      "type": "string",
-      "scope": "map",
-      "value": "\"\""
+      "name": "ShieldRegenDelay",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -3258,14 +3240,15 @@
       "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
       "attribute.joyg.critical_block_chance": "Critical Block Chance",
-      "item.joyg.wand_gold": "Aurous Wand",
       "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
+      "item.joyg.wand_gold": "Aurous Wand",
       "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
       "item.joyg.wand_wood": "Wooden Wand",
       "entity.joyg.totem": "Totem",
       "effect.joyg.clarity": "Clarity",
       "affix.apotheosis:armor/attribute/longwinded.prefix": "Long winded",
       "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
+      "attribute.joyg.max_absoption": "Max Absoption",
       "item.joyg.wand_iron": "Ferrous Wand",
       "item.joyg.totem_diamond": "Diamond Totem",
       "attribute.joyg.mana_leech": "Mana Leech",
@@ -3296,6 +3279,8 @@
       "attribute.joyg.maim": "Maim Chance",
       "death.attack.bleeding": "%1$s died from bleeding",
       "death.attack.bleeding.item": "%1$s was bled to death by %2$s using %3$s",
+      "attribute.joyg.absoption_delay": "Absoption Delay",
+      "attribute.joyg.absoption_recharge_rate": "Absoption Recharge Rate",
       "item.joyg.totem_sunking": "Totem Sunking"
     }
   },
@@ -3348,6 +3333,10 @@
           },
           {
             "name": "mana leech",
+            "children": []
+          },
+          {
+            "name": "absorption",
             "children": []
           }
         ]
@@ -3475,6 +3464,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "crafting",
+            "children": []
           }
         ]
       }

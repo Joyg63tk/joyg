@@ -15,14 +15,9 @@ import net.minecraftforge.common.capabilities.CapabilityToken;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.Capability;
 
-import net.minecraft.world.level.saveddata.SavedData;
-import net.minecraft.world.level.ServerLevelAccessor;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.Tag;
@@ -38,7 +33,6 @@ import java.util.function.Supplier;
 public class JoygModVariables {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
-		JoygMod.addNetworkMessage(SavedDataSyncMessage.class, SavedDataSyncMessage::buffer, SavedDataSyncMessage::new, SavedDataSyncMessage::handler);
 		JoygMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
 	}
 
@@ -72,8 +66,6 @@ public class JoygModVariables {
 			event.getOriginal().revive();
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-			clone.karma = original.karma;
-			clone.karmaBar = original.karmaBar;
 			clone.indirectMoH = original.indirectMoH;
 			clone.hollow = original.hollow;
 			clone.barbedarrow = original.barbedarrow;
@@ -104,161 +96,8 @@ public class JoygModVariables {
 			clone.aegisGuardian = original.aegisGuardian;
 			if (!event.isWasDeath()) {
 				clone.lowLife = original.lowLife;
+				clone.ShieldRegenDelay = original.ShieldRegenDelay;
 			}
-		}
-
-		@SubscribeEvent
-		public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				SavedData mapdata = MapVariables.get(event.getEntity().level());
-				SavedData worlddata = WorldVariables.get(event.getEntity().level());
-				if (mapdata != null)
-					JoygMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(0, mapdata));
-				if (worlddata != null)
-					JoygMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
-			}
-		}
-
-		@SubscribeEvent
-		public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				SavedData worlddata = WorldVariables.get(event.getEntity().level());
-				if (worlddata != null)
-					JoygMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
-			}
-		}
-	}
-
-	public static class WorldVariables extends SavedData {
-		public static final String DATA_NAME = "joyg_worldvars";
-
-		public static WorldVariables load(CompoundTag tag) {
-			WorldVariables data = new WorldVariables();
-			data.read(tag);
-			return data;
-		}
-
-		public void read(CompoundTag nbt) {
-		}
-
-		@Override
-		public CompoundTag save(CompoundTag nbt) {
-			return nbt;
-		}
-
-		public void syncData(LevelAccessor world) {
-			this.setDirty();
-			if (world instanceof Level level && !level.isClientSide())
-				JoygMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(level::dimension), new SavedDataSyncMessage(1, this));
-		}
-
-		static WorldVariables clientSide = new WorldVariables();
-
-		public static WorldVariables get(LevelAccessor world) {
-			if (world instanceof ServerLevel level) {
-				return level.getDataStorage().computeIfAbsent(e -> WorldVariables.load(e), WorldVariables::new, DATA_NAME);
-			} else {
-				return clientSide;
-			}
-		}
-	}
-
-	public static class MapVariables extends SavedData {
-		public static final String DATA_NAME = "joyg_mapvars";
-		public double karmaDmg = 0.1;
-		public double karmaEffChance = 0.2;
-		public double karmaWeakness = 3.0;
-		public double karmaSlowness = 2.0;
-		public double karmaPoison = 5.0;
-		public double karmaBleed = 1.0;
-		public double karmaEffDuration = 60.0;
-		public String affixPool = "\"\"";
-
-		public static MapVariables load(CompoundTag tag) {
-			MapVariables data = new MapVariables();
-			data.read(tag);
-			return data;
-		}
-
-		public void read(CompoundTag nbt) {
-			karmaDmg = nbt.getDouble("karmaDmg");
-			karmaEffChance = nbt.getDouble("karmaEffChance");
-			karmaWeakness = nbt.getDouble("karmaWeakness");
-			karmaSlowness = nbt.getDouble("karmaSlowness");
-			karmaPoison = nbt.getDouble("karmaPoison");
-			karmaBleed = nbt.getDouble("karmaBleed");
-			karmaEffDuration = nbt.getDouble("karmaEffDuration");
-			affixPool = nbt.getString("affixPool");
-		}
-
-		@Override
-		public CompoundTag save(CompoundTag nbt) {
-			nbt.putDouble("karmaDmg", karmaDmg);
-			nbt.putDouble("karmaEffChance", karmaEffChance);
-			nbt.putDouble("karmaWeakness", karmaWeakness);
-			nbt.putDouble("karmaSlowness", karmaSlowness);
-			nbt.putDouble("karmaPoison", karmaPoison);
-			nbt.putDouble("karmaBleed", karmaBleed);
-			nbt.putDouble("karmaEffDuration", karmaEffDuration);
-			nbt.putString("affixPool", affixPool);
-			return nbt;
-		}
-
-		public void syncData(LevelAccessor world) {
-			this.setDirty();
-			if (world instanceof Level && !world.isClientSide())
-				JoygMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new SavedDataSyncMessage(0, this));
-		}
-
-		static MapVariables clientSide = new MapVariables();
-
-		public static MapVariables get(LevelAccessor world) {
-			if (world instanceof ServerLevelAccessor serverLevelAcc) {
-				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(e -> MapVariables.load(e), MapVariables::new, DATA_NAME);
-			} else {
-				return clientSide;
-			}
-		}
-	}
-
-	public static class SavedDataSyncMessage {
-		private final int type;
-		private SavedData data;
-
-		public SavedDataSyncMessage(FriendlyByteBuf buffer) {
-			this.type = buffer.readInt();
-			CompoundTag nbt = buffer.readNbt();
-			if (nbt != null) {
-				this.data = this.type == 0 ? new MapVariables() : new WorldVariables();
-				if (this.data instanceof MapVariables mapVariables)
-					mapVariables.read(nbt);
-				else if (this.data instanceof WorldVariables worldVariables)
-					worldVariables.read(nbt);
-			}
-		}
-
-		public SavedDataSyncMessage(int type, SavedData data) {
-			this.type = type;
-			this.data = data;
-		}
-
-		public static void buffer(SavedDataSyncMessage message, FriendlyByteBuf buffer) {
-			buffer.writeInt(message.type);
-			if (message.data != null)
-				buffer.writeNbt(message.data.save(new CompoundTag()));
-		}
-
-		public static void handler(SavedDataSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-			NetworkEvent.Context context = contextSupplier.get();
-			context.enqueueWork(() -> {
-				if (!context.getDirection().getReceptionSide().isServer() && message.data != null) {
-					if (message.type == 0)
-						MapVariables.clientSide = (MapVariables) message.data;
-					else
-						WorldVariables.clientSide = (WorldVariables) message.data;
-				}
-			});
-			context.setPacketHandled(true);
 		}
 	}
 
@@ -293,8 +132,6 @@ public class JoygModVariables {
 	}
 
 	public static class PlayerVariables {
-		public double karma = 0;
-		public double karmaBar = 0;
 		public boolean indirectMoH = false;
 		public boolean hollow = false;
 		public boolean barbedarrow = false;
@@ -324,6 +161,7 @@ public class JoygModVariables {
 		public boolean guardingPresence = false;
 		public boolean juggernaut = false;
 		public boolean aegisGuardian = false;
+		public double ShieldRegenDelay = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -332,8 +170,6 @@ public class JoygModVariables {
 
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putDouble("karma", karma);
-			nbt.putDouble("karmaBar", karmaBar);
 			nbt.putBoolean("indirectMoH", indirectMoH);
 			nbt.putBoolean("hollow", hollow);
 			nbt.putBoolean("barbedarrow", barbedarrow);
@@ -363,13 +199,12 @@ public class JoygModVariables {
 			nbt.putBoolean("guardingPresence", guardingPresence);
 			nbt.putBoolean("juggernaut", juggernaut);
 			nbt.putBoolean("aegisGuardian", aegisGuardian);
+			nbt.putDouble("ShieldRegenDelay", ShieldRegenDelay);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
-			karma = nbt.getDouble("karma");
-			karmaBar = nbt.getDouble("karmaBar");
 			indirectMoH = nbt.getBoolean("indirectMoH");
 			hollow = nbt.getBoolean("hollow");
 			barbedarrow = nbt.getBoolean("barbedarrow");
@@ -399,6 +234,7 @@ public class JoygModVariables {
 			guardingPresence = nbt.getBoolean("guardingPresence");
 			juggernaut = nbt.getBoolean("juggernaut");
 			aegisGuardian = nbt.getBoolean("aegisGuardian");
+			ShieldRegenDelay = nbt.getDouble("ShieldRegenDelay");
 		}
 	}
 
@@ -423,8 +259,6 @@ public class JoygModVariables {
 			context.enqueueWork(() -> {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-					variables.karma = message.data.karma;
-					variables.karmaBar = message.data.karmaBar;
 					variables.indirectMoH = message.data.indirectMoH;
 					variables.hollow = message.data.hollow;
 					variables.barbedarrow = message.data.barbedarrow;
@@ -454,6 +288,7 @@ public class JoygModVariables {
 					variables.guardingPresence = message.data.guardingPresence;
 					variables.juggernaut = message.data.juggernaut;
 					variables.aegisGuardian = message.data.aegisGuardian;
+					variables.ShieldRegenDelay = message.data.ShieldRegenDelay;
 				}
 			});
 			context.setPacketHandled(true);
