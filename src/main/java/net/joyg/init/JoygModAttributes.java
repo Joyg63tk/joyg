@@ -29,7 +29,7 @@ public class JoygModAttributes {
 	public static final RegistryObject<Attribute> MAIM = ATTRIBUTES.register("maim", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".maim", 0, 0, 100)).setSyncable(true));
 	public static final RegistryObject<Attribute> CRITICALBLOCKCHANCE = ATTRIBUTES.register("critical_block_chance", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".critical_block_chance", 0, 0, 100)).setSyncable(true));
 	public static final RegistryObject<Attribute> MANALEECH = ATTRIBUTES.register("mana_leech", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".mana_leech", 0, 0, 0)).setSyncable(true));
-	public static final RegistryObject<Attribute> MAXABSOPTION = ATTRIBUTES.register("max_absoption", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".max_absoption", 0, 0, 0)).setSyncable(true));
+	public static final RegistryObject<Attribute> MAXABSOPTION = ATTRIBUTES.register("max_absoption", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".max_absoption", 0, 0, 200)).setSyncable(true));
 	public static final RegistryObject<Attribute> ABSOPTIONRECHARGERATE = ATTRIBUTES.register("absoption_recharge_rate", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".absoption_recharge_rate", 60, 5, 200)).setSyncable(true));
 	public static final RegistryObject<Attribute> ABSOPTIONDELAY = ATTRIBUTES.register("absoption_delay", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".absoption_delay", 200, 5, 1000)).setSyncable(true));
 
