@@ -3078,6 +3078,80 @@
         ]
       },
       "path": "~/attributes/absorption"
+    },
+    {
+      "name": "TornadoShots",
+      "type": "procedure",
+      "sortid": 236,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_shots",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/TornadoShotsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/tornado shots"
+    },
+    {
+      "name": "TornadoshotsCMD",
+      "type": "procedure",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornadoshots_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/TornadoshotsCMDProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/tornado shots"
+    },
+    {
+      "name": "TornadoshotsC",
+      "type": "command",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornadoshots_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/TornadoshotsCCommand.java"
+        ]
+      },
+      "path": "~/passives/tornado shots"
     }
   ],
   "variable_elements": [
@@ -3266,6 +3340,12 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "tornadoShots",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -3286,8 +3366,8 @@
       "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
       "attribute.joyg.critical_block_chance": "Critical Block Chance",
-      "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
       "item.joyg.wand_gold": "Aurous Wand",
+      "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
       "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
       "item.joyg.wand_wood": "Wooden Wand",
       "entity.joyg.totem": "Totem",
@@ -3449,6 +3529,10 @@
           },
           {
             "name": "aegis of the guardian",
+            "children": []
+          },
+          {
+            "name": "tornado shots",
             "children": []
           }
         ]

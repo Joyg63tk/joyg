@@ -94,6 +94,7 @@ public class JoygModVariables {
 			clone.guardingPresence = original.guardingPresence;
 			clone.juggernaut = original.juggernaut;
 			clone.aegisGuardian = original.aegisGuardian;
+			clone.tornadoShots = original.tornadoShots;
 			if (!event.isWasDeath()) {
 				clone.lowLife = original.lowLife;
 				clone.ShieldRegenDelay = original.ShieldRegenDelay;
@@ -164,6 +165,7 @@ public class JoygModVariables {
 		public boolean aegisGuardian = false;
 		public double ShieldRegenDelay = 0;
 		public boolean absoptionRegenStarted = false;
+		public boolean tornadoShots = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -203,6 +205,7 @@ public class JoygModVariables {
 			nbt.putBoolean("aegisGuardian", aegisGuardian);
 			nbt.putDouble("ShieldRegenDelay", ShieldRegenDelay);
 			nbt.putBoolean("absoptionRegenStarted", absoptionRegenStarted);
+			nbt.putBoolean("tornadoShots", tornadoShots);
 			return nbt;
 		}
 
@@ -239,6 +242,7 @@ public class JoygModVariables {
 			aegisGuardian = nbt.getBoolean("aegisGuardian");
 			ShieldRegenDelay = nbt.getDouble("ShieldRegenDelay");
 			absoptionRegenStarted = nbt.getBoolean("absoptionRegenStarted");
+			tornadoShots = nbt.getBoolean("tornadoShots");
 		}
 	}
 
@@ -294,6 +298,7 @@ public class JoygModVariables {
 					variables.aegisGuardian = message.data.aegisGuardian;
 					variables.ShieldRegenDelay = message.data.ShieldRegenDelay;
 					variables.absoptionRegenStarted = message.data.absoptionRegenStarted;
+					variables.tornadoShots = message.data.tornadoShots;
 				}
 			});
 			context.setPacketHandled(true);
