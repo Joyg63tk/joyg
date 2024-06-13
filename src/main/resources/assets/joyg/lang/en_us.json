@@ -55,5 +55,6 @@
   "death.attack.bleeding.item": "%1$s was bled to death by %2$s using %3$s",
   "attribute.joyg.absoption_delay": "Absorption Delay",
   "attribute.joyg.absoption_recharge_rate": "Absorption Recharge Rate",
+  "effect.joyg.immolation": "Immolation",
   "item.joyg.totem_sunking": "Totem Sunking"
 }

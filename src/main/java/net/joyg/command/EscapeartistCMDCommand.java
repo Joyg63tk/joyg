@@ -15,16 +15,16 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
-import net.joyg.procedures.ManathornCProcedure;
+import net.joyg.procedures.EscapeartistCProcedure;
 
 import com.mojang.brigadier.arguments.BoolArgumentType;
 
 @Mod.EventBusSubscriber
-public class ManathornCmdCommand {
+public class EscapeartistCMDCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher().register(Commands.literal("joyg").requires(s -> s.hasPermission(4))
-				.then(Commands.literal("passive").then(Commands.literal("manathorn").then(Commands.argument("name", EntityArgument.player()).then(Commands.argument("logic", BoolArgumentType.bool()).executes(arguments -> {
+				.then(Commands.literal("passive").then(Commands.literal("escape_artist").then(Commands.argument("name", EntityArgument.player()).then(Commands.argument("logic", BoolArgumentType.bool()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -36,7 +36,7 @@ public class ManathornCmdCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					ManathornCProcedure.execute(arguments);
+					EscapeartistCProcedure.execute(arguments);
 					return 0;
 				}))))));
 	}

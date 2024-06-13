@@ -3152,6 +3152,323 @@
         ]
       },
       "path": "~/passives/tornado shots"
+    },
+    {
+      "name": "ImmolationArrow",
+      "type": "procedure",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "immolation_arrow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ImmolationArrowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/immolation arrow"
+    },
+    {
+      "name": "ImmolationActiveTickCondition",
+      "type": "procedure",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "immolation_active_tick_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/joyg/procedures/ImmolationActiveTickConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "duration",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/passives/immolation arrow"
+    },
+    {
+      "name": "Immolation",
+      "type": "potioneffect",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "immolation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/ImmolationMobEffect.java"
+        ]
+      },
+      "path": "~/passives/immolation arrow"
+    },
+    {
+      "name": "ImmolationOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "immolation_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ImmolationOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/immolation arrow"
+    },
+    {
+      "name": "ImmolationDies",
+      "type": "procedure",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "immolation_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ImmolationDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/immolation arrow"
+    },
+    {
+      "name": "ImmolationArrowC",
+      "type": "procedure",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "immolation_arrow_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ImmolationArrowCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/immolation arrow"
+    },
+    {
+      "name": "ImmolationArrowCMD",
+      "type": "command",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "immolation_arrow_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/ImmolationArrowCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/immolation arrow"
+    },
+    {
+      "name": "BurstingShot",
+      "type": "procedure",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bursting_shot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BurstingShotProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/bursting shot"
+    },
+    {
+      "name": "BurstingCD",
+      "type": "procedure",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bursting_cd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BurstingCDProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/bursting shot"
+    },
+    {
+      "name": "BurstingShotC",
+      "type": "procedure",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bursting_shot_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BurstingShotCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/bursting shot"
+    },
+    {
+      "name": "BurstingshotCMD",
+      "type": "command",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burstingshot_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/BurstingshotCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/bursting shot"
+    },
+    {
+      "name": "EscapeartistC",
+      "type": "procedure",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "escapeartist_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/EscapeartistCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/escape artist"
+    },
+    {
+      "name": "EscapeartistCMD",
+      "type": "command",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "escapeartist_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/EscapeartistCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/escape artist"
+    },
+    {
+      "name": "DisengageC",
+      "type": "procedure",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disengage_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/DisengageCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/bursting shot"
     }
   ],
   "variable_elements": [
@@ -3346,6 +3663,30 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "immolationArrow",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "burstingShot",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "burstingShotCD",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "disengage",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -3407,6 +3748,7 @@
       "death.attack.bleeding.item": "%1$s was bled to death by %2$s using %3$s",
       "attribute.joyg.absoption_delay": "Absorption Delay",
       "attribute.joyg.absoption_recharge_rate": "Absorption Recharge Rate",
+      "effect.joyg.immolation": "Immolation",
       "item.joyg.totem_sunking": "Totem Sunking"
     }
   },
@@ -3533,6 +3875,14 @@
           },
           {
             "name": "tornado shots",
+            "children": []
+          },
+          {
+            "name": "immolation arrow",
+            "children": []
+          },
+          {
+            "name": "bursting shot",
             "children": []
           }
         ]

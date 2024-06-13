@@ -15,16 +15,17 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
-import net.joyg.procedures.ManathornCProcedure;
+import net.joyg.procedures.DisengageCProcedure;
+import net.joyg.procedures.BurstingShotCProcedure;
 
 import com.mojang.brigadier.arguments.BoolArgumentType;
 
 @Mod.EventBusSubscriber
-public class ManathornCmdCommand {
+public class BurstingshotCMDCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher().register(Commands.literal("joyg").requires(s -> s.hasPermission(4))
-				.then(Commands.literal("passive").then(Commands.literal("manathorn").then(Commands.argument("name", EntityArgument.player()).then(Commands.argument("logic", BoolArgumentType.bool()).executes(arguments -> {
+				.then(Commands.literal("passive").then(Commands.literal("bursting_shot").then(Commands.argument("name", EntityArgument.player()).then(Commands.argument("logic", BoolArgumentType.bool()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -36,7 +37,21 @@ public class ManathornCmdCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					ManathornCProcedure.execute(arguments);
+					BurstingShotCProcedure.execute(arguments);
+					return 0;
+				})))).then(Commands.literal("disengage").then(Commands.argument("name", EntityArgument.player()).then(Commands.argument("logic", BoolArgumentType.bool()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					DisengageCProcedure.execute(arguments);
 					return 0;
 				}))))));
 	}

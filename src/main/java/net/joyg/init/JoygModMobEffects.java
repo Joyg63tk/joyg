@@ -12,6 +12,7 @@ import net.minecraft.world.effect.MobEffect;
 
 import net.joyg.potion.ThunderCallMobEffect;
 import net.joyg.potion.ManaChargeMobEffect;
+import net.joyg.potion.ImmolationMobEffect;
 import net.joyg.potion.EscapeArtistCDIndicatorMobEffect;
 import net.joyg.potion.DisorientMobEffect;
 import net.joyg.potion.ClarityMobEffect;
@@ -28,4 +29,5 @@ public class JoygModMobEffects {
 	public static final RegistryObject<MobEffect> MANA_CHARGE = REGISTRY.register("mana_charge", () -> new ManaChargeMobEffect());
 	public static final RegistryObject<MobEffect> DISORIENT = REGISTRY.register("disorient", () -> new DisorientMobEffect());
 	public static final RegistryObject<MobEffect> ESCAPE_ARTIST_CD_INDICATOR = REGISTRY.register("escape_artist_cd_indicator", () -> new EscapeArtistCDIndicatorMobEffect());
+	public static final RegistryObject<MobEffect> IMMOLATION = REGISTRY.register("immolation", () -> new ImmolationMobEffect());
 }

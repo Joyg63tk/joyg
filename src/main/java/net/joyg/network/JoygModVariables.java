@@ -95,10 +95,14 @@ public class JoygModVariables {
 			clone.juggernaut = original.juggernaut;
 			clone.aegisGuardian = original.aegisGuardian;
 			clone.tornadoShots = original.tornadoShots;
+			clone.immolationArrow = original.immolationArrow;
+			clone.burstingShot = original.burstingShot;
+			clone.disengage = original.disengage;
 			if (!event.isWasDeath()) {
 				clone.lowLife = original.lowLife;
 				clone.ShieldRegenDelay = original.ShieldRegenDelay;
 				clone.absoptionRegenStarted = original.absoptionRegenStarted;
+				clone.burstingShotCD = original.burstingShotCD;
 			}
 		}
 	}
@@ -166,6 +170,10 @@ public class JoygModVariables {
 		public double ShieldRegenDelay = 0;
 		public boolean absoptionRegenStarted = false;
 		public boolean tornadoShots = false;
+		public boolean immolationArrow = false;
+		public boolean burstingShot = false;
+		public double burstingShotCD = 0;
+		public boolean disengage = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -206,6 +214,10 @@ public class JoygModVariables {
 			nbt.putDouble("ShieldRegenDelay", ShieldRegenDelay);
 			nbt.putBoolean("absoptionRegenStarted", absoptionRegenStarted);
 			nbt.putBoolean("tornadoShots", tornadoShots);
+			nbt.putBoolean("immolationArrow", immolationArrow);
+			nbt.putBoolean("burstingShot", burstingShot);
+			nbt.putDouble("burstingShotCD", burstingShotCD);
+			nbt.putBoolean("disengage", disengage);
 			return nbt;
 		}
 
@@ -243,6 +255,10 @@ public class JoygModVariables {
 			ShieldRegenDelay = nbt.getDouble("ShieldRegenDelay");
 			absoptionRegenStarted = nbt.getBoolean("absoptionRegenStarted");
 			tornadoShots = nbt.getBoolean("tornadoShots");
+			immolationArrow = nbt.getBoolean("immolationArrow");
+			burstingShot = nbt.getBoolean("burstingShot");
+			burstingShotCD = nbt.getDouble("burstingShotCD");
+			disengage = nbt.getBoolean("disengage");
 		}
 	}
 
@@ -299,6 +315,10 @@ public class JoygModVariables {
 					variables.ShieldRegenDelay = message.data.ShieldRegenDelay;
 					variables.absoptionRegenStarted = message.data.absoptionRegenStarted;
 					variables.tornadoShots = message.data.tornadoShots;
+					variables.immolationArrow = message.data.immolationArrow;
+					variables.burstingShot = message.data.burstingShot;
+					variables.burstingShotCD = message.data.burstingShotCD;
+					variables.disengage = message.data.disengage;
 				}
 			});
 			context.setPacketHandled(true);
