@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
@@ -18,6 +19,9 @@ import net.minecraft.core.BlockPos;
 import net.joyg.network.JoygModVariables;
 
 import javax.annotation.Nullable;
+
+import java.util.List;
+import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class BurstingShotProcedure {
@@ -37,7 +41,7 @@ public class BurstingShotProcedure {
 			return;
 		if ((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).burstingShot) {
 			if ((sourceentity != null ? entity.distanceTo(sourceentity) : -1) < 4 && damagesource.isIndirect()) {
-				if ((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).burstingShotCD < 0) {
+				if ((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).burstingShotCD < 1) {
 					{
 						double _setval = 200;
 						sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -55,8 +59,16 @@ public class BurstingShotProcedure {
 					entity.setDeltaMovement(new Vec3((5 * sourceentity.getLookAngle().x), 0.5, (5 * sourceentity.getLookAngle().z)));
 					Vec3 motion = entity.getDeltaMovement().scale(1);
 					entity.setDeltaMovement(motion);
-					if ((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).disengage && !sourceentity.onGround()) {
-						sourceentity.setDeltaMovement(new Vec3((-(5 * sourceentity.getLookAngle().x)), 0.5, (-(5 * sourceentity.getLookAngle().z))));
+					if ((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).disengage) {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								if (!(entityiterator == sourceentity)) {
+									entityiterator.setDeltaMovement(new Vec3((5 * sourceentity.getLookAngle().x), 0.5, (5 * sourceentity.getLookAngle().z)));
+								}
+							}
+						}
 					}
 				}
 			}

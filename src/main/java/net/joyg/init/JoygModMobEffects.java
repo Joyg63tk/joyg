@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.effect.MobEffect;
 
 import net.joyg.potion.ThunderCallMobEffect;
+import net.joyg.potion.MarkedMobEffect;
 import net.joyg.potion.ManaChargeMobEffect;
 import net.joyg.potion.ImmolationMobEffect;
 import net.joyg.potion.EscapeArtistCDIndicatorMobEffect;
@@ -30,4 +31,5 @@ public class JoygModMobEffects {
 	public static final RegistryObject<MobEffect> DISORIENT = REGISTRY.register("disorient", () -> new DisorientMobEffect());
 	public static final RegistryObject<MobEffect> ESCAPE_ARTIST_CD_INDICATOR = REGISTRY.register("escape_artist_cd_indicator", () -> new EscapeArtistCDIndicatorMobEffect());
 	public static final RegistryObject<MobEffect> IMMOLATION = REGISTRY.register("immolation", () -> new ImmolationMobEffect());
+	public static final RegistryObject<MobEffect> MARKED = REGISTRY.register("marked", () -> new MarkedMobEffect());
 }

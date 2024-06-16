@@ -98,11 +98,16 @@ public class JoygModVariables {
 			clone.immolationArrow = original.immolationArrow;
 			clone.burstingShot = original.burstingShot;
 			clone.disengage = original.disengage;
+			clone.huntersMark = original.huntersMark;
+			clone.snipersMark = original.snipersMark;
+			clone.scavengersMark = original.scavengersMark;
+			clone.marksman = original.marksman;
 			if (!event.isWasDeath()) {
 				clone.lowLife = original.lowLife;
 				clone.ShieldRegenDelay = original.ShieldRegenDelay;
 				clone.absoptionRegenStarted = original.absoptionRegenStarted;
 				clone.burstingShotCD = original.burstingShotCD;
+				clone.marked = original.marked;
 			}
 		}
 	}
@@ -174,6 +179,11 @@ public class JoygModVariables {
 		public boolean burstingShot = false;
 		public double burstingShotCD = 0;
 		public boolean disengage = false;
+		public boolean huntersMark = false;
+		public boolean snipersMark = false;
+		public boolean scavengersMark = false;
+		public boolean marksman = false;
+		public String marked = "\"NULL\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -218,6 +228,11 @@ public class JoygModVariables {
 			nbt.putBoolean("burstingShot", burstingShot);
 			nbt.putDouble("burstingShotCD", burstingShotCD);
 			nbt.putBoolean("disengage", disengage);
+			nbt.putBoolean("huntersMark", huntersMark);
+			nbt.putBoolean("snipersMark", snipersMark);
+			nbt.putBoolean("scavengersMark", scavengersMark);
+			nbt.putBoolean("marksman", marksman);
+			nbt.putString("marked", marked);
 			return nbt;
 		}
 
@@ -259,6 +274,11 @@ public class JoygModVariables {
 			burstingShot = nbt.getBoolean("burstingShot");
 			burstingShotCD = nbt.getDouble("burstingShotCD");
 			disengage = nbt.getBoolean("disengage");
+			huntersMark = nbt.getBoolean("huntersMark");
+			snipersMark = nbt.getBoolean("snipersMark");
+			scavengersMark = nbt.getBoolean("scavengersMark");
+			marksman = nbt.getBoolean("marksman");
+			marked = nbt.getString("marked");
 		}
 	}
 
@@ -319,6 +339,11 @@ public class JoygModVariables {
 					variables.burstingShot = message.data.burstingShot;
 					variables.burstingShotCD = message.data.burstingShotCD;
 					variables.disengage = message.data.disengage;
+					variables.huntersMark = message.data.huntersMark;
+					variables.snipersMark = message.data.snipersMark;
+					variables.scavengersMark = message.data.scavengersMark;
+					variables.marksman = message.data.marksman;
+					variables.marked = message.data.marked;
 				}
 			});
 			context.setPacketHandled(true);

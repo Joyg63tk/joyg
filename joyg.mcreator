@@ -3469,6 +3469,160 @@
         ]
       },
       "path": "~/passives/bursting shot"
+    },
+    {
+      "name": "Marked",
+      "type": "potioneffect",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/MarkedMobEffect.java"
+        ]
+      },
+      "path": "~/passives/hunters mark"
+    },
+    {
+      "name": "MarkedDamageTaken",
+      "type": "procedure",
+      "sortid": 254,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marked_damage_taken",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/MarkedDamageTakenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/hunters mark"
+    },
+    {
+      "name": "MarkedDies",
+      "type": "procedure",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marked_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/MarkedDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/hunters mark"
+    },
+    {
+      "name": "MarksmanApplier",
+      "type": "procedure",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marksman_applier",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/MarksmanApplierProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/hunters mark"
+    },
+    {
+      "name": "Automarker",
+      "type": "procedure",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "automarker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/AutomarkerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/hunters mark"
     }
   ],
   "variable_elements": [
@@ -3687,6 +3841,36 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "huntersMark",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "snipersMark",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "scavengersMark",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "marksman",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "marked",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"NULL\""
     }
   ],
   "sound_elements": [],
@@ -3739,6 +3923,7 @@
       "enchantment.joyg.empower": "Empower",
       "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
       "item.joyg.amethyst_focus_iron": "Iron Amethyst Focus",
+      "effect.joyg.marked": "Marked",
       "item.joyg.totem_stone": "Stone Totem",
       "attribute.joyg.skill_cdr.desc": "Reduces the Cooldown of your Martial Skills with diminishing returns",
       "attribute.joyg.mana_gained_on_hit.desc": "Increases mana gained by 5% of max mana, when Instant Mana on hit procs",
@@ -3883,6 +4068,10 @@
           },
           {
             "name": "bursting shot",
+            "children": []
+          },
+          {
+            "name": "hunters mark",
             "children": []
           }
         ]

@@ -46,6 +46,7 @@
   "enchantment.joyg.empower": "Empower",
   "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
   "item.joyg.amethyst_focus_iron": "Iron Amethyst Focus",
+  "effect.joyg.marked": "Marked",
   "item.joyg.totem_stone": "Stone Totem",
   "attribute.joyg.skill_cdr.desc": "Reduces the Cooldown of your Martial Skills with diminishing returns",
   "attribute.joyg.mana_gained_on_hit.desc": "Increases mana gained by 5% of max mana, when Instant Mana on hit procs",
