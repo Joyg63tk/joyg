@@ -3623,6 +3623,166 @@
         ]
       },
       "path": "~/passives/hunters mark"
+    },
+    {
+      "name": "MarksmanC",
+      "type": "procedure",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "marksman_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/MarksmanCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/hunters mark"
+    },
+    {
+      "name": "SnipersMarkC",
+      "type": "procedure",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snipers_mark_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/SnipersMarkCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/hunters mark"
+    },
+    {
+      "name": "ScavengersMarkC",
+      "type": "procedure",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scavengers_mark_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ScavengersMarkCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/hunters mark"
+    },
+    {
+      "name": "HuntersMarkC",
+      "type": "procedure",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hunters_mark_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/HuntersMarkCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/hunters mark"
+    },
+    {
+      "name": "MarkCMD",
+      "type": "command",
+      "sortid": 262,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mark_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/MarkCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/hunters mark"
+    },
+    {
+      "name": "ManathunderStrikes",
+      "type": "procedure",
+      "sortid": 263,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manathunder_strikes",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManathunderStrikesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/manathunder strikes"
+    },
+    {
+      "name": "ManathunderC",
+      "type": "procedure",
+      "sortid": 264,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manathunder_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManathunderCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/manathunder strikes"
+    },
+    {
+      "name": "ManathunderCMD",
+      "type": "command",
+      "sortid": 265,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manathunder_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/ManathunderCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/manathunder strikes"
     }
   ],
   "variable_elements": [
@@ -3871,6 +4031,12 @@
       "type": "string",
       "scope": "player_lifetime",
       "value": "\"NULL\""
+    },
+    {
+      "name": "manathunder",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -3891,8 +4057,8 @@
       "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
       "attribute.joyg.critical_block_chance": "Critical Block Chance",
-      "item.joyg.wand_gold": "Aurous Wand",
       "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
+      "item.joyg.wand_gold": "Aurous Wand",
       "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
       "item.joyg.wand_wood": "Wooden Wand",
       "entity.joyg.totem": "Totem",
@@ -4072,6 +4238,14 @@
           },
           {
             "name": "hunters mark",
+            "children": []
+          },
+          {
+            "name": "manathunder strikes",
+            "children": []
+          },
+          {
+            "name": "thunderlord",
             "children": []
           }
         ]

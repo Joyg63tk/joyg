@@ -102,6 +102,7 @@ public class JoygModVariables {
 			clone.snipersMark = original.snipersMark;
 			clone.scavengersMark = original.scavengersMark;
 			clone.marksman = original.marksman;
+			clone.manathunder = original.manathunder;
 			if (!event.isWasDeath()) {
 				clone.lowLife = original.lowLife;
 				clone.ShieldRegenDelay = original.ShieldRegenDelay;
@@ -184,6 +185,7 @@ public class JoygModVariables {
 		public boolean scavengersMark = false;
 		public boolean marksman = false;
 		public String marked = "\"NULL\"";
+		public boolean manathunder = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -233,6 +235,7 @@ public class JoygModVariables {
 			nbt.putBoolean("scavengersMark", scavengersMark);
 			nbt.putBoolean("marksman", marksman);
 			nbt.putString("marked", marked);
+			nbt.putBoolean("manathunder", manathunder);
 			return nbt;
 		}
 
@@ -279,6 +282,7 @@ public class JoygModVariables {
 			scavengersMark = nbt.getBoolean("scavengersMark");
 			marksman = nbt.getBoolean("marksman");
 			marked = nbt.getString("marked");
+			manathunder = nbt.getBoolean("manathunder");
 		}
 	}
 
@@ -344,6 +348,7 @@ public class JoygModVariables {
 					variables.scavengersMark = message.data.scavengersMark;
 					variables.marksman = message.data.marksman;
 					variables.marked = message.data.marked;
+					variables.manathunder = message.data.manathunder;
 				}
 			});
 			context.setPacketHandled(true);
