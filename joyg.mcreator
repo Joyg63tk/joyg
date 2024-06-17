@@ -4057,8 +4057,8 @@
       "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
       "attribute.joyg.critical_block_chance": "Critical Block Chance",
-      "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
       "item.joyg.wand_gold": "Aurous Wand",
+      "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
       "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
       "item.joyg.wand_wood": "Wooden Wand",
       "entity.joyg.totem": "Totem",
@@ -4329,7 +4329,6 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "use_compiled_mods",
       "curios_api",
       "geckolib",
       "playeranimator",

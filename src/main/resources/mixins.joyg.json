@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "net.joyg.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.joyg.refmap.json",
+  "mixins": [],
+  "client": [],
+  "minVersion": "0.8"
+}
