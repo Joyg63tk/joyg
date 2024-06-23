@@ -103,12 +103,20 @@ public class JoygModVariables {
 			clone.scavengersMark = original.scavengersMark;
 			clone.marksman = original.marksman;
 			clone.manathunder = original.manathunder;
+			clone.thunderlord = original.thunderlord;
+			clone.chargedThunder = original.chargedThunder;
+			clone.shockAwe = original.shockAwe;
+			clone.thundercaller = original.thundercaller;
+			clone.enderReflexes = original.enderReflexes;
+			clone.trickshots = original.trickshots;
+			clone.hemomancer = original.hemomancer;
 			if (!event.isWasDeath()) {
 				clone.lowLife = original.lowLife;
 				clone.ShieldRegenDelay = original.ShieldRegenDelay;
 				clone.absoptionRegenStarted = original.absoptionRegenStarted;
 				clone.burstingShotCD = original.burstingShotCD;
 				clone.marked = original.marked;
+				clone.nextHitShockwave = original.nextHitShockwave;
 			}
 		}
 	}
@@ -186,6 +194,14 @@ public class JoygModVariables {
 		public boolean marksman = false;
 		public String marked = "\"NULL\"";
 		public boolean manathunder = false;
+		public boolean thunderlord = false;
+		public boolean chargedThunder = false;
+		public boolean shockAwe = false;
+		public boolean nextHitShockwave = false;
+		public boolean thundercaller = false;
+		public boolean enderReflexes = false;
+		public boolean trickshots = false;
+		public boolean hemomancer = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -236,6 +252,14 @@ public class JoygModVariables {
 			nbt.putBoolean("marksman", marksman);
 			nbt.putString("marked", marked);
 			nbt.putBoolean("manathunder", manathunder);
+			nbt.putBoolean("thunderlord", thunderlord);
+			nbt.putBoolean("chargedThunder", chargedThunder);
+			nbt.putBoolean("shockAwe", shockAwe);
+			nbt.putBoolean("nextHitShockwave", nextHitShockwave);
+			nbt.putBoolean("thundercaller", thundercaller);
+			nbt.putBoolean("enderReflexes", enderReflexes);
+			nbt.putBoolean("trickshots", trickshots);
+			nbt.putBoolean("hemomancer", hemomancer);
 			return nbt;
 		}
 
@@ -283,6 +307,14 @@ public class JoygModVariables {
 			marksman = nbt.getBoolean("marksman");
 			marked = nbt.getString("marked");
 			manathunder = nbt.getBoolean("manathunder");
+			thunderlord = nbt.getBoolean("thunderlord");
+			chargedThunder = nbt.getBoolean("chargedThunder");
+			shockAwe = nbt.getBoolean("shockAwe");
+			nextHitShockwave = nbt.getBoolean("nextHitShockwave");
+			thundercaller = nbt.getBoolean("thundercaller");
+			enderReflexes = nbt.getBoolean("enderReflexes");
+			trickshots = nbt.getBoolean("trickshots");
+			hemomancer = nbt.getBoolean("hemomancer");
 		}
 	}
 
@@ -349,6 +381,14 @@ public class JoygModVariables {
 					variables.marksman = message.data.marksman;
 					variables.marked = message.data.marked;
 					variables.manathunder = message.data.manathunder;
+					variables.thunderlord = message.data.thunderlord;
+					variables.chargedThunder = message.data.chargedThunder;
+					variables.shockAwe = message.data.shockAwe;
+					variables.nextHitShockwave = message.data.nextHitShockwave;
+					variables.thundercaller = message.data.thundercaller;
+					variables.enderReflexes = message.data.enderReflexes;
+					variables.trickshots = message.data.trickshots;
+					variables.hemomancer = message.data.hemomancer;
 				}
 			});
 			context.setPacketHandled(true);

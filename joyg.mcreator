@@ -3783,6 +3783,338 @@
         ]
       },
       "path": "~/passives/manathunder strikes"
+    },
+    {
+      "name": "Thunderlord",
+      "type": "procedure",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunderlord",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ThunderlordProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/thunderlord"
+    },
+    {
+      "name": "CastShockwaveOnHit",
+      "type": "procedure",
+      "sortid": 267,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cast_shockwave_on_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/CastShockwaveOnHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/thunderlord"
+    },
+    {
+      "name": "ThunderlordC",
+      "type": "procedure",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunderlord_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ThunderlordCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/thunderlord"
+    },
+    {
+      "name": "ChargedThunderC",
+      "type": "procedure",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charged_thunder_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ChargedThunderCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/thunderlord"
+    },
+    {
+      "name": "ShockandaweC",
+      "type": "procedure",
+      "sortid": 270,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shockandawe_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ShockandaweCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/thunderlord"
+    },
+    {
+      "name": "ThunderlordCMD",
+      "type": "command",
+      "sortid": 271,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunderlord_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/ThunderlordCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/thunderlord"
+    },
+    {
+      "name": "Thundercaller",
+      "type": "procedure",
+      "sortid": 272,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thundercaller",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ThundercallerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/passives/thunder arrow"
+    },
+    {
+      "name": "ThundercallerC",
+      "type": "procedure",
+      "sortid": 273,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thundercaller_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ThundercallerCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/thunder arrow"
+    },
+    {
+      "name": "ThundercallerCMD",
+      "type": "command",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thundercaller_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/ThundercallerCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/thunder arrow"
+    },
+    {
+      "name": "EnderReflex",
+      "type": "procedure",
+      "sortid": 275,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ender_reflex",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/EnderReflexProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/ender reflexes"
+    },
+    {
+      "name": "EnderReflexC",
+      "type": "procedure",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ender_reflex_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/EnderReflexCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/ender reflexes"
+    },
+    {
+      "name": "EnderReflexCmd",
+      "type": "command",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ender_reflex_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/EnderReflexCmdCommand.java"
+        ]
+      },
+      "path": "~/passives/ender reflexes"
+    },
+    {
+      "name": "Trickshots",
+      "type": "procedure",
+      "sortid": 278,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trickshots",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/TrickshotsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/trickshots"
+    },
+    {
+      "name": "TrickshotsC",
+      "type": "procedure",
+      "sortid": 279,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trickshots_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/TrickshotsCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/passives/trickshots"
+    },
+    {
+      "name": "TrickshotsCMD",
+      "type": "command",
+      "sortid": 280,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trickshots_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/TrickshotsCMDCommand.java"
+        ]
+      },
+      "path": "~/passives/trickshots"
     }
   ],
   "variable_elements": [
@@ -4037,6 +4369,54 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "thunderlord",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "chargedThunder",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "shockAwe",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "nextHitShockwave",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "thundercaller",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "enderReflexes",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "trickshots",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "hemomancer",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -4246,6 +4626,26 @@
           },
           {
             "name": "thunderlord",
+            "children": []
+          },
+          {
+            "name": "thunder arrow",
+            "children": []
+          },
+          {
+            "name": "cold snap",
+            "children": []
+          },
+          {
+            "name": "ender reflexes",
+            "children": []
+          },
+          {
+            "name": "trickshots",
+            "children": []
+          },
+          {
+            "name": "hemomancer",
             "children": []
           }
         ]
