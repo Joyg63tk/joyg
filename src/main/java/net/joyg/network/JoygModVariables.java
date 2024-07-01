@@ -28,6 +28,7 @@ import net.minecraft.client.Minecraft;
 import net.joyg.JoygMod;
 
 import java.util.function.Supplier;
+import java.util.ArrayList;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class JoygModVariables {
@@ -45,20 +46,29 @@ public class JoygModVariables {
 	public static class EventBusVariableHandlers {
 		@SubscribeEvent
 		public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getEntity().level().isClientSide())
-				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
+			if (!event.getEntity().level().isClientSide()) {
+				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
+					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
+				}
+			}
 		}
 
 		@SubscribeEvent
 		public static void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
-			if (!event.getEntity().level().isClientSide())
-				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
+			if (!event.getEntity().level().isClientSide()) {
+				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
+					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
+				}
+			}
 		}
 
 		@SubscribeEvent
 		public static void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getEntity().level().isClientSide())
-				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
+			if (!event.getEntity().level().isClientSide()) {
+				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
+					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
+				}
+			}
 		}
 
 		@SubscribeEvent
@@ -117,6 +127,12 @@ public class JoygModVariables {
 				clone.burstingShotCD = original.burstingShotCD;
 				clone.marked = original.marked;
 				clone.nextHitShockwave = original.nextHitShockwave;
+				clone.finalBlow = original.finalBlow;
+			}
+			if (!event.getEntity().level().isClientSide()) {
+				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
+					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
+				}
 			}
 		}
 	}
@@ -202,10 +218,11 @@ public class JoygModVariables {
 		public boolean enderReflexes = false;
 		public boolean trickshots = false;
 		public boolean hemomancer = false;
+		public boolean finalBlow = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
-				JoygMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> serverPlayer), new PlayerVariablesSyncMessage(this));
+				JoygMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(entity.level()::dimension), new PlayerVariablesSyncMessage(this, entity.getId()));
 		}
 
 		public Tag writeNBT() {
@@ -260,6 +277,7 @@ public class JoygModVariables {
 			nbt.putBoolean("enderReflexes", enderReflexes);
 			nbt.putBoolean("trickshots", trickshots);
 			nbt.putBoolean("hemomancer", hemomancer);
+			nbt.putBoolean("finalBlow", finalBlow);
 			return nbt;
 		}
 
@@ -315,30 +333,40 @@ public class JoygModVariables {
 			enderReflexes = nbt.getBoolean("enderReflexes");
 			trickshots = nbt.getBoolean("trickshots");
 			hemomancer = nbt.getBoolean("hemomancer");
+			finalBlow = nbt.getBoolean("finalBlow");
 		}
 	}
 
+	@SubscribeEvent
+	public static void registerMessage(FMLCommonSetupEvent event) {
+		JoygMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
+	}
+
 	public static class PlayerVariablesSyncMessage {
+		private final int target;
 		private final PlayerVariables data;
 
 		public PlayerVariablesSyncMessage(FriendlyByteBuf buffer) {
 			this.data = new PlayerVariables();
 			this.data.readNBT(buffer.readNbt());
+			this.target = buffer.readInt();
 		}
 
-		public PlayerVariablesSyncMessage(PlayerVariables data) {
+		public PlayerVariablesSyncMessage(PlayerVariables data, int entityid) {
 			this.data = data;
+			this.target = entityid;
 		}
 
 		public static void buffer(PlayerVariablesSyncMessage message, FriendlyByteBuf buffer) {
 			buffer.writeNbt((CompoundTag) message.data.writeNBT());
+			buffer.writeInt(message.target);
 		}
 
 		public static void handler(PlayerVariablesSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 			NetworkEvent.Context context = contextSupplier.get();
 			context.enqueueWork(() -> {
 				if (!context.getDirection().getReceptionSide().isServer()) {
-					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.indirectMoH = message.data.indirectMoH;
 					variables.hollow = message.data.hollow;
 					variables.barbedarrow = message.data.barbedarrow;
@@ -389,6 +417,7 @@ public class JoygModVariables {
 					variables.enderReflexes = message.data.enderReflexes;
 					variables.trickshots = message.data.trickshots;
 					variables.hemomancer = message.data.hemomancer;
+					variables.finalBlow = message.data.finalBlow;
 				}
 			});
 			context.setPacketHandled(true);

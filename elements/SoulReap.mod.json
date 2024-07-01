@@ -2,10 +2,10 @@
   "_fv": 57,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Disoriented",
-    "icon": "icon42.png",
+    "effectName": "Soul Reap",
+    "icon": "icon32.png",
     "color": {
-      "value": -16777165,
+      "value": -13421773,
       "falpha": 0.0
     },
     "isInstant": false,
@@ -13,14 +13,11 @@
     "isBenefitical": false,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
-    "onStarted": {
-      "name": "DisorientEffectStartedapplied"
-    },
     "onActiveTick": {
-      "name": "DisorientOnEffectActiveTick"
+      "name": "SoulReapOnEffectActiveTick"
     },
-    "onExpired": {
-      "name": "DisorientEffectExpires"
+    "activeTickCondition": {
+      "name": "SoulReapActiveTickCondition"
     }
   }
 }

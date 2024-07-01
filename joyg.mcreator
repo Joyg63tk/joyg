@@ -2666,102 +2666,6 @@
       "path": "~/passives/affinity for suffering"
     },
     {
-      "name": "FlamecasterAffix",
-      "type": "procedure",
-      "sortid": 201,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flamecaster_affix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/FlamecasterAffixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/util/spawn affix/affixes"
-    },
-    {
-      "name": "FrostcasterAffix",
-      "type": "procedure",
-      "sortid": 204,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "frostcaster_affix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/FrostcasterAffixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/util/spawn affix/affixes"
-    },
-    {
-      "name": "ThundercallerAffix",
-      "type": "procedure",
-      "sortid": 214,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "thundercaller_affix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/ThundercallerAffixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/util/spawn affix/affixes"
-    },
-    {
-      "name": "ClimberAffix",
-      "type": "procedure",
-      "sortid": 219,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "climber_affix",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/ClimberAffixProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/util/spawn affix/affixes"
-    },
-    {
       "name": "IntimidatingPresence",
       "type": "procedure",
       "sortid": 220,
@@ -4115,6 +4019,481 @@
         ]
       },
       "path": "~/passives/trickshots"
+    },
+    {
+      "name": "Tagger",
+      "type": "procedure",
+      "sortid": 281,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tagger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/TaggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util"
+    },
+    {
+      "name": "ExportCMD",
+      "type": "command",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "export_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/ExportCMDCommand.java"
+        ]
+      },
+      "path": "~/util"
+    },
+    {
+      "name": "Spelltest",
+      "type": "procedure",
+      "sortid": 283,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spelltest",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/SpelltestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells"
+    },
+    {
+      "name": "Casttest",
+      "type": "command",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "casttest",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/CasttestCommand.java"
+        ]
+      },
+      "path": "~/spells"
+    },
+    {
+      "name": "SetupAnimations",
+      "type": "procedure",
+      "sortid": 285,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setup_animations",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/SetupAnimationsProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Slam1",
+      "type": "procedure",
+      "sortid": 286,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slam_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/Slam1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/slam"
+    },
+    {
+      "name": "Cripplingslam",
+      "type": "command",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cripplingslam",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/CripplingslamCommand.java"
+        ]
+      },
+      "path": "~/spells/slam"
+    },
+    {
+      "name": "DisorientEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 288,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disorient_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/DisorientEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/effects/disorient"
+    },
+    {
+      "name": "DisorientEffectExpires",
+      "type": "procedure",
+      "sortid": 289,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disorient_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/DisorientEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/effects/disorient"
+    },
+    {
+      "name": "Thunderstrike",
+      "type": "procedure",
+      "sortid": 290,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunderstrike",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ThunderstrikeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/thunderstrike"
+    },
+    {
+      "name": "ThunderstrikeC",
+      "type": "command",
+      "sortid": 291,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunderstrike_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/ThunderstrikeCCommand.java"
+        ]
+      },
+      "path": "~/spells/thunderstrike"
+    },
+    {
+      "name": "SoulReapActiveTickCondition",
+      "type": "procedure",
+      "sortid": 292,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_reap_active_tick_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/joyg/procedures/SoulReapActiveTickConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "duration",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/spells/soul reaper"
+    },
+    {
+      "name": "SoulReap",
+      "type": "potioneffect",
+      "sortid": 293,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_reap",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/SoulReapMobEffect.java"
+        ]
+      },
+      "path": "~/spells/soul reaper"
+    },
+    {
+      "name": "SoulReapOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 294,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_reap_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/SoulReapOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/soul reaper"
+    },
+    {
+      "name": "SoulReaper",
+      "type": "procedure",
+      "sortid": 295,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_reaper",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/SoulReaperProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/soul reaper"
+    },
+    {
+      "name": "RipSoul",
+      "type": "procedure",
+      "sortid": 296,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rip_soul",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/RipSoulProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/soul reaper"
+    },
+    {
+      "name": "SoulreaperCmd",
+      "type": "command",
+      "sortid": 297,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soulreaper_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/SoulreaperCmdCommand.java"
+        ]
+      },
+      "path": "~/spells/soul reaper"
+    },
+    {
+      "name": "FirststrikeFinalblow",
+      "type": "procedure",
+      "sortid": 298,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firststrike_finalblow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/FirststrikeFinalblowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/first strike final blow"
+    },
+    {
+      "name": "FinalBlowEffectExpires",
+      "type": "procedure",
+      "sortid": 299,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_blow_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/FinalBlowEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/spells/first strike final blow"
+    },
+    {
+      "name": "FinalBlow",
+      "type": "potioneffect",
+      "sortid": 300,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_blow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/FinalBlowMobEffect.java"
+        ]
+      },
+      "path": "~/spells/first strike final blow"
+    },
+    {
+      "name": "Firstfinal",
+      "type": "command",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firstfinal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/FirstfinalCommand.java"
+        ]
+      },
+      "path": "~/spells/first strike final blow"
     }
   ],
   "variable_elements": [
@@ -4417,6 +4796,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "finalBlow",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -4444,6 +4829,7 @@
       "entity.joyg.totem": "Totem",
       "effect.joyg.clarity": "Clarity",
       "affix.apotheosis:armor/attribute/longwinded.prefix": "Long winded",
+      "effect.joyg.final_blow": "Final Blow Available",
       "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
       "attribute.joyg.max_absoption": "Max Absorption",
       "item.joyg.wand_iron": "Ferrous Wand",
@@ -4476,6 +4862,7 @@
       "item.joyg.amethyst_focus_gold": "Gold Amethyst Focus",
       "attribute.joyg.maim": "Maim Chance",
       "death.attack.bleeding": "%1$s died from bleeding",
+      "effect.joyg.soul_reap": "Soul Reap",
       "death.attack.bleeding.item": "%1$s was bled to death by %2$s using %3$s",
       "attribute.joyg.absoption_delay": "Absorption Delay",
       "attribute.joyg.absoption_recharge_rate": "Absorption Recharge Rate",
@@ -4700,16 +5087,28 @@
             "children": []
           },
           {
-            "name": "spawn affix",
-            "children": [
-              {
-                "name": "affixes",
-                "children": []
-              }
-            ]
+            "name": "crafting",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "spells",
+        "children": [
+          {
+            "name": "slam",
+            "children": []
           },
           {
-            "name": "crafting",
+            "name": "thunderstrike",
+            "children": []
+          },
+          {
+            "name": "soul reaper",
+            "children": []
+          },
+          {
+            "name": "first strike final blow",
             "children": []
           }
         ]
