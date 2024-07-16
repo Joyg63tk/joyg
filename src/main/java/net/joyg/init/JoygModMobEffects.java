@@ -12,9 +12,11 @@ import net.minecraft.world.effect.MobEffect;
 
 import net.joyg.potion.ThunderCallMobEffect;
 import net.joyg.potion.SoulReapMobEffect;
+import net.joyg.potion.ShatteredArmorMobEffect;
 import net.joyg.potion.MarkedMobEffect;
 import net.joyg.potion.ManaChargeMobEffect;
 import net.joyg.potion.ImmolationMobEffect;
+import net.joyg.potion.FlameBrandWeaponMobEffect;
 import net.joyg.potion.FinalBlowMobEffect;
 import net.joyg.potion.EscapeArtistCDIndicatorMobEffect;
 import net.joyg.potion.DisorientMobEffect;
@@ -36,4 +38,6 @@ public class JoygModMobEffects {
 	public static final RegistryObject<MobEffect> MARKED = REGISTRY.register("marked", () -> new MarkedMobEffect());
 	public static final RegistryObject<MobEffect> SOUL_REAP = REGISTRY.register("soul_reap", () -> new SoulReapMobEffect());
 	public static final RegistryObject<MobEffect> FINAL_BLOW = REGISTRY.register("final_blow", () -> new FinalBlowMobEffect());
+	public static final RegistryObject<MobEffect> FLAME_BRAND_WEAPON = REGISTRY.register("flame_brand_weapon", () -> new FlameBrandWeaponMobEffect());
+	public static final RegistryObject<MobEffect> SHATTERED_ARMOR = REGISTRY.register("shattered_armor", () -> new ShatteredArmorMobEffect());
 }

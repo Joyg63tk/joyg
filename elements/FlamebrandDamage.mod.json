@@ -1,0 +1,7 @@
+{
+  "_fv": 60,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">entity_attacked</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"entity_haspotioneffect\"><field name=\"potion\">CUSTOM:FlameBrandWeapon</field><value name=\"entity\"><block type=\"source_entity_from_deps\"/></value></block></value><statement name=\"DO0\"><block type=\"deal_damage\"><value name=\"amount\"><block type=\"math_dual_ops\"><field name=\"OP\">ADD</field><value name=\"A\"><block type=\"entity_potioneffectlevel\"><field name=\"potion\">CUSTOM:FlameBrandWeapon</field><value name=\"entity\"><block type=\"source_entity_from_deps\"/></value></block></value><value name=\"B\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value></block></value><value name=\"entity\"><block type=\"entity_from_deps\"/></value><value name=\"damagesource\"><block type=\"damagesource_from_type_cause\"><field name=\"damagetype\">ON_FIRE</field><value name=\"cause\"><block type=\"source_entity_from_deps\"/></value></block></value><next><block type=\"entity_set_fire\"><value name=\"entity\"><block type=\"entity_from_deps\"/></value><value name=\"seconds\"><block type=\"math_number\"><field name=\"NUM\">8</field></block></value></block></next></block></statement></block></next></block></xml>"
+  }
+}

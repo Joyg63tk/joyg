@@ -23,8 +23,8 @@ import net.joyg.JoygMod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class JoygModAttributes {
 	public static final DeferredRegister<Attribute> ATTRIBUTES = DeferredRegister.create(ForgeRegistries.ATTRIBUTES, JoygMod.MODID);
-	public static final RegistryObject<Attribute> MANAGAINEDONHIT = ATTRIBUTES.register("mana_gained_on_hit", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".mana_gained_on_hit", 0, 0, 256)).setSyncable(true));
 	public static final RegistryObject<Attribute> MANAONHITCHANCE = ATTRIBUTES.register("mana_on_hit_chance", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".mana_on_hit_chance", 0, 0, 100)).setSyncable(true));
+	public static final RegistryObject<Attribute> MANAGAINEDONHIT = ATTRIBUTES.register("mana_gained_on_hit", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".mana_gained_on_hit", 0, 0, 256)).setSyncable(true));
 	public static final RegistryObject<Attribute> ENVENOM = ATTRIBUTES.register("envenom", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".envenom", 0, 0, 100)).setSyncable(true));
 	public static final RegistryObject<Attribute> MAIM = ATTRIBUTES.register("maim", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".maim", 0, 0, 100)).setSyncable(true));
 	public static final RegistryObject<Attribute> CRITICALBLOCKCHANCE = ATTRIBUTES.register("critical_block_chance", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".critical_block_chance", 0, 0, 100)).setSyncable(true));
@@ -42,10 +42,10 @@ public class JoygModAttributes {
 
 	@SubscribeEvent
 	public static void addAttributes(EntityAttributeModificationEvent event) {
-		event.add(EntityType.PLAYER, MANAGAINEDONHIT.get());
-		event.add(EntityType.PLAYER, MANAGAINEDONHIT.get());
 		event.add(EntityType.PLAYER, MANAONHITCHANCE.get());
 		event.add(EntityType.PLAYER, MANAONHITCHANCE.get());
+		event.add(EntityType.PLAYER, MANAGAINEDONHIT.get());
+		event.add(EntityType.PLAYER, MANAGAINEDONHIT.get());
 		event.add(EntityType.PLAYER, ENVENOM.get());
 		event.add(EntityType.PLAYER, ENVENOM.get());
 		event.add(EntityType.PLAYER, MAIM.get());
@@ -68,8 +68,8 @@ public class JoygModAttributes {
 		public static void persistAttributes(PlayerEvent.Clone event) {
 			Player oldP = event.getOriginal();
 			Player newP = (Player) event.getEntity();
-			newP.getAttribute(MANAGAINEDONHIT.get()).setBaseValue(oldP.getAttribute(MANAGAINEDONHIT.get()).getBaseValue());
 			newP.getAttribute(MANAONHITCHANCE.get()).setBaseValue(oldP.getAttribute(MANAONHITCHANCE.get()).getBaseValue());
+			newP.getAttribute(MANAGAINEDONHIT.get()).setBaseValue(oldP.getAttribute(MANAGAINEDONHIT.get()).getBaseValue());
 			newP.getAttribute(ENVENOM.get()).setBaseValue(oldP.getAttribute(ENVENOM.get()).getBaseValue());
 			newP.getAttribute(MAIM.get()).setBaseValue(oldP.getAttribute(MAIM.get()).getBaseValue());
 			newP.getAttribute(CRITICALBLOCKCHANCE.get()).setBaseValue(oldP.getAttribute(CRITICALBLOCKCHANCE.get()).getBaseValue());

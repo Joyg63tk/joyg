@@ -10,11 +10,6 @@ public class MarkedMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.joyg.marked";
-	}
-
-	@Override
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}

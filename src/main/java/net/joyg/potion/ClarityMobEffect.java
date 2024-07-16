@@ -14,11 +14,6 @@ public class ClarityMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.joyg.clarity";
-	}
-
-	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		ClarityOnEffectActiveTickProcedure.execute(entity);
 	}

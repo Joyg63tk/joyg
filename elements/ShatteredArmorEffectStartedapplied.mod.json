@@ -1,0 +1,7 @@
+{
+  "_fv": 60,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block inline=\"false\" type=\"add_modifier\"><field name=\"attribute\">ARMOR</field><field name=\"permanent\">FALSE</field><field name=\"checkExiting\">TRUE</field><value name=\"modifier\"><block type=\"create_new_modifier\"><field name=\"operation\">MULTIPLY_TOTAL</field><value name=\"modifierid\"><block type=\"text\"><field name=\"TEXT\">dd988aa8-42cd-11ef-9d94-325096b39f47</field></block></value><value name=\"name\"><block type=\"text\"><field name=\"TEXT\">shatterarmor</field></block></value><value name=\"value\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value></block></value><value name=\"entity\"><block type=\"entity_from_deps\"/></value></block></next></block></xml>"
+  }
+}

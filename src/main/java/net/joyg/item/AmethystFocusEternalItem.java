@@ -30,8 +30,8 @@ public class AmethystFocusEternalItem extends Item {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, world, list, flag);
+	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, level, list, flag);
 		list.add(Component.literal("While in Offhand: Grants 70 increased Max Mana"));
 		list.add(Component.literal("If you have Arcane Familiar Passive allocated you summon an additional Familiar"));
 		list.add(Component.literal("+1 to all Spells"));

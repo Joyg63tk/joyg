@@ -14,11 +14,6 @@ public class FinalBlowMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.joyg.final_blow";
-	}
-
-	@Override
 	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		super.removeAttributeModifiers(entity, attributeMap, amplifier);
 		FinalBlowEffectExpiresProcedure.execute(entity);

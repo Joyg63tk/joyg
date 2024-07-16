@@ -10,11 +10,6 @@ public class BarbedArrowMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.joyg.barbed_arrow";
-	}
-
-	@Override
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}

@@ -37,6 +37,7 @@ import net.joyg.init.JoygModEntities;
 
 public class TotemEntity extends Animal {
 	public static final EntityDataAccessor<String> DATA_spell = SynchedEntityData.defineId(TotemEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Integer> DATA_age = SynchedEntityData.defineId(TotemEntity.class, EntityDataSerializers.INT);
 
 	public TotemEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(JoygModEntities.TOTEM.get(), world);
@@ -58,6 +59,7 @@ public class TotemEntity extends Animal {
 	protected void defineSynchedData() {
 		super.defineSynchedData();
 		this.entityData.define(DATA_spell, "magic_missile");
+		this.entityData.define(DATA_age, 0);
 	}
 
 	@Override
@@ -92,6 +94,7 @@ public class TotemEntity extends Animal {
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Dataspell", this.entityData.get(DATA_spell));
+		compound.putInt("Dataage", this.entityData.get(DATA_age));
 	}
 
 	@Override
@@ -99,12 +102,14 @@ public class TotemEntity extends Animal {
 		super.readAdditionalSaveData(compound);
 		if (compound.contains("Dataspell"))
 			this.entityData.set(DATA_spell, compound.getString("Dataspell"));
+		if (compound.contains("Dataage"))
+			this.entityData.set(DATA_age, compound.getInt("Dataage"));
 	}
 
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		TotemOnEntityTickUpdateProcedure.execute(this);
+		TotemOnEntityTickUpdateProcedure.execute(this.level(), this);
 	}
 
 	@Override

@@ -111,30 +111,6 @@
       "path": "~/attributes/mana on hit"
     },
     {
-      "name": "ManaOnHitChanceP",
-      "type": "procedure",
-      "sortid": 10,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mana_on_hit_chance_p",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/ManaOnHitChancePProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/attributes/mana on hit"
-    },
-    {
       "name": "ManaGainedOnHit",
       "type": "attribute",
       "sortid": 11,
@@ -458,20 +434,6 @@
       "path": "~/items/blasters"
     },
     {
-      "name": "Blasters",
-      "type": "tag",
-      "sortid": 48,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "blasters",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/joyg/tags/items/blasters.json"
-        ]
-      },
-      "path": "~/items/blasters"
-    },
-    {
       "name": "BlasterTT",
       "type": "procedure",
       "sortid": 56,
@@ -494,20 +456,6 @@
         ]
       },
       "path": "~/items/blasters"
-    },
-    {
-      "name": "Tomes",
-      "type": "tag",
-      "sortid": 57,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "tomes",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/joyg/tags/items/tomes.json"
-        ]
-      },
-      "path": "~/items/tome"
     },
     {
       "name": "TomeTT",
@@ -755,18 +703,6 @@
           {
             "name": "sourceentity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -1084,22 +1020,6 @@
           {
             "name": "sourceentity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1460,20 +1380,6 @@
       "path": "~/items/wands"
     },
     {
-      "name": "Wands",
-      "type": "tag",
-      "sortid": 130,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wands",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/joyg/tags/items/wands.json"
-        ]
-      },
-      "path": "~/items/wands"
-    },
-    {
       "name": "Empower",
       "type": "enchantment",
       "sortid": 132,
@@ -1659,34 +1565,6 @@
       "path": "~/items/amethyst focus"
     },
     {
-      "name": "ArcaneFamiliarOnEntityTickUpdate",
-      "type": "procedure",
-      "sortid": 142,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "arcane_familiar_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/ArcaneFamiliarOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          }
-        ]
-      },
-      "path": "~/passives/arcane familiar/familiar"
-    },
-    {
       "name": "ArcaneFamiliar",
       "type": "livingentity",
       "sortid": 143,
@@ -1772,38 +1650,12 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
         ]
       },
       "path": "~/passives/arcane familiar"
-    },
-    {
-      "name": "Focus",
-      "type": "tag",
-      "sortid": 148,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "focus",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/joyg/tags/items/focus.json"
-        ]
-      },
-      "path": "~/items/amethyst focus"
     },
     {
       "name": "Totem",
@@ -1889,22 +1741,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1929,40 +1765,6 @@
         ]
       },
       "path": "~/passives/idolatry"
-    },
-    {
-      "name": "TotemOnEntityTickUpdate",
-      "type": "procedure",
-      "sortid": 155,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "totem_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/joyg/procedures/TotemOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/passives/idolatry"
-    },
-    {
-      "name": "Totems",
-      "type": "tag",
-      "sortid": 156,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "totems",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/joyg/tags/items/totems.json"
-        ]
-      },
-      "path": "~/items/totems"
     },
     {
       "name": "AmethystFocusFall",
@@ -2157,10 +1959,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -4229,18 +4027,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -4494,6 +4280,410 @@
         ]
       },
       "path": "~/spells/first strike final blow"
+    },
+    {
+      "name": "FlameBrandWeapon",
+      "type": "potioneffect",
+      "sortid": 302,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flame_brand_weapon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/FlameBrandWeaponMobEffect.java"
+        ]
+      },
+      "path": "~/spells/flame brand imbue"
+    },
+    {
+      "name": "FlamebrandDamage",
+      "type": "procedure",
+      "sortid": 303,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flamebrand_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/FlamebrandDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/flame brand imbue"
+    },
+    {
+      "name": "FlamebrandCast",
+      "type": "procedure",
+      "sortid": 304,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flamebrand_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/FlamebrandCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/flame brand imbue"
+    },
+    {
+      "name": "FlamebrandCMD",
+      "type": "command",
+      "sortid": 305,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flamebrand_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/FlamebrandCMDCommand.java"
+        ]
+      },
+      "path": "~/spells/flame brand imbue"
+    },
+    {
+      "name": "SummonBallista",
+      "type": "procedure",
+      "sortid": 306,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "summon_ballista",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/SummonBallistaProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/spells/ballista"
+    },
+    {
+      "name": "BallistaCMD",
+      "type": "command",
+      "sortid": 307,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ballista_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/BallistaCMDCommand.java"
+        ]
+      },
+      "path": "~/spells/ballista"
+    },
+    {
+      "name": "EarthSpike",
+      "type": "livingentity",
+      "sortid": 308,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_spike",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/entity/EarthSpikeEntity.java",
+          "src/main/java/net/joyg/client/renderer/EarthSpikeRenderer.java"
+        ]
+      },
+      "path": "~/spells/earthshatter"
+    },
+    {
+      "name": "EarthSpikeOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 309,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_spike_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/EarthSpikeOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/earthshatter"
+    },
+    {
+      "name": "EarthSpikeEntityDies",
+      "type": "procedure",
+      "sortid": 310,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_spike_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/EarthSpikeEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/earthshatter"
+    },
+    {
+      "name": "EarthShatter",
+      "type": "procedure",
+      "sortid": 311,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_shatter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/EarthShatterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/earthshatter"
+    },
+    {
+      "name": "EarthshatterCMD",
+      "type": "command",
+      "sortid": 312,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earthshatter_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/EarthshatterCMDCommand.java"
+        ]
+      },
+      "path": "~/spells/earthshatter"
+    },
+    {
+      "name": "ShatteredArmorEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 313,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shattered_armor_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ShatteredArmorEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/spells/shatter armor"
+    },
+    {
+      "name": "ShatteredArmorEffectExpires",
+      "type": "procedure",
+      "sortid": 314,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shattered_armor_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ShatteredArmorEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/spells/shatter armor"
+    },
+    {
+      "name": "ShatteredArmor",
+      "type": "potioneffect",
+      "sortid": 315,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shattered_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/ShatteredArmorMobEffect.java"
+        ]
+      },
+      "path": "~/spells/shatter armor"
+    },
+    {
+      "name": "TotemOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 316,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/TotemOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/idolatry"
+    },
+    {
+      "name": "ArcaneFamiliarOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 317,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arcane_familiar_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ArcaneFamiliarOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/passives/arcane familiar"
+    },
+    {
+      "name": "ManaOnHit",
+      "type": "procedure",
+      "sortid": 318,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_on_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManaOnHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/attributes/mana on hit"
+    },
+    {
+      "name": "ShatterArmor",
+      "type": "procedure",
+      "sortid": 319,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shatter_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ShatterArmorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/shatter armor"
     }
   ],
   "variable_elements": [
@@ -4805,10 +4995,42 @@
     }
   ],
   "sound_elements": [],
+  "tag_elements": {
+    "ITEMS:mod:focus": [
+      "CUSTOM:AmethystFocusIron",
+      "CUSTOM:AmethystFocusGold",
+      "CUSTOM:AmethystFocusDiamond",
+      "CUSTOM:AmethystFocusNetherite",
+      "CUSTOM:AmethystFocusEternal"
+    ],
+    "ITEMS:mod:tomes": [
+      "Items.KNOWLEDGE_BOOK"
+    ],
+    "ITEMS:mod:totems": [
+      "CUSTOM:TotemDiamond",
+      "CUSTOM:TotemNetherite",
+      "CUSTOM:TotemSunking",
+      "CUSTOM:TotemFrostshaman",
+      "CUSTOM:TotemGold",
+      "CUSTOM:TotemIron",
+      "CUSTOM:TotemStone",
+      "CUSTOM:TotemWood"
+    ],
+    "ITEMS:mod:blasters": [
+      "CUSTOM:BrassBlaster"
+    ],
+    "ITEMS:mod:wands": [
+      "CUSTOM:WandWood",
+      "CUSTOM:WandIron",
+      "CUSTOM:WandGold",
+      "CUSTOM:WandDiamond"
+    ]
+  },
   "language_map": {
     "en_us": {
       "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
       "item.joyg.flash_bomb": "Flash Bomb",
+      "entity.joyg.earth_spike": "Earth Spike",
       "item.joyg.totem_netherite": "Totem Netherite",
       "effect.joyg.disorient": "Disoriented",
       "effect.joyg.thunder_call": "Thunder Call",
@@ -4829,6 +5051,7 @@
       "entity.joyg.totem": "Totem",
       "effect.joyg.clarity": "Clarity",
       "affix.apotheosis:armor/attribute/longwinded.prefix": "Long winded",
+      "effect.joyg.shattered_armor": "Shattered Armor",
       "effect.joyg.final_blow": "Final Blow Available",
       "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
       "attribute.joyg.max_absoption": "Max Absorption",
@@ -4847,6 +5070,7 @@
       "item.joyg.totem_frostshaman": "Frost Shaman\u0027s Idol",
       "item.joyg.amethyst_focus_diamond": "Diamond Amethyst Focus",
       "effect.joyg.escape_artist_cd_indicator": "Escape Artist Cooldown",
+      "effect.joyg.flame_brand_weapon": "Flamebrand Weapon",
       "config.joyg.joyg_cfg": "joyg_cfg",
       "item.joyg.wand_netherite": "Netherflame Wand",
       "effect.joyg.barbed_arrow": "Barbed Arrow",
@@ -5110,6 +5334,22 @@
           {
             "name": "first strike final blow",
             "children": []
+          },
+          {
+            "name": "flame brand imbue",
+            "children": []
+          },
+          {
+            "name": "ballista",
+            "children": []
+          },
+          {
+            "name": "earthshatter",
+            "children": []
+          },
+          {
+            "name": "shatter armor",
+            "children": []
           }
         ]
       }
@@ -5122,7 +5362,6 @@
     "author": "Ivan, MCreator",
     "websiteURL": "https://mcreator.net",
     "license": "Academic Free License v3.0",
-    "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
@@ -5132,12 +5371,12 @@
       "geckolib",
       "playeranimator",
       "particlepresets",
-      "jei"
+      "jei",
+      "photon_api"
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
-    "modElementsPackage": "net.joyg",
-    "lockBaseModFiles": false
+    "modElementsPackage": "net.joyg"
   },
-  "mcreatorVersion": 202300452316
+  "mcreatorVersion": 202400118518
 }

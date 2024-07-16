@@ -1,6 +1,7 @@
 {
   "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
   "item.joyg.flash_bomb": "Flash Bomb",
+  "entity.joyg.earth_spike": "Earth Spike",
   "item.joyg.totem_netherite": "Totem Netherite",
   "effect.joyg.disorient": "Disoriented",
   "effect.joyg.thunder_call": "Thunder Call",
@@ -21,6 +22,7 @@
   "entity.joyg.totem": "Totem",
   "effect.joyg.clarity": "Clarity",
   "affix.apotheosis:armor/attribute/longwinded.prefix": "Long winded",
+  "effect.joyg.shattered_armor": "Shattered Armor",
   "effect.joyg.final_blow": "Final Blow Available",
   "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
   "attribute.joyg.max_absoption": "Max Absorption",
@@ -39,6 +41,7 @@
   "item.joyg.totem_frostshaman": "Frost Shaman\u0027s Idol",
   "item.joyg.amethyst_focus_diamond": "Diamond Amethyst Focus",
   "effect.joyg.escape_artist_cd_indicator": "Escape Artist Cooldown",
+  "effect.joyg.flame_brand_weapon": "Flamebrand Weapon",
   "config.joyg.joyg_cfg": "joyg_cfg",
   "item.joyg.wand_netherite": "Netherflame Wand",
   "effect.joyg.barbed_arrow": "Barbed Arrow",

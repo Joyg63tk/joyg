@@ -10,13 +10,15 @@ displayURL="https://mcreator.net"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 authors="Ivan, MCreator"
 
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
 [[dependencies.joyg]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.20.1]"
     ordering="NONE"
     side="BOTH"
-
 
 
 [[dependencies.joyg]]
@@ -45,6 +47,12 @@ authors="Ivan, MCreator"
     side="BOTH"
 [[dependencies.joyg]]
     modId="jei"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.joyg]]
+    modId="photon_api"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

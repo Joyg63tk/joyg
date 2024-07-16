@@ -10,11 +10,6 @@ public class EscapeArtistCDIndicatorMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.joyg.escape_artist_cd_indicator";
-	}
-
-	@Override
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}

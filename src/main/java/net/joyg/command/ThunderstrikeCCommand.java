@@ -33,7 +33,7 @@ public class ThunderstrikeCCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			ThunderstrikeProcedure.execute(world, x, y, z, entity);
+			ThunderstrikeProcedure.execute(world, entity);
 			return 0;
 		})))));
 	}

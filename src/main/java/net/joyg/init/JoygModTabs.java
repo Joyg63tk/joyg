@@ -21,7 +21,6 @@ public class JoygModTabs {
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
-
 		if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(JoygModItems.BRASS_BLASTER.get());
 			tabData.accept(JoygModItems.TOTEM_WOOD.get());
@@ -43,9 +42,7 @@ public class JoygModTabs {
 			tabData.accept(JoygModItems.WAND_NETHERITE.get());
 			tabData.accept(JoygModItems.AMETHYST_FOCUS_ETERNAL.get());
 			tabData.accept(JoygModItems.AMETHYST_FOCUS_FALL.get());
-		}
-
-		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(JoygModItems.PORTAL_SCROLL.get());
 			tabData.accept(JoygModItems.FLASH_BOMB.get());
 		}

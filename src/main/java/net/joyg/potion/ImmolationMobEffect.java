@@ -14,11 +14,6 @@ public class ImmolationMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.joyg.immolation";
-	}
-
-	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		ImmolationOnEffectActiveTickProcedure.execute(entity.level(), entity, amplifier);
 	}

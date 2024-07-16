@@ -8,6 +8,7 @@ dependencies {
   runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:5.4.2+1.20.1")
   compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:5.4.2+1.20.1:api")
 }
+
 minecraft {
   runs {
      client {
@@ -109,9 +110,39 @@ repositories {
 }
 
 dependencies {
-    compileOnly(fg.deobf("mezz.jei:jei-1.20.1-common-api:15.2.0.27"))
-    compileOnly(fg.deobf("mezz.jei:jei-1.20.1-forge-api:15.2.0.27"))
-    runtimeOnly(fg.deobf("mezz.jei:jei-1.20.1-forge:15.2.0.27"))
+    compileOnly(fg.deobf("mezz.jei:jei-1.20.1-common-api:15.3.0.8"))
+    compileOnly(fg.deobf("mezz.jei:jei-1.20.1-forge-api:15.3.0.8"))
+    runtimeOnly(fg.deobf("mezz.jei:jei-1.20.1-forge:15.3.0.8"))
+}
+
+
+minecraft {
+	runs {
+		client {
+			property 'mixin.env.remapRefMap', 'true'
+			property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+		}
+		server {
+			property 'mixin.env.remapRefMap', 'true'
+			property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+		}
+		data {
+			property 'mixin.env.remapRefMap', 'true'
+			property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+		}
+	}
+}  
+repositories {
+	maven {
+		url "https://www.cursemaven.com"
+		content {
+			includeGroup "curse.maven"
+		}
+	}
+}
+dependencies {
+	compileOnly fg.deobf("curse.maven:photon-871522:4864492")
+	runtimeOnly fg.deobf("curse.maven:photon-871522:4864492")
 }
 
 

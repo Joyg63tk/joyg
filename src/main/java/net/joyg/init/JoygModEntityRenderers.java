@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.joyg.client.renderer.TotemRenderer;
 import net.joyg.client.renderer.PortalRenderer;
 import net.joyg.client.renderer.LootbagERenderer;
+import net.joyg.client.renderer.EarthSpikeRenderer;
 import net.joyg.client.renderer.AutoBallistaRenderer;
 import net.joyg.client.renderer.ArcaneFamiliarRenderer;
 
@@ -24,5 +25,6 @@ public class JoygModEntityRenderers {
 		event.registerEntityRenderer(JoygModEntities.ARCANE_FAMILIAR.get(), ArcaneFamiliarRenderer::new);
 		event.registerEntityRenderer(JoygModEntities.TOTEM.get(), TotemRenderer::new);
 		event.registerEntityRenderer(JoygModEntities.AUTO_BALLISTA.get(), AutoBallistaRenderer::new);
+		event.registerEntityRenderer(JoygModEntities.EARTH_SPIKE.get(), EarthSpikeRenderer::new);
 	}
 }

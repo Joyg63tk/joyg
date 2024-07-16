@@ -19,6 +19,7 @@ import net.minecraft.world.entity.Entity;
 import net.joyg.entity.TotemEntity;
 import net.joyg.entity.PortalEntity;
 import net.joyg.entity.LootbagEEntity;
+import net.joyg.entity.EarthSpikeEntity;
 import net.joyg.entity.AutoBallistaEntity;
 import net.joyg.entity.ArcaneFamiliarEntity;
 import net.joyg.JoygMod;
@@ -42,6 +43,10 @@ public class JoygModEntities {
 			EntityType.Builder.<AutoBallistaEntity>of(AutoBallistaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AutoBallistaEntity::new)
 
 					.sized(0.8f, 0.4f));
+	public static final RegistryObject<EntityType<EarthSpikeEntity>> EARTH_SPIKE = register("earth_spike",
+			EntityType.Builder.<EarthSpikeEntity>of(EarthSpikeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EarthSpikeEntity::new)
+
+					.sized(0.3f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -55,6 +60,7 @@ public class JoygModEntities {
 			ArcaneFamiliarEntity.init();
 			TotemEntity.init();
 			AutoBallistaEntity.init();
+			EarthSpikeEntity.init();
 		});
 	}
 
@@ -65,5 +71,6 @@ public class JoygModEntities {
 		event.put(ARCANE_FAMILIAR.get(), ArcaneFamiliarEntity.createAttributes().build());
 		event.put(TOTEM.get(), TotemEntity.createAttributes().build());
 		event.put(AUTO_BALLISTA.get(), AutoBallistaEntity.createAttributes().build());
+		event.put(EARTH_SPIKE.get(), EarthSpikeEntity.createAttributes().build());
 	}
 }

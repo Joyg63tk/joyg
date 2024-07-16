@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "joyg:brass_blaster",
-    "wom:ender_blaster",
-    "cataclysm:tidal_claws"
+    "joyg:brass_blaster"
   ]
 }

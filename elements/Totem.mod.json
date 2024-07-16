@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 60,
   "_type": "livingentity",
   "definition": {
     "mobName": "Totem",
@@ -119,6 +119,13 @@
         "name": "spell",
         "type": "string",
         "value": "magic_missile"
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "age",
+        "type": "integer",
+        "value": 0
       }
     ],
     "onMobTickUpdate": {

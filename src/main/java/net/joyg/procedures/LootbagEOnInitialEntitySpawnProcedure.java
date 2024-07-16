@@ -35,11 +35,11 @@ public class LootbagEOnInitialEntitySpawnProcedure {
 					}.getItemStack(0, entity)).getItem() == Blocks.AIR.asItem()) {
 						{
 							final int _slotid = 0;
-							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY);
+							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount((entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).getCount());
 							entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable _modHandler)
-									_modHandler.setStackInSlot(_slotid, _setstack);
+								if (capability instanceof IItemHandlerModifiable _modHandlerEntSetSlot)
+									_modHandlerEntSetSlot.setStackInSlot(_slotid, _setstack);
 							});
 						}
 						if (!entityiterator.level().isClientSide())
@@ -55,11 +55,11 @@ public class LootbagEOnInitialEntitySpawnProcedure {
 					}.getItemStack(1, entity)).getItem() == Blocks.AIR.asItem()) {
 						{
 							final int _slotid = 1;
-							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY);
+							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount((entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).getCount());
 							entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable _modHandler)
-									_modHandler.setStackInSlot(_slotid, _setstack);
+								if (capability instanceof IItemHandlerModifiable _modHandlerEntSetSlot)
+									_modHandlerEntSetSlot.setStackInSlot(_slotid, _setstack);
 							});
 						}
 						if (!entityiterator.level().isClientSide())
@@ -75,11 +75,11 @@ public class LootbagEOnInitialEntitySpawnProcedure {
 					}.getItemStack(2, entity)).getItem() == Blocks.AIR.asItem()) {
 						{
 							final int _slotid = 2;
-							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY);
+							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount((entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).getCount());
 							entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable _modHandler)
-									_modHandler.setStackInSlot(_slotid, _setstack);
+								if (capability instanceof IItemHandlerModifiable _modHandlerEntSetSlot)
+									_modHandlerEntSetSlot.setStackInSlot(_slotid, _setstack);
 							});
 						}
 						if (!entityiterator.level().isClientSide())
@@ -95,11 +95,11 @@ public class LootbagEOnInitialEntitySpawnProcedure {
 					}.getItemStack(3, entity)).getItem() == Blocks.AIR.asItem()) {
 						{
 							final int _slotid = 3;
-							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY);
+							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount((entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).getCount());
 							entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable _modHandler)
-									_modHandler.setStackInSlot(_slotid, _setstack);
+								if (capability instanceof IItemHandlerModifiable _modHandlerEntSetSlot)
+									_modHandlerEntSetSlot.setStackInSlot(_slotid, _setstack);
 							});
 						}
 						if (!entityiterator.level().isClientSide())
@@ -115,11 +115,11 @@ public class LootbagEOnInitialEntitySpawnProcedure {
 					}.getItemStack(4, entity)).getItem() == Blocks.AIR.asItem()) {
 						{
 							final int _slotid = 4;
-							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY);
+							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount((entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).getCount());
 							entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable _modHandler)
-									_modHandler.setStackInSlot(_slotid, _setstack);
+								if (capability instanceof IItemHandlerModifiable _modHandlerEntSetSlot)
+									_modHandlerEntSetSlot.setStackInSlot(_slotid, _setstack);
 							});
 						}
 						if (!entityiterator.level().isClientSide())
@@ -135,11 +135,11 @@ public class LootbagEOnInitialEntitySpawnProcedure {
 					}.getItemStack(5, entity)).getItem() == Blocks.AIR.asItem()) {
 						{
 							final int _slotid = 5;
-							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY);
+							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount((entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).getCount());
 							entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable _modHandler)
-									_modHandler.setStackInSlot(_slotid, _setstack);
+								if (capability instanceof IItemHandlerModifiable _modHandlerEntSetSlot)
+									_modHandlerEntSetSlot.setStackInSlot(_slotid, _setstack);
 							});
 						}
 						if (!entityiterator.level().isClientSide())
@@ -155,11 +155,11 @@ public class LootbagEOnInitialEntitySpawnProcedure {
 					}.getItemStack(6, entity)).getItem() == Blocks.AIR.asItem()) {
 						{
 							final int _slotid = 6;
-							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY);
+							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount((entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).getCount());
 							entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable _modHandler)
-									_modHandler.setStackInSlot(_slotid, _setstack);
+								if (capability instanceof IItemHandlerModifiable _modHandlerEntSetSlot)
+									_modHandlerEntSetSlot.setStackInSlot(_slotid, _setstack);
 							});
 						}
 						if (!entityiterator.level().isClientSide())
@@ -175,11 +175,11 @@ public class LootbagEOnInitialEntitySpawnProcedure {
 					}.getItemStack(7, entity)).getItem() == Blocks.AIR.asItem()) {
 						{
 							final int _slotid = 7;
-							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY);
+							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount((entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).getCount());
 							entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable _modHandler)
-									_modHandler.setStackInSlot(_slotid, _setstack);
+								if (capability instanceof IItemHandlerModifiable _modHandlerEntSetSlot)
+									_modHandlerEntSetSlot.setStackInSlot(_slotid, _setstack);
 							});
 						}
 						if (!entityiterator.level().isClientSide())
@@ -195,11 +195,11 @@ public class LootbagEOnInitialEntitySpawnProcedure {
 					}.getItemStack(8, entity)).getItem() == Blocks.AIR.asItem()) {
 						{
 							final int _slotid = 8;
-							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY);
+							final ItemStack _setstack = (entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).copy();
 							_setstack.setCount((entityiterator instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).getCount());
 							entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
-								if (capability instanceof IItemHandlerModifiable _modHandler)
-									_modHandler.setStackInSlot(_slotid, _setstack);
+								if (capability instanceof IItemHandlerModifiable _modHandlerEntSetSlot)
+									_modHandlerEntSetSlot.setStackInSlot(_slotid, _setstack);
 							});
 						}
 						if (!entityiterator.level().isClientSide())

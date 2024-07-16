@@ -14,11 +14,6 @@ public class BleedMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.joyg.bleed";
-	}
-
-	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		BleedOnEffectActiveTickProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}

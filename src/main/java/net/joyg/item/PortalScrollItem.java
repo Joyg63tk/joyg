@@ -21,8 +21,8 @@ public class PortalScrollItem extends Item {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, world, list, flag);
+	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, level, list, flag);
 		list.add(Component.literal("Use to open a portal to your spawn point"));
 		list.add(Component.literal("Using the portal at your spawn will teleport you to the portal created by the scroll and consume both portals"));
 		list.add(Component.literal("portals last 5 min."));

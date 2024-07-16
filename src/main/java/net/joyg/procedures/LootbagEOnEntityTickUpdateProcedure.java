@@ -21,7 +21,6 @@ public class LootbagEOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		entity.setInvulnerable(true);
 		if (world.getBlockState(BlockPos.containing(x, y, z)).canOcclude()) {
 			{
 				Entity _ent = entity;

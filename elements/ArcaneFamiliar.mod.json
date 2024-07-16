@@ -1,5 +1,5 @@
 {
-  "_fv": 57,
+  "_fv": 60,
   "_type": "livingentity",
   "definition": {
     "mobName": "Arcane Familiar",
@@ -120,7 +120,15 @@
     "stepSound": {
       "value": ""
     },
-    "entityDataEntries": [],
+    "entityDataEntries": [
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "age",
+        "type": "integer",
+        "value": 0
+      }
+    ],
     "onMobTickUpdate": {
       "name": "ArcaneFamiliarOnEntityTickUpdate"
     },

@@ -16,11 +16,6 @@ public class DisorientMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.joyg.disorient";
-	}
-
-	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		DisorientEffectStartedappliedProcedure.execute(entity);
 	}

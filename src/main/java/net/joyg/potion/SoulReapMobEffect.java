@@ -14,11 +14,6 @@ public class SoulReapMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.joyg.soul_reap";
-	}
-
-	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		SoulReapOnEffectActiveTickProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity, amplifier);
 	}

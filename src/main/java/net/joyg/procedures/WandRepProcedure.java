@@ -4,6 +4,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.AnvilUpdateEvent;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
@@ -14,8 +16,9 @@ import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
 public class WandRepProcedure {
+	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent
-	public static void onAnvilUpdate(AnvilUpdateEvent event) {
+	public static void onEventTriggered(AnvilUpdateEvent event) {
 		execute(event, event.getLeft(), event.getRight());
 	}
 

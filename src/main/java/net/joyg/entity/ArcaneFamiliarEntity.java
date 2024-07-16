@@ -40,14 +40,20 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.joyg.procedures.ArcaneFamiliarOnEntityTickUpdateProcedure;
 import net.joyg.init.JoygModEntities;
 
 public class ArcaneFamiliarEntity extends TamableAnimal {
+	public static final EntityDataAccessor<Integer> DATA_age = SynchedEntityData.defineId(ArcaneFamiliarEntity.class, EntityDataSerializers.INT);
+
 	public ArcaneFamiliarEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(JoygModEntities.ARCANE_FAMILIAR.get(), world);
 	}
@@ -63,6 +69,12 @@ public class ArcaneFamiliarEntity extends TamableAnimal {
 	@Override
 	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
+	}
+
+	@Override
+	protected void defineSynchedData() {
+		super.defineSynchedData();
+		this.entityData.define(DATA_age, 0);
 	}
 
 	@Override
@@ -119,6 +131,19 @@ public class ArcaneFamiliarEntity extends TamableAnimal {
 	}
 
 	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putInt("Dataage", this.entityData.get(DATA_age));
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("Dataage"))
+			this.entityData.set(DATA_age, compound.getInt("Dataage"));
+	}
+
+	@Override
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
@@ -164,7 +189,7 @@ public class ArcaneFamiliarEntity extends TamableAnimal {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		ArcaneFamiliarOnEntityTickUpdateProcedure.execute(this.getX(), this.getZ(), this);
+		ArcaneFamiliarOnEntityTickUpdateProcedure.execute(this.level(), this);
 	}
 
 	@Override

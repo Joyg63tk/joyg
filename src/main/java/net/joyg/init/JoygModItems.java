@@ -58,4 +58,6 @@ public class JoygModItems {
 	public static final RegistryObject<Item> AMETHYST_FOCUS_ETERNAL = REGISTRY.register("amethyst_focus_eternal", () -> new AmethystFocusEternalItem());
 	public static final RegistryObject<Item> AMETHYST_FOCUS_FALL = REGISTRY.register("amethyst_focus_fall", () -> new AmethystFocusFallItem());
 	public static final RegistryObject<Item> FLASH_BOMB = REGISTRY.register("flash_bomb", () -> new FlashBombItem());
+	// Start of user code block custom items
+	// End of user code block custom items
 }
