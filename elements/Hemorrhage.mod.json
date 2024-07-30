@@ -1,0 +1,23 @@
+{
+  "_fv": 60,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Hemorrhage",
+    "icon": "icon2.png",
+    "color": {
+      "value": -3407872,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "HemorrhageOnEffectActiveTick"
+    },
+    "activeTickCondition": {
+      "name": "HemorrhageActiveTickCondition"
+    }
+  }
+}

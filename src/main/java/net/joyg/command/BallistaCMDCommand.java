@@ -15,7 +15,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
-import net.joyg.procedures.SummonBallistaProcedure;
+import net.joyg.procedures.BallistaCastProcedure;
 
 @Mod.EventBusSubscriber
 public class BallistaCMDCommand {
@@ -33,7 +33,7 @@ public class BallistaCMDCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			SummonBallistaProcedure.execute();
+			BallistaCastProcedure.execute(world, x, y, z, entity);
 			return 0;
 		})))));
 	}

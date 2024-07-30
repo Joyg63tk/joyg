@@ -33,7 +33,7 @@ public class SoulreaperCmdCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			SoulReaperProcedure.execute(world, entity);
+			SoulReaperProcedure.execute(world, x, y, z, entity);
 			return 0;
 		})))));
 	}

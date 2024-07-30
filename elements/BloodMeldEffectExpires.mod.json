@@ -1,0 +1,7 @@
+{
+  "_fv": 60,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"entity_execute_command_with_perm_level\"><value name=\"command\"><block type=\"text\"><field name=\"TEXT\">attribute @s additional_attributes:spell_school_blood modifier remove 8ebe9ca4-4df1-11ef-861a-325096b39f47</field></block></value><value name=\"entity\"><block type=\"entity_from_deps\"></block></value><value name=\"permlevel\"><block type=\"math_number\"><field name=\"NUM\">4</field></block></value></block></next></block></xml>"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "hammer_spawn": {
+    "sounds": [
+      {
+        "name": "joyg:spell_pa_blessedhammer_cast_03",
+        "stream": false
+      }
+    ]
+  },
+  "hammer_hit": {
+    "sounds": [
+      {
+        "name": "joyg:spell_pa_hammerofjustice_impact_04",
+        "stream": false
+      }
+    ]
+  },
+  "reap": {
+    "sounds": [
+      {
+        "name": "joyg:spell_dh_soul_cleave_cast_02",
+        "stream": false
+      }
+    ]
+  },
+  "crash_lightning": {
+    "sounds": [
+      {
+        "name": "joyg:spell_sh_crashlightning_revamp_impact02",
+        "stream": false
+      }
+    ]
+  },
+  "mech1": {
+    "sounds": [
+      {
+        "name": "joyg:mechastriderwoundc",
+        "stream": false
+      }
+    ]
+  },
+  "exsanguinate": {
+    "sounds": [
+      {
+        "name": "joyg:spell_dk_bloodstrike_cast01",
+        "stream": false
+      }
+    ]
+  },
+  "blood_frenzy_heal": {
+    "sounds": [
+      {
+        "name": "joyg:deathknightbloodtap",
+        "stream": false
+      }
+    ]
+  },
+  "blood_meld": {
+    "sounds": [
+      {
+        "name": "joyg:deathknight_bloodboil",
+        "stream": false
+      }
+    ]
+  },
+  "gorespike": {
+    "sounds": [
+      {
+        "name": "joyg:spell_dk_deathcoil_cast02",
+        "stream": false
+      }
+    ]
+  },
+  "gore_cast": {
+    "sounds": [
+      {
+        "name": "joyg:fx_gibs_explode01",
+        "stream": false
+      }
+    ]
+  }
+}

@@ -51,10 +51,4 @@ authors="Ivan, MCreator"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.joyg]]
-    modId="photon_api"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 

@@ -15,7 +15,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
-import net.joyg.procedures.ThunderstrikeProcedure;
+import net.joyg.procedures.ThunderstrikeCastProcedure;
 
 @Mod.EventBusSubscriber
 public class ThunderstrikeCCommand {
@@ -33,7 +33,7 @@ public class ThunderstrikeCCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			ThunderstrikeProcedure.execute(world, entity);
+			ThunderstrikeCastProcedure.execute(world, x, y, z, entity);
 			return 0;
 		})))));
 	}

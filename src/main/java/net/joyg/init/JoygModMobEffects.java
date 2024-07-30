@@ -14,14 +14,19 @@ import net.joyg.potion.ThunderCallMobEffect;
 import net.joyg.potion.SoulReapMobEffect;
 import net.joyg.potion.ShatteredArmorMobEffect;
 import net.joyg.potion.MarkedMobEffect;
+import net.joyg.potion.ManaChargedWeaponMobEffect;
 import net.joyg.potion.ManaChargeMobEffect;
 import net.joyg.potion.ImmolationMobEffect;
+import net.joyg.potion.HemorrhageMobEffect;
 import net.joyg.potion.FlameBrandWeaponMobEffect;
 import net.joyg.potion.FinalBlowMobEffect;
 import net.joyg.potion.EscapeArtistCDIndicatorMobEffect;
 import net.joyg.potion.DisorientMobEffect;
 import net.joyg.potion.ClarityMobEffect;
+import net.joyg.potion.BloodMeldMobEffect;
+import net.joyg.potion.BloodFrenzyMobEffect;
 import net.joyg.potion.BleedMobEffect;
+import net.joyg.potion.BarrageChargeMobEffect;
 import net.joyg.potion.BarbedArrowMobEffect;
 import net.joyg.JoygMod;
 
@@ -40,4 +45,9 @@ public class JoygModMobEffects {
 	public static final RegistryObject<MobEffect> FINAL_BLOW = REGISTRY.register("final_blow", () -> new FinalBlowMobEffect());
 	public static final RegistryObject<MobEffect> FLAME_BRAND_WEAPON = REGISTRY.register("flame_brand_weapon", () -> new FlameBrandWeaponMobEffect());
 	public static final RegistryObject<MobEffect> SHATTERED_ARMOR = REGISTRY.register("shattered_armor", () -> new ShatteredArmorMobEffect());
+	public static final RegistryObject<MobEffect> MANA_CHARGED_WEAPON = REGISTRY.register("mana_charged_weapon", () -> new ManaChargedWeaponMobEffect());
+	public static final RegistryObject<MobEffect> BARRAGE_CHARGE = REGISTRY.register("barrage_charge", () -> new BarrageChargeMobEffect());
+	public static final RegistryObject<MobEffect> HEMORRHAGE = REGISTRY.register("hemorrhage", () -> new HemorrhageMobEffect());
+	public static final RegistryObject<MobEffect> BLOOD_FRENZY = REGISTRY.register("blood_frenzy", () -> new BloodFrenzyMobEffect());
+	public static final RegistryObject<MobEffect> BLOOD_MELD = REGISTRY.register("blood_meld", () -> new BloodMeldMobEffect());
 }

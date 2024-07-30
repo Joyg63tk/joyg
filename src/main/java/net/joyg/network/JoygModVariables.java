@@ -118,6 +118,7 @@ public class JoygModVariables {
 				clone.marked = original.marked;
 				clone.nextHitShockwave = original.nextHitShockwave;
 				clone.finalBlow = original.finalBlow;
+				clone.manaBlastArrow = original.manaBlastArrow;
 			}
 		}
 	}
@@ -204,6 +205,7 @@ public class JoygModVariables {
 		public boolean trickshots = false;
 		public boolean hemomancer = false;
 		public boolean finalBlow = false;
+		public boolean manaBlastArrow = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -263,6 +265,7 @@ public class JoygModVariables {
 			nbt.putBoolean("trickshots", trickshots);
 			nbt.putBoolean("hemomancer", hemomancer);
 			nbt.putBoolean("finalBlow", finalBlow);
+			nbt.putBoolean("manaBlastArrow", manaBlastArrow);
 			return nbt;
 		}
 
@@ -319,6 +322,7 @@ public class JoygModVariables {
 			trickshots = nbt.getBoolean("trickshots");
 			hemomancer = nbt.getBoolean("hemomancer");
 			finalBlow = nbt.getBoolean("finalBlow");
+			manaBlastArrow = nbt.getBoolean("manaBlastArrow");
 		}
 	}
 
@@ -394,6 +398,7 @@ public class JoygModVariables {
 					variables.trickshots = message.data.trickshots;
 					variables.hemomancer = message.data.hemomancer;
 					variables.finalBlow = message.data.finalBlow;
+					variables.manaBlastArrow = message.data.manaBlastArrow;
 				}
 			});
 			context.setPacketHandled(true);

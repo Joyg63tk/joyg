@@ -4067,7 +4067,7 @@
           }
         ]
       },
-      "path": "~/spells/soul reaper"
+      "path": "~/spells/blood/soul reaper"
     },
     {
       "name": "SoulReap",
@@ -4081,7 +4081,7 @@
           "src/main/java/net/joyg/potion/SoulReapMobEffect.java"
         ]
       },
-      "path": "~/spells/soul reaper"
+      "path": "~/spells/blood/soul reaper"
     },
     {
       "name": "SoulReapOnEffectActiveTick",
@@ -4121,7 +4121,7 @@
           }
         ]
       },
-      "path": "~/spells/soul reaper"
+      "path": "~/spells/blood/soul reaper"
     },
     {
       "name": "SoulReaper",
@@ -4140,12 +4140,24 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
         ]
       },
-      "path": "~/spells/soul reaper"
+      "path": "~/spells/blood/soul reaper"
     },
     {
       "name": "RipSoul",
@@ -4181,7 +4193,7 @@
           }
         ]
       },
-      "path": "~/spells/soul reaper"
+      "path": "~/spells/blood/soul reaper"
     },
     {
       "name": "SoulreaperCmd",
@@ -4195,7 +4207,7 @@
           "src/main/java/net/joyg/command/SoulreaperCmdCommand.java"
         ]
       },
-      "path": "~/spells/soul reaper"
+      "path": "~/spells/blood/soul reaper"
     },
     {
       "name": "FirststrikeFinalblow",
@@ -4684,6 +4696,911 @@
         ]
       },
       "path": "~/spells/shatter armor"
+    },
+    {
+      "name": "ManaBlastArrow",
+      "type": "procedure",
+      "sortid": 320,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_blast_arrow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManaBlastArrowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/mana Arrow"
+    },
+    {
+      "name": "ManablastTrigger",
+      "type": "procedure",
+      "sortid": 321,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manablast_trigger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ManablastTriggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/mana Arrow"
+    },
+    {
+      "name": "ManaChargedWeapon",
+      "type": "potioneffect",
+      "sortid": 322,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_charged_weapon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/ManaChargedWeaponMobEffect.java"
+        ]
+      },
+      "path": "~/spells/mana Arrow"
+    },
+    {
+      "name": "ManaArrow",
+      "type": "command",
+      "sortid": 323,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_arrow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/ManaArrowCommand.java"
+        ]
+      },
+      "path": "~/spells/mana Arrow"
+    },
+    {
+      "name": "BarrageCharge",
+      "type": "potioneffect",
+      "sortid": 324,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barrage_charge",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/BarrageChargeMobEffect.java"
+        ]
+      },
+      "path": "~/spells/barrage"
+    },
+    {
+      "name": "Windblade",
+      "type": "livingentity",
+      "sortid": 325,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "windblade",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/entity/WindbladeEntity.java",
+          "src/main/java/net/joyg/client/renderer/WindbladeRenderer.java"
+        ]
+      },
+      "path": "~/spells/Windblades"
+    },
+    {
+      "name": "WindbladeOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 326,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "windblade_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/WindbladeOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/Windblades"
+    },
+    {
+      "name": "Windbladetest",
+      "type": "procedure",
+      "sortid": 327,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "windbladetest",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/WindbladetestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/Windblades"
+    },
+    {
+      "name": "WindbladeEntityIsHurt",
+      "type": "procedure",
+      "sortid": 328,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "windblade_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/WindbladeEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/spells/Windblades"
+    },
+    {
+      "name": "BHammer",
+      "type": "animatedentity",
+      "sortid": 329,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_hammer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/entity/layer/BHammerLayer.java",
+          "src/main/java/net/joyg/client/renderer/BHammerRenderer.java",
+          "src/main/java/net/joyg/entity/model/BHammerModel.java",
+          "src/main/java/net/joyg/entity/BHammerEntity.java"
+        ]
+      },
+      "path": "~/spells/blessed hammer"
+    },
+    {
+      "name": "BHammerOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 330,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_hammer_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BHammerOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/blessed hammer"
+    },
+    {
+      "name": "BlessedHammerCast",
+      "type": "procedure",
+      "sortid": 331,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blessed_hammer_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BlessedHammerCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/blessed hammer"
+    },
+    {
+      "name": "BlessHamCMD",
+      "type": "command",
+      "sortid": 332,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bless_ham_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/BlessHamCMDCommand.java"
+        ]
+      },
+      "path": "~/spells/blessed hammer"
+    },
+    {
+      "name": "ThunderstrikeCast",
+      "type": "procedure",
+      "sortid": 333,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunderstrike_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ThunderstrikeCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/thunderstrike"
+    },
+    {
+      "name": "BallistaCast",
+      "type": "procedure",
+      "sortid": 334,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ballista_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BallistaCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/ballista"
+    },
+    {
+      "name": "HemorrhageActiveTickCondition",
+      "type": "procedure",
+      "sortid": 335,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hemorrhage_active_tick_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/joyg/procedures/HemorrhageActiveTickConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "duration",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/spells/blood"
+    },
+    {
+      "name": "Hemorrhage",
+      "type": "potioneffect",
+      "sortid": 336,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hemorrhage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/HemorrhageMobEffect.java"
+        ]
+      },
+      "path": "~/spells/blood"
+    },
+    {
+      "name": "HemorrhageOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hemorrhage_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/HemorrhageOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/blood"
+    },
+    {
+      "name": "BloodSplash",
+      "type": "particle",
+      "sortid": 338,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_splash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/client/particle/BloodSplashParticle.java",
+          "src/main/resources/assets/joyg/particles/blood_splash.json"
+        ]
+      },
+      "path": "~/spells/blood/Exsanguinate"
+    },
+    {
+      "name": "BloodFrenzy",
+      "type": "potioneffect",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_frenzy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/BloodFrenzyMobEffect.java"
+        ]
+      },
+      "path": "~/spells/blood/Exsanguinate"
+    },
+    {
+      "name": "ExsanguinateCast",
+      "type": "procedure",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exsanguinate_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ExsanguinateCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/blood/Exsanguinate"
+    },
+    {
+      "name": "BloodFrenzyHeal",
+      "type": "procedure",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_frenzy_heal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BloodFrenzyHealProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/blood/Exsanguinate"
+    },
+    {
+      "name": "ExsanguinateCmd",
+      "type": "command",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exsanguinate_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/ExsanguinateCmdCommand.java"
+        ]
+      },
+      "path": "~/spells/blood/Exsanguinate"
+    },
+    {
+      "name": "BloodMeldEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_meld_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BloodMeldEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/spells/blood/Blood Meld"
+    },
+    {
+      "name": "BloodMeldEffectExpires",
+      "type": "procedure",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_meld_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BloodMeldEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/spells/blood/Blood Meld"
+    },
+    {
+      "name": "BloodMeld",
+      "type": "potioneffect",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_meld",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/BloodMeldMobEffect.java"
+        ]
+      },
+      "path": "~/spells/blood/Blood Meld"
+    },
+    {
+      "name": "BloodMeldCast",
+      "type": "procedure",
+      "sortid": 346,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_meld_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/BloodMeldCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/blood/Blood Meld"
+    },
+    {
+      "name": "BloodMeldCmd",
+      "type": "command",
+      "sortid": 347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_meld_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/BloodMeldCmdCommand.java"
+        ]
+      },
+      "path": "~/spells/blood/Blood Meld"
+    },
+    {
+      "name": "GoreSpike",
+      "type": "projectile",
+      "sortid": 348,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gore_spike",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/entity/GoreSpikeEntity.java",
+          "src/main/java/net/joyg/client/renderer/GoreSpikeRenderer.java"
+        ]
+      },
+      "path": "~/spells/blood/Gore spike"
+    },
+    {
+      "name": "GoreSpikeProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 349,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gore_spike_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/GoreSpikeProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/blood/Gore spike"
+    },
+    {
+      "name": "GoreSpikeWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 350,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gore_spike_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/GoreSpikeWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/blood/Gore spike"
+    },
+    {
+      "name": "GoreSpikeCast",
+      "type": "procedure",
+      "sortid": 352,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gore_spike_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/GoreSpikeCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/blood/Gore spike"
+    },
+    {
+      "name": "GoreSpikeCmd",
+      "type": "command",
+      "sortid": 353,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gore_spike_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/GoreSpikeCmdCommand.java"
+        ]
+      },
+      "path": "~/spells/blood/Gore spike"
+    },
+    {
+      "name": "DetonateBloodCast",
+      "type": "procedure",
+      "sortid": 354,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detonate_blood_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/DetonateBloodCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/blood/detonate blood"
+    },
+    {
+      "name": "DetonateBloodCmd",
+      "type": "command",
+      "sortid": 355,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detonate_blood_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/DetonateBloodCmdCommand.java"
+        ]
+      },
+      "path": "~/spells/blood/detonate blood"
+    },
+    {
+      "name": "GoreSpikeProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 356,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gore_spike_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/GoreSpikeProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/blood/Gore spike"
     }
   ],
   "variable_elements": [
@@ -4992,9 +5909,96 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "manaBlastArrow",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "hammer_spawn",
+      "files": [
+        "spell_pa_blessedhammer_cast_03"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "hammer_hit",
+      "files": [
+        "spell_pa_hammerofjustice_impact_04"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "reap",
+      "files": [
+        "spell_dh_soul_cleave_cast_02"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "crash_lightning",
+      "files": [
+        "spell_sh_crashlightning_revamp_impact02"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "mech1",
+      "files": [
+        "mechastriderwoundc"
+      ],
+      "category": "ambient",
+      "subtitle": ""
+    },
+    {
+      "name": "exsanguinate",
+      "files": [
+        "spell_dk_bloodstrike_cast01"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "blood_frenzy_heal",
+      "files": [
+        "deathknightbloodtap"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "blood_meld",
+      "files": [
+        "deathknight_bloodboil"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "gorespike",
+      "files": [
+        "spell_dk_deathcoil_cast02"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "gore_cast",
+      "files": [
+        "fx_gibs_explode01"
+      ],
+      "category": "player",
+      "subtitle": ""
+    }
+  ],
   "tag_elements": {
     "ITEMS:mod:focus": [
       "CUSTOM:AmethystFocusIron",
@@ -5029,30 +6033,41 @@
   "language_map": {
     "en_us": {
       "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
+      "subtitles.hammer_spawn": "",
       "item.joyg.flash_bomb": "Flash Bomb",
+      "subtitles.gore_cast": "",
       "entity.joyg.earth_spike": "Earth Spike",
       "item.joyg.totem_netherite": "Totem Netherite",
       "effect.joyg.disorient": "Disoriented",
       "effect.joyg.thunder_call": "Thunder Call",
       "item.joyg.totem_iron": "Iron Totem",
+      "entity.joyg.windblade": "Windblade",
       "item.joyg.portal_scroll": "Portal Scroll",
       "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
+      "subtitles.exsanguinate": "",
       "effect.joyg.bleed": "Bleed",
       "item.joyg.brass_blaster": "Brass Blaster",
       "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
       "item.joyg.totem_gold": "Gold Totem",
       "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
+      "subtitles.blood_frenzy_heal": "",
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
       "attribute.joyg.critical_block_chance": "Critical Block Chance",
+      "effect.joyg.blood_meld": "Blood Meld",
       "item.joyg.wand_gold": "Aurous Wand",
       "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
       "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
+      "effect.joyg.barrage_charge": "Barrage Charge",
+      "entity.joyg.b_hammer": "Blessed Hammer",
       "item.joyg.wand_wood": "Wooden Wand",
       "entity.joyg.totem": "Totem",
       "effect.joyg.clarity": "Clarity",
+      "effect.joyg.mana_charged_weapon": "Mana Charged Projectiles",
       "affix.apotheosis:armor/attribute/longwinded.prefix": "Long winded",
       "effect.joyg.shattered_armor": "Shattered Armor",
       "effect.joyg.final_blow": "Final Blow Available",
+      "item.joyg.b_hammer_spawn_egg": "Blessed Hammer Spawn Egg",
+      "subtitles.crash_lightning": "",
       "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
       "attribute.joyg.max_absoption": "Max Absorption",
       "item.joyg.wand_iron": "Ferrous Wand",
@@ -5062,10 +6077,15 @@
       "item.joyg.totem_wood": "Wood Totem",
       "gui.joyg.lootbagslots.label_owner": "owner",
       "item.joyg.amethyst_focus_netherite": "Netherite Amethyst Focus",
+      "subtitles.reap": "",
       "entity.joyg.arcane_familiar": "Arcane Familiar",
+      "effect.joyg.blood_frenzy": "Blood Frenzy",
+      "subtitles.gorespike": "",
       "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
+      "subtitles.hammer_hit": "",
       "effect.joyg.mana_charge": "Mana Charge",
       "entity.joyg.portal": "Portal",
+      "effect.joyg.hemorrhage": "Hemorrhage",
       "entity.joyg.auto_ballista": "Auto Ballista",
       "item.joyg.totem_frostshaman": "Frost Shaman\u0027s Idol",
       "item.joyg.amethyst_focus_diamond": "Diamond Amethyst Focus",
@@ -5090,7 +6110,9 @@
       "death.attack.bleeding.item": "%1$s was bled to death by %2$s using %3$s",
       "attribute.joyg.absoption_delay": "Absorption Delay",
       "attribute.joyg.absoption_recharge_rate": "Absorption Recharge Rate",
+      "subtitles.blood_meld": "",
       "effect.joyg.immolation": "Immolation",
+      "subtitles.mech1": "",
       "item.joyg.totem_sunking": "Totem Sunking"
     }
   },
@@ -5328,10 +6350,6 @@
             "children": []
           },
           {
-            "name": "soul reaper",
-            "children": []
-          },
-          {
             "name": "first strike final blow",
             "children": []
           },
@@ -5349,6 +6367,51 @@
           },
           {
             "name": "shatter armor",
+            "children": []
+          },
+          {
+            "name": "mana Arrow",
+            "children": []
+          },
+          {
+            "name": "barrage",
+            "children": []
+          },
+          {
+            "name": "Windblades",
+            "children": []
+          },
+          {
+            "name": "blessed hammer",
+            "children": []
+          },
+          {
+            "name": "blood",
+            "children": [
+              {
+                "name": "soul reaper",
+                "children": []
+              },
+              {
+                "name": "Exsanguinate",
+                "children": []
+              },
+              {
+                "name": "Blood Meld",
+                "children": []
+              },
+              {
+                "name": "Gore spike",
+                "children": []
+              },
+              {
+                "name": "detonate blood",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "ender",
             "children": []
           }
         ]
@@ -5371,8 +6434,7 @@
       "geckolib",
       "playeranimator",
       "particlepresets",
-      "jei",
-      "photon_api"
+      "jei"
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",

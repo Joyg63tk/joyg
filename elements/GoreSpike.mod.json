@@ -1,0 +1,28 @@
+{
+  "_fv": 60,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.BONE"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 3.0,
+    "damage": 5.0,
+    "knockback": 0,
+    "entityModel": "Modelgorespike",
+    "customModelTexture": "gorespike.png",
+    "onHitsBlock": {
+      "name": "GoreSpikeProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "GoreSpikeProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "GoreSpikeWhileProjectileFlyingTick"
+    }
+  }
+}

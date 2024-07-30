@@ -18,6 +18,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.joyg.init.JoygModTabs;
+import net.joyg.init.JoygModSounds;
+import net.joyg.init.JoygModParticleTypes;
 import net.joyg.init.JoygModMobEffects;
 import net.joyg.init.JoygModMenus;
 import net.joyg.init.JoygModItems;
@@ -43,6 +45,7 @@ public class JoygMod {
 		// End of user code block mod constructor
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		JoygModSounds.REGISTRY.register(bus);
 
 		JoygModItems.REGISTRY.register(bus);
 		JoygModEntities.REGISTRY.register(bus);
@@ -50,6 +53,8 @@ public class JoygMod {
 		JoygModTabs.REGISTRY.register(bus);
 
 		JoygModMobEffects.REGISTRY.register(bus);
+
+		JoygModParticleTypes.REGISTRY.register(bus);
 
 		JoygModMenus.REGISTRY.register(bus);
 		// Start of user code block mod init

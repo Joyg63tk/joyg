@@ -9,10 +9,13 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.joyg.client.renderer.WindbladeRenderer;
 import net.joyg.client.renderer.TotemRenderer;
 import net.joyg.client.renderer.PortalRenderer;
 import net.joyg.client.renderer.LootbagERenderer;
+import net.joyg.client.renderer.GoreSpikeRenderer;
 import net.joyg.client.renderer.EarthSpikeRenderer;
+import net.joyg.client.renderer.BHammerRenderer;
 import net.joyg.client.renderer.AutoBallistaRenderer;
 import net.joyg.client.renderer.ArcaneFamiliarRenderer;
 
@@ -26,5 +29,8 @@ public class JoygModEntityRenderers {
 		event.registerEntityRenderer(JoygModEntities.TOTEM.get(), TotemRenderer::new);
 		event.registerEntityRenderer(JoygModEntities.AUTO_BALLISTA.get(), AutoBallistaRenderer::new);
 		event.registerEntityRenderer(JoygModEntities.EARTH_SPIKE.get(), EarthSpikeRenderer::new);
+		event.registerEntityRenderer(JoygModEntities.WINDBLADE.get(), WindbladeRenderer::new);
+		event.registerEntityRenderer(JoygModEntities.B_HAMMER.get(), BHammerRenderer::new);
+		event.registerEntityRenderer(JoygModEntities.GORE_SPIKE.get(), GoreSpikeRenderer::new);
 	}
 }

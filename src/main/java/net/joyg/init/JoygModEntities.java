@@ -16,10 +16,13 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.joyg.entity.WindbladeEntity;
 import net.joyg.entity.TotemEntity;
 import net.joyg.entity.PortalEntity;
 import net.joyg.entity.LootbagEEntity;
+import net.joyg.entity.GoreSpikeEntity;
 import net.joyg.entity.EarthSpikeEntity;
+import net.joyg.entity.BHammerEntity;
 import net.joyg.entity.AutoBallistaEntity;
 import net.joyg.entity.ArcaneFamiliarEntity;
 import net.joyg.JoygMod;
@@ -47,6 +50,12 @@ public class JoygModEntities {
 			EntityType.Builder.<EarthSpikeEntity>of(EarthSpikeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EarthSpikeEntity::new)
 
 					.sized(0.3f, 1.8f));
+	public static final RegistryObject<EntityType<WindbladeEntity>> WINDBLADE = register("windblade",
+			EntityType.Builder.<WindbladeEntity>of(WindbladeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WindbladeEntity::new).fireImmune().sized(1f, 1f));
+	public static final RegistryObject<EntityType<BHammerEntity>> B_HAMMER = register("b_hammer",
+			EntityType.Builder.<BHammerEntity>of(BHammerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BHammerEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<GoreSpikeEntity>> GORE_SPIKE = register("gore_spike",
+			EntityType.Builder.<GoreSpikeEntity>of(GoreSpikeEntity::new, MobCategory.MISC).setCustomClientFactory(GoreSpikeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -61,6 +70,8 @@ public class JoygModEntities {
 			TotemEntity.init();
 			AutoBallistaEntity.init();
 			EarthSpikeEntity.init();
+			WindbladeEntity.init();
+			BHammerEntity.init();
 		});
 	}
 
@@ -72,5 +83,7 @@ public class JoygModEntities {
 		event.put(TOTEM.get(), TotemEntity.createAttributes().build());
 		event.put(AUTO_BALLISTA.get(), AutoBallistaEntity.createAttributes().build());
 		event.put(EARTH_SPIKE.get(), EarthSpikeEntity.createAttributes().build());
+		event.put(WINDBLADE.get(), WindbladeEntity.createAttributes().build());
+		event.put(B_HAMMER.get(), BHammerEntity.createAttributes().build());
 	}
 }
