@@ -78,5 +78,13 @@
         "stream": false
       }
     ]
+  },
+  "chorus_cast": {
+    "sounds": [
+      {
+        "name": "joyg:spell_ro_grapplinghook_whoosh_cast_02",
+        "stream": false
+      }
+    ]
   }
 }

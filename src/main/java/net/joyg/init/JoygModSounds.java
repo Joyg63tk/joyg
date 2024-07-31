@@ -25,4 +25,5 @@ public class JoygModSounds {
 	public static final RegistryObject<SoundEvent> BLOOD_MELD = REGISTRY.register("blood_meld", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("joyg", "blood_meld")));
 	public static final RegistryObject<SoundEvent> GORESPIKE = REGISTRY.register("gorespike", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("joyg", "gorespike")));
 	public static final RegistryObject<SoundEvent> GORE_CAST = REGISTRY.register("gore_cast", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("joyg", "gore_cast")));
+	public static final RegistryObject<SoundEvent> CHORUS_CAST = REGISTRY.register("chorus_cast", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("joyg", "chorus_cast")));
 }

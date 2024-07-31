@@ -1,10 +1,6 @@
 package net.joyg.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
@@ -18,25 +14,11 @@ import net.minecraft.core.BlockPos;
 
 import net.joyg.network.JoygModVariables;
 
-import javax.annotation.Nullable;
-
 import java.util.List;
 import java.util.Comparator;
 
-@Mod.EventBusSubscriber
 public class BurstingShotProcedure {
-	@SubscribeEvent
-	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getSource(), event.getEntity(), event.getSource().getEntity());
-		}
-	}
-
 	public static void execute(LevelAccessor world, double x, double y, double z, DamageSource damagesource, Entity entity, Entity sourceentity) {
-		execute(null, world, x, y, z, damagesource, entity, sourceentity);
-	}
-
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, DamageSource damagesource, Entity entity, Entity sourceentity) {
 		if (damagesource == null || entity == null || sourceentity == null)
 			return;
 		if ((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).burstingShot) {
