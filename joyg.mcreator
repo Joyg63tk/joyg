@@ -5615,6 +5615,56 @@
         ]
       },
       "path": "~/spells/ender/chorus Strike"
+    },
+    {
+      "name": "EnderBlastCast",
+      "type": "procedure",
+      "sortid": 359,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ender_blast_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/EnderBlastCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/spells/ender/ender blast"
+    },
+    {
+      "name": "EnderblastCmd",
+      "type": "command",
+      "sortid": 360,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enderblast_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/EnderblastCmdCommand.java"
+        ]
+      },
+      "path": "~/spells/ender/ender blast"
     }
   ],
   "variable_elements": [
@@ -6019,6 +6069,14 @@
       ],
       "category": "player",
       "subtitle": ""
+    },
+    {
+      "name": "ender_blast",
+      "files": [
+        "mon_pandarenserpent_attackcrit_01"
+      ],
+      "category": "player",
+      "subtitle": ""
     }
   ],
   "tag_elements": {
@@ -6055,12 +6113,12 @@
   "language_map": {
     "en_us": {
       "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
-      "subtitles.gore_cast": "",
-      "item.joyg.flash_bomb": "Flash Bomb",
       "subtitles.hammer_spawn": "",
+      "item.joyg.flash_bomb": "Flash Bomb",
+      "subtitles.gore_cast": "",
       "entity.joyg.earth_spike": "Earth Spike",
-      "effect.joyg.disorient": "Disoriented",
       "item.joyg.totem_netherite": "Totem Netherite",
+      "effect.joyg.disorient": "Disoriented",
       "effect.joyg.thunder_call": "Thunder Call",
       "item.joyg.totem_iron": "Iron Totem",
       "entity.joyg.windblade": "Windblade",
@@ -6077,6 +6135,7 @@
       "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
       "attribute.joyg.critical_block_chance": "Critical Block Chance",
       "effect.joyg.blood_meld": "Blood Meld",
+      "subtitles.ender_blast": "",
       "item.joyg.wand_gold": "Aurous Wand",
       "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
       "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
@@ -6438,6 +6497,10 @@
             "children": [
               {
                 "name": "chorus Strike",
+                "children": []
+              },
+              {
+                "name": "ender blast",
                 "children": []
               }
             ]
