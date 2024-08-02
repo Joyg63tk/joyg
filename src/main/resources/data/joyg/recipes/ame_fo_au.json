@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    " c "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "b": {
+      "item": "joyg:amethyst_focus_iron"
+    },
+    "c": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "result": {
+    "item": "joyg:amethyst_focus_gold",
+    "count": 1
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_fv": 60,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "Items.NETHERITE_INGOT"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.ECHO_SHARD"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:WandDiamond"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:WandNetherite"
+    },
+    "name": "netherite_wand_r",
+    "namespace": "mod"
+  }
+}

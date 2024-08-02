@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b",
+    "c"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:diamond"
+    },
+    "b": {
+      "tag": "minecraft:logs"
+    },
+    "c": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "item": "joyg:totem_diamond",
+    "count": 1
+  }
+}

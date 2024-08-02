@@ -1,0 +1,28 @@
+{
+  "_fv": 60,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "Items.NETHERITE_INGOT"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.NETHER_STAR"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:AmethystFocusDiamond"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:AmethystFocusNetherite"
+    },
+    "name": "ame_fo_nether",
+    "namespace": "mod"
+  }
+}

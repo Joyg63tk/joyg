@@ -5665,6 +5665,216 @@
         ]
       },
       "path": "~/spells/ender/ender blast"
+    },
+    {
+      "name": "AmeFoFe",
+      "type": "recipe",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ame_fo_fe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/ame_fo_fe.json"
+        ]
+      },
+      "path": "~/items/amethyst focus"
+    },
+    {
+      "name": "AmeFoAu",
+      "type": "recipe",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ame_fo_au",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/ame_fo_au.json"
+        ]
+      },
+      "path": "~/items/amethyst focus"
+    },
+    {
+      "name": "AmeFoC",
+      "type": "recipe",
+      "sortid": 363,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ame_fo_c",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/ame_fo_c.json"
+        ]
+      },
+      "path": "~/items/amethyst focus"
+    },
+    {
+      "name": "AmeFoNether",
+      "type": "recipe",
+      "sortid": 364,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ame_fo_nether",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/ame_fo_nether.json"
+        ]
+      },
+      "path": "~/items/amethyst focus"
+    },
+    {
+      "name": "WoodWandR",
+      "type": "recipe",
+      "sortid": 365,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wood_wand_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/wood_wand_r.json"
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "IronWandR",
+      "type": "recipe",
+      "sortid": 366,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_wand_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/iron_wand_r.json"
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "GoldWandR",
+      "type": "recipe",
+      "sortid": 367,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_wand_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/gold_wand_r.json"
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "DiamondWandR",
+      "type": "recipe",
+      "sortid": 368,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_wand_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/diamond_wand_r.json"
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "NetheriteWandR",
+      "type": "recipe",
+      "sortid": 369,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_wand_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/netherite_wand_r.json"
+        ]
+      },
+      "path": "~/items/wands"
+    },
+    {
+      "name": "TotWoodR",
+      "type": "recipe",
+      "sortid": 370,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tot_wood_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/tot_wood_r.json"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "TotemStoneR",
+      "type": "recipe",
+      "sortid": 371,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_stone_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/totem_stone_r.json"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "TotIronR",
+      "type": "recipe",
+      "sortid": 372,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tot_iron_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/tot_iron_r.json"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "TotGoldR",
+      "type": "recipe",
+      "sortid": 373,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tot_gold_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/tot_gold_r.json"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "TotDiamond",
+      "type": "recipe",
+      "sortid": 374,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tot_diamond",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/tot_diamond.json"
+        ]
+      },
+      "path": "~/items/totems"
+    },
+    {
+      "name": "TotNetheriteR",
+      "type": "recipe",
+      "sortid": 375,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tot_netherite_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/joyg/recipes/tot_netherite_r.json"
+        ]
+      },
+      "path": "~/items/totems"
     }
   ],
   "variable_elements": [
@@ -6113,9 +6323,9 @@
   "language_map": {
     "en_us": {
       "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
-      "subtitles.hammer_spawn": "",
-      "item.joyg.flash_bomb": "Flash Bomb",
       "subtitles.gore_cast": "",
+      "item.joyg.flash_bomb": "Flash Bomb",
+      "subtitles.hammer_spawn": "",
       "entity.joyg.earth_spike": "Earth Spike",
       "item.joyg.totem_netherite": "Totem Netherite",
       "effect.joyg.disorient": "Disoriented",
