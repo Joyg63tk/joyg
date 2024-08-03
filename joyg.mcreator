@@ -5875,6 +5875,31 @@
         ]
       },
       "path": "~/items/totems"
+    },
+    {
+      "name": "AntiRetardAlert",
+      "type": "procedure",
+      "sortid": 376,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anti_retard_alert",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util"
     }
   ],
   "variable_elements": [
@@ -6323,9 +6348,9 @@
   "language_map": {
     "en_us": {
       "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
-      "subtitles.gore_cast": "",
-      "item.joyg.flash_bomb": "Flash Bomb",
       "subtitles.hammer_spawn": "",
+      "item.joyg.flash_bomb": "Flash Bomb",
+      "subtitles.gore_cast": "",
       "entity.joyg.earth_spike": "Earth Spike",
       "item.joyg.totem_netherite": "Totem Netherite",
       "effect.joyg.disorient": "Disoriented",
