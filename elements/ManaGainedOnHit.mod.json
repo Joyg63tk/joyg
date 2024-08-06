@@ -3,9 +3,9 @@
   "_type": "attribute",
   "definition": {
     "description": "Mana Gained On Hit",
-    "minValue": 0.0,
+    "minValue": 1.0,
     "maxValue": 256.0,
-    "defaultValue": 0.0,
+    "defaultValue": 1.0,
     "isPersistent": true,
     "entities": [
       {

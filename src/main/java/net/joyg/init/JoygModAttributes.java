@@ -24,7 +24,7 @@ import net.joyg.JoygMod;
 public class JoygModAttributes {
 	public static final DeferredRegister<Attribute> ATTRIBUTES = DeferredRegister.create(ForgeRegistries.ATTRIBUTES, JoygMod.MODID);
 	public static final RegistryObject<Attribute> MANAONHITCHANCE = ATTRIBUTES.register("mana_on_hit_chance", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".mana_on_hit_chance", 0, 0, 100)).setSyncable(true));
-	public static final RegistryObject<Attribute> MANAGAINEDONHIT = ATTRIBUTES.register("mana_gained_on_hit", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".mana_gained_on_hit", 0, 0, 256)).setSyncable(true));
+	public static final RegistryObject<Attribute> MANAGAINEDONHIT = ATTRIBUTES.register("mana_gained_on_hit", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".mana_gained_on_hit", 1, 1, 256)).setSyncable(true));
 	public static final RegistryObject<Attribute> ENVENOM = ATTRIBUTES.register("envenom", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".envenom", 0, 0, 100)).setSyncable(true));
 	public static final RegistryObject<Attribute> MAIM = ATTRIBUTES.register("maim", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".maim", 0, 0, 100)).setSyncable(true));
 	public static final RegistryObject<Attribute> CRITICALBLOCKCHANCE = ATTRIBUTES.register("critical_block_chance", () -> (new RangedAttribute("attribute." + JoygMod.MODID + ".critical_block_chance", 0, 0, 100)).setSyncable(true));

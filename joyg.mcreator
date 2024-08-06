@@ -5900,6 +5900,504 @@
         ]
       },
       "path": "~/util"
+    },
+    {
+      "name": "MaxAbsorbIcon",
+      "type": "potioneffect",
+      "sortid": 377,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "max_absorb_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/MaxAbsorbIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "AbsorbRegenIcon",
+      "type": "potioneffect",
+      "sortid": 378,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "absorb_regen_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/AbsorbRegenIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "AbsorbDelayIcon",
+      "type": "potioneffect",
+      "sortid": 379,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "absorb_delay_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/AbsorbDelayIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "ManaLeechIcon",
+      "type": "potioneffect",
+      "sortid": 380,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_leech_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/ManaLeechIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "ManaonhitChanceIcon",
+      "type": "potioneffect",
+      "sortid": 381,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manaonhit_chance_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/ManaonhitChanceIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "ManaonhitAmountIcon",
+      "type": "potioneffect",
+      "sortid": 382,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manaonhit_amount_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/ManaonhitAmountIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "EnvenomIcon",
+      "type": "potioneffect",
+      "sortid": 383,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "envenom_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/EnvenomIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "MaimIcon",
+      "type": "potioneffect",
+      "sortid": 384,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maim_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/MaimIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "FireLvlIcon",
+      "type": "potioneffect",
+      "sortid": 385,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_lvl_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/FireLvlIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "IceLvlIcon",
+      "type": "potioneffect",
+      "sortid": 386,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_lvl_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/IceLvlIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "LightingLvlIcon",
+      "type": "potioneffect",
+      "sortid": 387,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lighting_lvl_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/LightingLvlIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "HolyLvlIcon",
+      "type": "potioneffect",
+      "sortid": 388,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "holy_lvl_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/HolyLvlIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "EnderLvlIcon",
+      "type": "potioneffect",
+      "sortid": 389,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ender_lvl_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/EnderLvlIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "BloodLvlIcon",
+      "type": "potioneffect",
+      "sortid": 390,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_lvl_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/BloodLvlIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "EvocationLvlIcon",
+      "type": "potioneffect",
+      "sortid": 391,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "evocation_lvl_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/EvocationLvlIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "NatureLvlIcon",
+      "type": "potioneffect",
+      "sortid": 392,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nature_lvl_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/NatureLvlIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "IntIcon",
+      "type": "potioneffect",
+      "sortid": 393,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "int_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/IntIconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "Int2Icon",
+      "type": "potioneffect",
+      "sortid": 394,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "int_2_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/Int2IconMobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "Int3",
+      "type": "potioneffect",
+      "sortid": 395,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "int_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/Int3MobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "Str1",
+      "type": "potioneffect",
+      "sortid": 396,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "str_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/Str1MobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "Str2",
+      "type": "potioneffect",
+      "sortid": 397,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "str_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/Str2MobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "Str3",
+      "type": "potioneffect",
+      "sortid": 398,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "str_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/Str3MobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "Dex1",
+      "type": "potioneffect",
+      "sortid": 399,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dex_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/Dex1MobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "Dex2",
+      "type": "potioneffect",
+      "sortid": 400,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dex_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/Dex2MobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "Dex3",
+      "type": "potioneffect",
+      "sortid": 401,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dex_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/Dex3MobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "Res1",
+      "type": "potioneffect",
+      "sortid": 402,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "res_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/Res1MobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "Res2",
+      "type": "potioneffect",
+      "sortid": 403,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "res_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/Res2MobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "Res3",
+      "type": "potioneffect",
+      "sortid": 404,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "res_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/Res3MobEffect.java"
+        ]
+      },
+      "path": "~/icons"
+    },
+    {
+      "name": "AntiGoblins",
+      "type": "procedure",
+      "sortid": 405,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anti_goblins",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/AntiGoblinsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util"
+    },
+    {
+      "name": "HpIcon",
+      "type": "potioneffect",
+      "sortid": 406,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hp_icon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/HpIconMobEffect.java"
+        ]
+      },
+      "path": "~/passives/hollow palm"
+    },
+    {
+      "name": "Splinter",
+      "type": "potioneffect",
+      "sortid": 407,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "splinter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/SplinterMobEffect.java"
+        ]
+      },
+      "path": "~/passives/Barbed arrows"
+    },
+    {
+      "name": "Rule3",
+      "type": "potioneffect",
+      "sortid": 408,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rule_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/Rule3MobEffect.java"
+        ]
+      },
+      "path": "~/passives/Barbed arrows"
+    },
+    {
+      "name": "Manathorn",
+      "type": "potioneffect",
+      "sortid": 409,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manathorn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/ManathornMobEffect.java"
+        ]
+      },
+      "path": "~/passives/manathorn"
+    },
+    {
+      "name": "Suffering",
+      "type": "potioneffect",
+      "sortid": 410,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "suffering",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/potion/SufferingMobEffect.java"
+        ]
+      },
+      "path": "~/passives/affinity for suffering"
     }
   ],
   "variable_elements": [
@@ -6349,88 +6847,121 @@
     "en_us": {
       "attribute.joyg.mana_on_hit_chance.desc": "Chance to gain Instant Mana when you land a melee hit",
       "subtitles.hammer_spawn": "",
-      "item.joyg.flash_bomb": "Flash Bomb",
-      "subtitles.gore_cast": "",
+      "effect.joyg.str_1": "Str 1",
       "entity.joyg.earth_spike": "Earth Spike",
       "item.joyg.totem_netherite": "Totem Netherite",
-      "effect.joyg.disorient": "Disoriented",
-      "effect.joyg.thunder_call": "Thunder Call",
+      "effect.joyg.str_3": "Str 3",
+      "effect.joyg.str_2": "Str 2",
       "item.joyg.totem_iron": "Iron Totem",
       "entity.joyg.windblade": "Windblade",
-      "item.joyg.portal_scroll": "Portal Scroll",
+      "effect.joyg.rule_3": "Rule 3",
       "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
-      "subtitles.exsanguinate": "",
-      "effect.joyg.bleed": "Bleed",
-      "subtitles.chorus_cast": "",
-      "item.joyg.brass_blaster": "Brass Blaster",
+      "effect.joyg.suffering": "Suffering",
       "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
-      "item.joyg.totem_gold": "Gold Totem",
       "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
+      "effect.joyg.lighting_lvl_icon": "Lighting Lvl Icon",
       "subtitles.blood_frenzy_heal": "",
-      "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
-      "attribute.joyg.critical_block_chance": "Critical Block Chance",
-      "effect.joyg.blood_meld": "Blood Meld",
-      "subtitles.ender_blast": "",
+      "effect.joyg.maim_icon": "Maim Icon",
+      "effect.joyg.ice_lvl_icon": "Ice Lvl Icon",
       "item.joyg.wand_gold": "Aurous Wand",
-      "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
-      "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
       "effect.joyg.barrage_charge": "Barrage Charge",
-      "entity.joyg.b_hammer": "Blessed Hammer",
+      "effect.joyg.mana_leech_icon": "Mana Leech Icon",
       "item.joyg.wand_wood": "Wooden Wand",
-      "entity.joyg.totem": "Totem",
-      "effect.joyg.clarity": "Clarity",
-      "effect.joyg.mana_charged_weapon": "Mana Charged Projectiles",
       "affix.apotheosis:armor/attribute/longwinded.prefix": "Long winded",
-      "effect.joyg.shattered_armor": "Shattered Armor",
-      "effect.joyg.final_blow": "Final Blow Available",
+      "effect.joyg.int_3": "Int 3",
       "item.joyg.b_hammer_spawn_egg": "Blessed Hammer Spawn Egg",
-      "subtitles.crash_lightning": "",
+      "effect.joyg.manathorn": "Manathorn",
       "attribute.joyg.envenom.desc": "Chance on crit towards poisoned enemies to add 1 stack of poison and increase duration by 1 second",
       "attribute.joyg.max_absoption": "Max Absorption",
-      "item.joyg.wand_iron": "Ferrous Wand",
-      "item.joyg.totem_diamond": "Diamond Totem",
       "attribute.joyg.mana_leech": "Mana Leech",
       "attribute.joyg.envenom": "Envenom",
       "item.joyg.totem_wood": "Wood Totem",
       "gui.joyg.lootbagslots.label_owner": "owner",
-      "item.joyg.amethyst_focus_netherite": "Netherite Amethyst Focus",
       "subtitles.reap": "",
+      "effect.joyg.evocation_lvl_icon": "Evocation Lvl Icon",
       "entity.joyg.arcane_familiar": "Arcane Familiar",
-      "effect.joyg.blood_frenzy": "Blood Frenzy",
+      "effect.joyg.envenom_icon": "Envenom Icon",
+      "effect.joyg.dex_3": "Dex 3",
+      "effect.joyg.hp_icon": "Hp Icon",
       "subtitles.gorespike": "",
-      "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
+      "effect.joyg.dex_2": "Dex 2",
+      "effect.joyg.dex_1": "Dex 1",
       "subtitles.hammer_hit": "",
       "effect.joyg.mana_charge": "Mana Charge",
+      "effect.joyg.int_2_icon": "Int 2 Icon",
+      "effect.joyg.res_1": "Res 1",
+      "effect.joyg.res_2": "Res 2",
       "entity.joyg.portal": "Portal",
       "effect.joyg.hemorrhage": "Hemorrhage",
+      "effect.joyg.res_3": "Res 3",
       "entity.joyg.auto_ballista": "Auto Ballista",
-      "item.joyg.totem_frostshaman": "Frost Shaman\u0027s Idol",
       "item.joyg.amethyst_focus_diamond": "Diamond Amethyst Focus",
       "effect.joyg.escape_artist_cd_indicator": "Escape Artist Cooldown",
       "effect.joyg.flame_brand_weapon": "Flamebrand Weapon",
       "config.joyg.joyg_cfg": "joyg_cfg",
       "item.joyg.wand_netherite": "Netherflame Wand",
-      "effect.joyg.barbed_arrow": "Barbed Arrow",
       "item.joyg.wand_diamond": "Diamantiferous Wand",
+      "effect.joyg.max_absorb_icon": "Max Absorb Icon",
       "entity.joyg.lootbag_e": "Loot bag",
-      "enchantment.joyg.empower": "Empower",
-      "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
       "item.joyg.amethyst_focus_iron": "Iron Amethyst Focus",
-      "effect.joyg.marked": "Marked",
+      "death.attack.bleeding.player": "%1$s bled to death whilst trying to escape %2$s",
       "item.joyg.totem_stone": "Stone Totem",
       "attribute.joyg.skill_cdr.desc": "Reduces the Cooldown of your Martial Skills with diminishing returns",
-      "attribute.joyg.mana_gained_on_hit.desc": "Increases mana gained by 5% of max mana, when Instant Mana on hit procs",
-      "item.joyg.amethyst_focus_gold": "Gold Amethyst Focus",
       "attribute.joyg.maim": "Maim Chance",
       "death.attack.bleeding": "%1$s died from bleeding",
-      "effect.joyg.soul_reap": "Soul Reap",
+      "effect.joyg.nature_lvl_icon": "Nature Lvl Icon",
       "death.attack.bleeding.item": "%1$s was bled to death by %2$s using %3$s",
       "attribute.joyg.absoption_delay": "Absorption Delay",
       "attribute.joyg.absoption_recharge_rate": "Absorption Recharge Rate",
+      "item.joyg.totem_sunking": "Totem Sunking",
+      "effect.joyg.holy_lvl_icon": "Holy Lvl Icon",
+      "item.joyg.flash_bomb": "Flash Bomb",
+      "subtitles.gore_cast": "",
+      "effect.joyg.disorient": "Disoriented",
+      "effect.joyg.thunder_call": "Thunder Call",
+      "item.joyg.portal_scroll": "Portal Scroll",
+      "subtitles.exsanguinate": "",
+      "effect.joyg.bleed": "Bleed",
+      "subtitles.chorus_cast": "",
+      "effect.joyg.manaonhit_amount_icon": "Manaonhit Amount Icon",
+      "item.joyg.totem_gold": "Gold Totem",
+      "item.joyg.brass_blaster": "Brass Blaster",
+      "attribute.joyg.mana_gained_on_hit": "Mana Gained On Hit",
+      "attribute.joyg.critical_block_chance": "Critical Block Chance",
+      "effect.joyg.blood_meld": "Blood Meld",
+      "subtitles.ender_blast": "",
+      "effect.joyg.splinter": "Splinter",
+      "affix.apotheosis:armor/attribute/longwinded.suffix": "of stamina",
+      "item.joyg.amethyst_focus_eternal": "Eternal Wizard\u0027s Focus",
+      "entity.joyg.b_hammer": "Blessed Hammer",
+      "entity.joyg.totem": "Totem",
+      "effect.joyg.clarity": "Clarity",
+      "effect.joyg.mana_charged_weapon": "Mana Charged Projectiles",
+      "effect.joyg.shattered_armor": "Shattered Armor",
+      "effect.joyg.ender_lvl_icon": "Ender Lvl Icon",
+      "effect.joyg.final_blow": "Final Blow Available",
+      "subtitles.crash_lightning": "",
+      "item.joyg.wand_iron": "Ferrous Wand",
+      "effect.joyg.blood_lvl_icon": "Blood Lvl Icon",
+      "item.joyg.totem_diamond": "Diamond Totem",
+      "item.joyg.amethyst_focus_netherite": "Netherite Amethyst Focus",
+      "effect.joyg.int_icon": "Int Icon",
+      "effect.joyg.blood_frenzy": "Blood Frenzy",
+      "effect.joyg.manaonhit_chance_icon": "Manaonhit Chance Icon",
+      "effect.joyg.fire_lvl_icon": "Fire Lvl Icon",
+      "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
+      "item.joyg.totem_frostshaman": "Frost Shaman\u0027s Idol",
+      "effect.joyg.barbed_arrow": "Barbed Arrow",
+      "enchantment.joyg.empower": "Empower",
+      "effect.joyg.marked": "Marked",
+      "effect.joyg.absorb_regen_icon": "Absorb Regen Icon",
+      "attribute.joyg.mana_gained_on_hit.desc": "Increases mana gained by 5% of max mana, when Instant Mana on hit procs",
+      "item.joyg.amethyst_focus_gold": "Gold Amethyst Focus",
+      "effect.joyg.soul_reap": "Soul Reap",
       "subtitles.blood_meld": "",
       "effect.joyg.immolation": "Immolation",
       "subtitles.mech1": "",
-      "item.joyg.totem_sunking": "Totem Sunking"
+      "effect.joyg.absorb_delay_icon": "Absorb Delay Icon"
     }
   },
   "foldersRoot": {
@@ -6593,10 +7124,6 @@
           {
             "name": "trickshots",
             "children": []
-          },
-          {
-            "name": "hemomancer",
-            "children": []
           }
         ]
       },
@@ -6741,6 +7268,10 @@
             ]
           }
         ]
+      },
+      {
+        "name": "icons",
+        "children": []
       }
     ]
   },

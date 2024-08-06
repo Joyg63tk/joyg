@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Escape Artist Cooldown",
-    "icon": "escape_artist.png",
+    "icon": "escape.png",
     "color": {
       "value": -1,
       "falpha": 0.0

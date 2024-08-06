@@ -37,7 +37,7 @@ public class AffinityForSufferingProcedure {
 					Entity _ent = entity;
 					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @p irons_spellbooks:spell_power modifier add dec2e418-fdff-11ee-ab5e-325096b39f47 ll 2 multiply");
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @p irons_spellbooks:spell_power modifier add dec2e418-fdff-11ee-ab5e-325096b39f47 ll 0.3 multiply");
 					}
 				}
 				entity.getPersistentData().putBoolean("suffering", true);
