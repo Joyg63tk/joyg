@@ -94,5 +94,13 @@
         "stream": false
       }
     ]
+  },
+  "righteous_sac": {
+    "sounds": [
+      {
+        "name": "joyg:spell_pr_artifact_lightswrath_impact_02",
+        "stream": false
+      }
+    ]
   }
 }

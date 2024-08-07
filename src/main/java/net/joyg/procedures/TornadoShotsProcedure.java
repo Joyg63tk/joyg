@@ -1,5 +1,6 @@
 package net.joyg.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -39,7 +40,8 @@ public class TornadoShotsProcedure {
 		if (immediatesourceentity == null || sourceentity == null)
 			return;
 		if (sourceentity instanceof ServerPlayer || sourceentity instanceof Player) {
-			if ((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).tornadoShots && immediatesourceentity instanceof Arrow) {
+			if ((sourceentity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).tornadoShots
+					&& ((ForgeRegistries.ENTITY_TYPES.getKey(immediatesourceentity.getType()).toString()).contains("arrow") || (ForgeRegistries.ENTITY_TYPES.getKey(immediatesourceentity.getType()).toString()).contains("bolt"))) {
 				for (int index0 = 0; index0 < 3; index0++) {
 					if (world instanceof ServerLevel projectileLevel) {
 						Projectile _entityToSpawn = new Object() {

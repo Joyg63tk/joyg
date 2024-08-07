@@ -46,7 +46,7 @@ public class ShatterArmorProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(12 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (!(entityiterator instanceof Player) == !(entityiterator instanceof ServerPlayer)) {
-					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.EXPLOSION), entity),
+					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.LAVA), entity),
 							(float) ((LivingEntity) entityiterator).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.ARMOR).getValue());
 					if (entityiterator instanceof LivingEntity _livingEntity)
 						_livingEntity.addEffect((new MobEffectInstance(JoygModMobEffects.SHATTERED_ARMOR.get(), 240, 0)));

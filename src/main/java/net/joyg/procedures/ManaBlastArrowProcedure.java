@@ -11,9 +11,10 @@ import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.TraceableEntity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.ParticleTypes;
+
+import net.joyg.init.JoygModMobEffects;
 
 import javax.annotation.Nullable;
 
@@ -32,16 +33,16 @@ public class ManaBlastArrowProcedure {
 		if (entity == null)
 			return;
 		if ((ForgeRegistries.ENTITY_TYPES.getKey(entity.getType()).toString()).contains("arrow") || (ForgeRegistries.ENTITY_TYPES.getKey(entity.getType()).toString()).contains("bolt")) {
-			if ((entity instanceof TraceableEntity _traceableEntity ? _traceableEntity.getOwner() : null) instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(MobEffects.DIG_SPEED)) {
+			if ((entity instanceof TraceableEntity _traceableEntity ? _traceableEntity.getOwner() : null) instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(JoygModMobEffects.MANA_CHARGED_WEAPON.get())) {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.CRIT, x, y, z, 5, 3, 3, 3, 1);
 				if (entity instanceof AbstractArrow _abstractArrow)
 					_abstractArrow.setBaseDamage(((entity instanceof AbstractArrow _arrowContext ? _arrowContext.getBaseDamage() : 0.0D)
-							+ ((entity instanceof TraceableEntity _traceableEntity ? _traceableEntity.getOwner() : null) instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.DIG_SPEED)
-									? _livEnt.getEffect(MobEffects.DIG_SPEED).getAmplifier()
+							+ ((entity instanceof TraceableEntity _traceableEntity ? _traceableEntity.getOwner() : null) instanceof LivingEntity _livEnt && _livEnt.hasEffect(JoygModMobEffects.MANA_CHARGED_WEAPON.get())
+									? _livEnt.getEffect(JoygModMobEffects.MANA_CHARGED_WEAPON.get()).getAmplifier()
 									: 0)));
 				if ((entity instanceof TraceableEntity _traceableEntity ? _traceableEntity.getOwner() : null) instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.DIG_SPEED);
+					_entity.removeEffect(JoygModMobEffects.MANA_CHARGED_WEAPON.get());
 			}
 		}
 	}
