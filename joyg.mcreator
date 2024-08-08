@@ -6546,6 +6546,120 @@
         ]
       },
       "path": "~/spells/shatter armor"
+    },
+    {
+      "name": "XpPenalty",
+      "type": "procedure",
+      "sortid": 420,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_penalty",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/XpPenaltyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util"
+    },
+    {
+      "name": "LvlUp",
+      "type": "procedure",
+      "sortid": 421,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lvl_up",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/LvlUpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util"
+    },
+    {
+      "name": "LvlUpCmd",
+      "type": "command",
+      "sortid": 422,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lvl_up_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/command/LvlUpCmdCommand.java"
+        ]
+      },
+      "path": "~/util"
+    },
+    {
+      "name": "Reset",
+      "type": "procedure",
+      "sortid": 423,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/ResetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util"
     }
   ],
   "variable_elements": [
@@ -6860,6 +6974,12 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
     }
   ],
   "sound_elements": [
@@ -7011,10 +7131,10 @@
       "item.joyg.totem_iron": "Iron Totem",
       "entity.joyg.windblade": "Windblade",
       "effect.joyg.rule_3": "Rule 3",
-      "effect.joyg.suffering": "Suffering",
       "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
-      "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
+      "effect.joyg.suffering": "Suffering",
       "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
+      "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
       "effect.joyg.lighting_lvl_icon": "Lighting Lvl Icon",
       "subtitles.blood_frenzy_heal": "",
       "effect.joyg.maim_icon": "Maim Icon",

@@ -12,6 +12,7 @@ import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
@@ -31,12 +32,18 @@ public class BlessedHammerCastProcedure {
 		if (world instanceof ServerLevel _level) {
 			System.out.println(entity.getStringUUID());
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(0, 0, 0), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"execute as " + entity.getStringUUID() + " run particlesetrel light_expansion 1");
+					"execute as " + entity.getStringUUID() + " run particleset light_ring");
 		}
 		if (world instanceof ServerLevel _serverLevel) {
-			Entity entityinstance = JoygModEntities.B_HAMMER.get().create(_serverLevel, null, null, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED, false, false);
+			Entity entityinstance = JoygModEntities.B_HAMMER.get().create(_serverLevel, null, null, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED, false, false);
 			if (entityinstance != null) {
 				entityinstance.setYRot(world.getRandom().nextFloat() * 360.0F);
+				{
+					Entity _ent = entityinstance;
+					_ent.teleportTo(x, (y + 1), z);
+					if (_ent instanceof ServerPlayer _serverPlayer)
+						_serverPlayer.connection.teleport(x, (y + 1), z, _ent.getYRot(), _ent.getXRot());
+				}
 				if (entityinstance instanceof BHammerEntity _datEntSetI)
 					_datEntSetI.getEntityData().set(BHammerEntity.DATA_damageCD, (int) (20 / ((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_SPEED).getValue()));
 				if (entityinstance instanceof BHammerEntity _datEntSetI)
@@ -45,7 +52,7 @@ public class BlessedHammerCastProcedure {
 									* ((LivingEntity) entity).getAttribute(ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("irons_spellbooks:holy_spell_power"))).getValue()
 									+ ((LivingEntity) entity).getAttribute(ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("additional_attributes:spell_school_holy"))).getValue()));
 				if (entityinstance instanceof BHammerEntity _datEntSetI)
-					_datEntSetI.getEntityData().set(BHammerEntity.DATA_age, (int) (100 / ((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_SPEED).getValue()));
+					_datEntSetI.getEntityData().set(BHammerEntity.DATA_age, (int) (200 / ((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_SPEED).getValue()));
 				if (entityinstance instanceof TamableAnimal _toTame && entity instanceof Player _owner)
 					_toTame.tame(_owner);
 				_serverLevel.addFreshEntity(entityinstance);

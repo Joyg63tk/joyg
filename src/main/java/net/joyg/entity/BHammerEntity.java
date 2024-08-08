@@ -77,9 +77,9 @@ public class BHammerEntity extends Monster implements GeoEntity {
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
 		this.entityData.define(TEXTURE, "dragwings");
-		this.entityData.define(DATA_age, 0);
-		this.entityData.define(DATA_damage, 0);
-		this.entityData.define(DATA_damageCD, 0);
+		this.entityData.define(DATA_age, 100);
+		this.entityData.define(DATA_damage, 1);
+		this.entityData.define(DATA_damageCD, 20);
 	}
 
 	public void setTexture(String texture) {

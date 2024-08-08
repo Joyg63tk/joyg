@@ -17,7 +17,7 @@ public class EarthSpikeOnEntityTickUpdateProcedure {
 			return;
 		if (entity instanceof EarthSpikeEntity _datEntSetI)
 			_datEntSetI.getEntityData().set(EarthSpikeEntity.DATA_age, (int) ((entity instanceof EarthSpikeEntity _datEntI ? _datEntI.getEntityData().get(EarthSpikeEntity.DATA_age) : 0) + 1));
-		if ((entity instanceof EarthSpikeEntity _datEntI ? _datEntI.getEntityData().get(EarthSpikeEntity.DATA_age) : 0) > 1) {
+		if ((entity instanceof EarthSpikeEntity _datEntI ? _datEntI.getEntityData().get(EarthSpikeEntity.DATA_age) : 0) > 200) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.ancient_debris.break")), SoundSource.AMBIENT, 1, 1);

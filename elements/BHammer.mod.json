@@ -18,21 +18,21 @@
         "max": 2147483647,
         "name": "age",
         "type": "integer",
-        "value": 0
+        "value": 100
       },
       {
         "min": -2147483648,
         "max": 2147483647,
         "name": "damage",
         "type": "integer",
-        "value": 0
+        "value": 1
       },
       {
         "min": -2147483648,
         "max": 2147483647,
         "name": "damageCD",
         "type": "integer",
-        "value": 0
+        "value": 20
       }
     ],
     "modelWidth": 0.6,

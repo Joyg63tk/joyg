@@ -110,6 +110,7 @@ public class JoygModVariables {
 			clone.enderReflexes = original.enderReflexes;
 			clone.trickshots = original.trickshots;
 			clone.hemomancer = original.hemomancer;
+			clone.level = original.level;
 			if (!event.isWasDeath()) {
 				clone.lowLife = original.lowLife;
 				clone.ShieldRegenDelay = original.ShieldRegenDelay;
@@ -206,6 +207,7 @@ public class JoygModVariables {
 		public boolean hemomancer = false;
 		public boolean finalBlow = false;
 		public boolean manaBlastArrow = false;
+		public double level = 1.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -266,6 +268,7 @@ public class JoygModVariables {
 			nbt.putBoolean("hemomancer", hemomancer);
 			nbt.putBoolean("finalBlow", finalBlow);
 			nbt.putBoolean("manaBlastArrow", manaBlastArrow);
+			nbt.putDouble("level", level);
 			return nbt;
 		}
 
@@ -323,6 +326,7 @@ public class JoygModVariables {
 			hemomancer = nbt.getBoolean("hemomancer");
 			finalBlow = nbt.getBoolean("finalBlow");
 			manaBlastArrow = nbt.getBoolean("manaBlastArrow");
+			level = nbt.getDouble("level");
 		}
 	}
 
@@ -399,6 +403,7 @@ public class JoygModVariables {
 					variables.hemomancer = message.data.hemomancer;
 					variables.finalBlow = message.data.finalBlow;
 					variables.manaBlastArrow = message.data.manaBlastArrow;
+					variables.level = message.data.level;
 				}
 			});
 			context.setPacketHandled(true);
