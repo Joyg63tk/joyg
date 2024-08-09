@@ -12,6 +12,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
@@ -33,11 +34,13 @@ public class BloodFrenzyHealProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, double amount) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(JoygModMobEffects.BLOOD_FRENZY.get())) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.setAbsorptionAmount((float) ((entity instanceof Player _plr ? _plr.getAbsorptionAmount() : 0) + amount));
-			if (world instanceof Level)
-				((Level) world).playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("joyg:blood_frenzy_heal")), SoundSource.PLAYERS, 1, 1);
+		if (entity instanceof Player || entity instanceof ServerPlayer) {
+			if (entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(JoygModMobEffects.BLOOD_FRENZY.get())) {
+				if (entity instanceof LivingEntity _entity)
+					_entity.setAbsorptionAmount((float) ((entity instanceof Player _plr ? _plr.getAbsorptionAmount() : 0) + amount));
+				if (world instanceof Level)
+					((Level) world).playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("joyg:blood_frenzy_heal")), SoundSource.PLAYERS, 1, 1);
+			}
 		}
 	}
 }
