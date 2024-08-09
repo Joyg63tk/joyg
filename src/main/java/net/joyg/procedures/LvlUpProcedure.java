@@ -1,7 +1,5 @@
 package net.joyg.procedures;
 
-import org.lwjgl.glfw.GLFW;
-
 import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.level.LevelAccessor;
@@ -22,10 +20,17 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 
 public class LvlUpProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments, Entity entity) {
-		if (entity == null)
-			return;
-		if ((entity instanceof Player _plr ? _plr.experienceLevel : 0) >= 10 * ((new Object() {
+	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments) {
+		if (((new Object() {
+			public Entity getEntity() {
+				try {
+					return EntityArgument.getEntity(arguments, "name");
+				} catch (CommandSyntaxException e) {
+					e.printStackTrace();
+					return null;
+				}
+			}
+		}.getEntity()) instanceof Player _plr ? _plr.experienceLevel : 0) >= 10 * ((new Object() {
 			public Entity getEntity() {
 				try {
 					return EntityArgument.getEntity(arguments, "name");
@@ -92,7 +97,16 @@ public class LvlUpProcedure {
 			if (world instanceof Level)
 				((Level) world).playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.levelup")), SoundSource.MASTER, 1, 1, false);
 			{
-				Entity _ent = entity;
+				Entity _ent = (new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "name");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity());
 				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
 							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), ("fmvariable set reqxp false " + 10 * ((new Object() {
@@ -120,7 +134,7 @@ public class LvlUpProcedure {
 				}.getEntity());
 				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "puffish_skills points add @s passives 1");
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "puffish_skills points add @s joyg:passives 1");
 				}
 			}
 			if ((new Object() {
@@ -133,9 +147,7 @@ public class LvlUpProcedure {
 					}
 				}
 			}.getEntity()) instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(
-						("Has Aprendido un Punto Passivo, preciona" + GLFW.glfwGetKeyName(JoygModKeyMappings.key.puffish_skills.open.getKey().getValue(), GLFW.glfwGetKeyScancode(JoygModKeyMappings.key.puffish_skills.open.getKey().getValue())))),
-						false);
+				_player.displayClientMessage(Component.literal("Has Aprendido un Punto Passivo, preciona K (predeterminado)"), false);
 			if ((new Object() {
 				public Entity getEntity() {
 					try {
@@ -146,9 +158,7 @@ public class LvlUpProcedure {
 					}
 				}
 			}.getEntity()) instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(
-						("Has Aprendido un Punto Passivo, preciona" + GLFW.glfwGetKeyName(JoygModKeyMappings.key.puffish_skills.open.getKey().getValue(), GLFW.glfwGetKeyScancode(JoygModKeyMappings.key.puffish_skills.open.getKey().getValue())))),
-						true);
+				_player.displayClientMessage(Component.literal("Has Aprendido un Punto Passivo, preciona K (predeterminado)"), true);
 		} else {
 			if (world instanceof Level)
 				((Level) world).playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bamboo.break")), SoundSource.MASTER, 1, 1, false);

@@ -6584,10 +6584,6 @@
             "type": "cmdcontext"
           },
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -6638,10 +6634,6 @@
             "type": "cmdcontext"
           },
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -6656,6 +6648,46 @@
           {
             "name": "world",
             "type": "world"
+          }
+        ]
+      },
+      "path": "~/util"
+    },
+    {
+      "name": "LvlUpAvailable",
+      "type": "procedure",
+      "sortid": 424,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lvl_up_available",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/LvlUpAvailableProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/util"
+    },
+    {
+      "name": "XpmultiSet",
+      "type": "procedure",
+      "sortid": 425,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xpmulti_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/XpmultiSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
           }
         ]
       },
@@ -7131,10 +7163,10 @@
       "item.joyg.totem_iron": "Iron Totem",
       "entity.joyg.windblade": "Windblade",
       "effect.joyg.rule_3": "Rule 3",
-      "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
       "effect.joyg.suffering": "Suffering",
-      "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
+      "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
       "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
+      "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
       "effect.joyg.lighting_lvl_icon": "Lighting Lvl Icon",
       "subtitles.blood_frenzy_heal": "",
       "effect.joyg.maim_icon": "Maim Icon",

@@ -20,10 +20,17 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 
 public class ResetProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments, Entity entity) {
-		if (entity == null)
-			return;
-		if ((entity instanceof Player _plr ? _plr.experienceLevel : 0) >= 10 * ((new Object() {
+	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments) {
+		if (((new Object() {
+			public Entity getEntity() {
+				try {
+					return EntityArgument.getEntity(arguments, "name");
+				} catch (CommandSyntaxException e) {
+					e.printStackTrace();
+					return null;
+				}
+			}
+		}.getEntity()) instanceof Player _plr ? _plr.experienceLevel : 0) >= 10 * ((new Object() {
 			public Entity getEntity() {
 				try {
 					return EntityArgument.getEntity(arguments, "name");
@@ -43,7 +50,7 @@ public class ResetProcedure {
 					}
 				}
 			}.getEntity()) instanceof Player _player)
-				_player.giveExperienceLevels(-(Math.round(10 * ((new Object() {
+				_player.giveExperienceLevels(-((int) (10 * ((new Object() {
 					public Entity getEntity() {
 						try {
 							return EntityArgument.getEntity(arguments, "name");
@@ -68,7 +75,7 @@ public class ResetProcedure {
 				}.getEntity());
 				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "puffish_skills skills reset @s passives");
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "puffish_skills skills reset @s joyg:passives");
 				}
 			}
 		} else {

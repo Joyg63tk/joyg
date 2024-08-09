@@ -13,8 +13,11 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
+import net.joyg.procedures.XpmultiSetProcedure;
 import net.joyg.procedures.ResetProcedure;
 import net.joyg.procedures.LvlUpProcedure;
+
+import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 @Mod.EventBusSubscriber
 public class LvlUpCmdCommand {
@@ -34,7 +37,7 @@ public class LvlUpCmdCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					LvlUpProcedure.execute(world, x, y, z, arguments, entity);
+					LvlUpProcedure.execute(world, x, y, z, arguments);
 					return 0;
 				}))).then(Commands.literal("reset").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -48,8 +51,22 @@ public class LvlUpCmdCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					ResetProcedure.execute(world, x, y, z, arguments, entity);
+					ResetProcedure.execute(world, x, y, z, arguments);
 					return 0;
-				}))));
+				}))).then(Commands.literal("xp_multi").then(Commands.argument("name", EntityArgument.player()).then(Commands.argument("num", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					XpmultiSetProcedure.execute(arguments);
+					return 0;
+				})))));
 	}
 }
