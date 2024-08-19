@@ -2,7 +2,7 @@
   "_fv": 60,
   "_type": "command",
   "definition": {
-    "commandName": "joyg",
+    "commandName": "passives",
     "type": "STANDARD",
     "permissionLevel": "No requirement",
     "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">lvlup</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">LvlUp</field></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">reset</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Reset</field></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">xp_multi</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">num</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">XpmultiSet</field></block></statement></block></statement></block></statement></block></next></block></next></block></next></block></xml>"

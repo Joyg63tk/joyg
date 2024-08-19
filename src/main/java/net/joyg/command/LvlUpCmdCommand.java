@@ -23,7 +23,7 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class LvlUpCmdCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("joyg")
+		event.getDispatcher().register(Commands.literal("passives")
 
 				.then(Commands.literal("lvlup").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();

@@ -41,8 +41,8 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
-import net.joyg.procedures.LootbagEEntityIsHurtProcedure;
 import net.joyg.procedures.BHammerOnEntityTickUpdateProcedure;
+import net.joyg.procedures.BHammerEntityIsHurtProcedure;
 import net.joyg.init.JoygModEntities;
 
 public class BHammerEntity extends Monster implements GeoEntity {
@@ -65,7 +65,7 @@ public class BHammerEntity extends Monster implements GeoEntity {
 	public BHammerEntity(EntityType<BHammerEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
-		setNoAi(false);
+		setNoAi(true);
 		setMaxUpStep(0.6f);
 		setPersistenceRequired();
 		this.moveControl = new FlyingMoveControl(this, 10, true);
@@ -101,12 +101,6 @@ public class BHammerEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	protected void registerGoals() {
-		super.registerGoals();
-
-	}
-
-	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
 	}
@@ -123,7 +117,7 @@ public class BHammerEntity extends Monster implements GeoEntity {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		LootbagEEntityIsHurtProcedure.execute();
+		BHammerEntityIsHurtProcedure.execute();
 		if (source.is(DamageTypes.IN_FIRE))
 			return false;
 		if (source.getDirectEntity() instanceof AbstractArrow)

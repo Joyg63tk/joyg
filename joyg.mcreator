@@ -6692,6 +6692,117 @@
         ]
       },
       "path": "~/util"
+    },
+    {
+      "name": "XpForHp",
+      "type": "procedure",
+      "sortid": 426,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_for_hp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/XpForHpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "xp",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util"
+    },
+    {
+      "name": "XpShare",
+      "type": "procedure",
+      "sortid": 427,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_share",
+      "metadata": {
+        "files": [
+          "src/main/java/net/joyg/procedures/XpShareProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/util"
+    },
+    {
+      "name": "ChaseItemHelm",
+      "type": "curiosbauble",
+      "sortid": 428,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chase_item_helm",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/joyg/models/item/chase_item_helm.json",
+          "src/main/java/net/joyg/item/ChaseItemHelmItem.java"
+        ]
+      },
+      "path": "~/items"
+    },
+    {
+      "name": "BHammerEntityIsHurt",
+      "type": "procedure",
+      "sortid": 429,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_hammer_entity_is_hurt",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/joyg/procedures/BHammerEntityIsHurtProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/spells/blessed hammer"
     }
   ],
   "variable_elements": [
@@ -7163,10 +7274,10 @@
       "item.joyg.totem_iron": "Iron Totem",
       "entity.joyg.windblade": "Windblade",
       "effect.joyg.rule_3": "Rule 3",
-      "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
       "effect.joyg.suffering": "Suffering",
-      "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
+      "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
       "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
+      "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
       "effect.joyg.lighting_lvl_icon": "Lighting Lvl Icon",
       "subtitles.blood_frenzy_heal": "",
       "effect.joyg.maim_icon": "Maim Icon",
@@ -7265,6 +7376,7 @@
       "effect.joyg.fire_lvl_icon": "Fire Lvl Icon",
       "attribute.joyg.mana_on_hit_chance": "Mana On Hit Chance",
       "item.joyg.totem_frostshaman": "Frost Shaman\u0027s Idol",
+      "item.joyg.chase_item_helm": "Echoes",
       "effect.joyg.barbed_arrow": "Barbed Arrow",
       "enchantment.joyg.empower": "Empower",
       "effect.joyg.marked": "Marked",

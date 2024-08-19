@@ -42,6 +42,7 @@ public class JoygModTabs {
 			tabData.accept(JoygModItems.WAND_NETHERITE.get());
 			tabData.accept(JoygModItems.AMETHYST_FOCUS_ETERNAL.get());
 			tabData.accept(JoygModItems.AMETHYST_FOCUS_FALL.get());
+			tabData.accept(JoygModItems.CHASE_ITEM_HELM.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(JoygModItems.PORTAL_SCROLL.get());
 			tabData.accept(JoygModItems.FLASH_BOMB.get());
