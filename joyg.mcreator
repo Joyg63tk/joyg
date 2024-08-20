@@ -2108,7 +2108,7 @@
             "type": "entity"
           },
           {
-            "name": "blockedamount",
+            "name": "originalblockedamount",
             "type": "number"
           },
           {
@@ -7274,10 +7274,10 @@
       "item.joyg.totem_iron": "Iron Totem",
       "entity.joyg.windblade": "Windblade",
       "effect.joyg.rule_3": "Rule 3",
-      "effect.joyg.suffering": "Suffering",
       "attribute.joyg.skill_effect_area.desc": "Multiplies the Area of your Martial Skills by this amount",
-      "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
+      "effect.joyg.suffering": "Suffering",
       "attribute.joyg.maim.desc": "Chance to Maim on hit, slowing enemies. Direct damage will inflict a stronger maim while Indirect hits will instead last longer",
+      "item.joyg.amethyst_focus_fall": "Shaper\u0027s Eye",
       "effect.joyg.lighting_lvl_icon": "Lighting Lvl Icon",
       "subtitles.blood_frenzy_heal": "",
       "effect.joyg.maim_icon": "Maim Icon",

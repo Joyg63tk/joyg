@@ -42,7 +42,7 @@ public class ChorusStrikeProcedure {
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(16 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
-				if (!(entityiterator instanceof Player) || !(entityiterator instanceof ServerPlayer)) {
+				if ((!(entityiterator instanceof Player) || !(entityiterator instanceof ServerPlayer)) && entityiterator instanceof LivingEntity) {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.REVERSE_PORTAL, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 5, 0, 0, 0, 0);
 					{

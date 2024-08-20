@@ -51,7 +51,7 @@ public class ThunderstrikeCastProcedure {
 			for (Entity entityiterator : _entfound) {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.ELECTRIC_SPARK, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 5, 0, 1, 0, 1);
-				if (!(entityiterator instanceof Player) || !(entityiterator instanceof ServerPlayer)) {
+				if ((!(entityiterator instanceof Player) || !(entityiterator instanceof ServerPlayer)) && entityiterator instanceof LivingEntity) {
 					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.LIGHTNING_BOLT), entity),
 							(float) (((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE).getValue()
 									* ((LivingEntity) entity).getAttribute(ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("irons_spellbooks:lightning_spell_power"))).getValue()

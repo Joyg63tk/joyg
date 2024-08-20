@@ -47,7 +47,7 @@ public class ExsanguinateCastProcedure {
 			for (Entity entityiterator : _entfound) {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles((SimpleParticleType) (JoygModParticleTypes.BLOOD_SPLASH.get()), (entityiterator.getX()), (entityiterator.getY() + 1), (entityiterator.getZ()), 1, 0, 0, 0, 0);
-				if (!(entityiterator instanceof Player) || !(entityiterator instanceof ServerPlayer)) {
+				if ((!(entityiterator instanceof Player) || !(entityiterator instanceof ServerPlayer)) && entityiterator instanceof LivingEntity) {
 					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("joyg:bleeding"))), entity),
 							(float) ((((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE).getValue()
 									+ ((LivingEntity) entity).getAttribute(ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation("additional_attributes:spell_school_blood"))).getValue())

@@ -23,24 +23,24 @@ public class ManathornShieldProcedure {
 	@SubscribeEvent
 	public static void whenEntityBlocksWithShield(ShieldBlockEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level(), event.getEntity(), event.getDamageSource().getEntity(), event.getBlockedDamage());
+			execute(event, event.getEntity().level(), event.getEntity(), event.getDamageSource().getEntity(), event.getOriginalBlockedDamage());
 		}
 	}
 
-	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity, double blockedamount) {
-		execute(null, world, entity, sourceentity, blockedamount);
+	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity, double originalblockedamount) {
+		execute(null, world, entity, sourceentity, originalblockedamount);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity, double blockedamount) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity, double originalblockedamount) {
 		if (entity == null || sourceentity == null)
 			return;
 		if ((entity.getCapability(JoygModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new JoygModVariables.PlayerVariables())).manathorn == true) {
-			sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), (float) blockedamount);
+			sourceentity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), (float) originalblockedamount);
 			{
 				Entity _ent = entity;
 				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), ("mana add @p -" + Math.round(blockedamount)));
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), ("mana add @p -" + Math.round(originalblockedamount)));
 				}
 			}
 		}

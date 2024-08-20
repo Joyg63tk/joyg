@@ -56,8 +56,8 @@ public class Slam1Procedure {
 			for (Entity entityiterator : _entfound) {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.WHITE_ASH, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 5, 0, 1, 0, 1);
-				if (!(entityiterator instanceof Player) || !(entityiterator instanceof ServerPlayer)) {
-					if (entityiterator instanceof LivingEntity _livEnt12 && _livEnt12.hasEffect(MobEffects.MOVEMENT_SLOWDOWN)) {
+				if ((!(entityiterator instanceof Player) || !(entityiterator instanceof ServerPlayer)) && entityiterator instanceof LivingEntity) {
+					if (entityiterator instanceof LivingEntity _livEnt13 && _livEnt13.hasEffect(MobEffects.MOVEMENT_SLOWDOWN)) {
 						entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC), entity),
 								(float) (((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE).getValue() * 2));
 						if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
